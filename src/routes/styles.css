@@ -4,27 +4,32 @@
 
 @font-face {
     font-family: "Hind-Siliguri";
-    src: url("Hind_Siliguri_Light-Regular.ttf");
-    src: url("Hind_Siliguri-Regular_GhOgZt6.ttf");
-    src: url("Hind_Siliguri_Light-Regular.ttf"),
-    url("Hind_Siliguri_SemiBold-Regular.ttf"),
-    url("Hind_Siliguri-Bold.ttf");
+    src: url("../assets/fonts/Hind_Siliguri_Light-Regular.ttf");
+    src: url("../assets/fonts/Hind_Siliguri-Regular_GhOgZt6.ttf");
+    src: url("../assets/fonts/Hind_Siliguri_Light-Regular.ttf"),
+        url("../assets/fonts/Hind_Siliguri_SemiBold-Regular.ttf"),
+        url("../assets/fonts/Hind_Siliguri-Bold.ttf");
 }
 
 @font-face {
     font-family: "baloo da 2";
-    src: url("BalooDa2-Regular.ttf");
-    src: url("BalooDa2-ExtraBold.ttf");
-    src: url("BalooDa2-Medium.ttf"),
-    url("BalooDa2-Bold.ttf"),
-    url("BalooDa2-SemiBold.ttf");
+    src: url("../assets/fonts/BalooDa2-Regular.ttf");
+    src: url("../assets/fonts/BalooDa2-ExtraBold.ttf");
+    src: url("../assets/fonts/BalooDa2-Medium.ttf"),
+        url("../assets/fonts/BalooDa2-Bold.ttf"),
+        url("../assets/fonts/BalooDa2-SemiBold.ttf");
 }
 
 @layer base {
-    html{
+    html {
         font-family: 'baloo da 2';
     }
-    h1, h2, h3, h4, h5 {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
         font-family: 'Hind-Siliguri';
     }
 }
