@@ -11,6 +11,6 @@
 
 
 <Hero />
-<Opening />
+<!-- <Opening /> -->
 <Zigzag />
 
