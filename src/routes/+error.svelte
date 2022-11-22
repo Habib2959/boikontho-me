@@ -11,7 +11,7 @@
 		<div>
 			<video src={vid} autoplay loop />
 		</div>
-		<div class="mt-20">
+		<div class="my-20">
 			<a class="border border-color-home py-2 px-5 font-bold" href="/">হোমপেজে ফিরে যান</a>
 		</div>
 	</div>

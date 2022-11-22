@@ -34,7 +34,7 @@
 			<p class="mb-3 text-[#9b9b9b]">{info.desc}</p>
 			<div class="py-3">
 				<a
-					href="/"
+					href={info.id === 2 ? '/booklist' : '/'}
 					class="bg-[#602D90] transition-colors duration-300  hover:bg-[#602d90bf] text-white p-3 rounded"
 					>{info.btn}</a
 				>
