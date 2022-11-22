@@ -7,8 +7,8 @@
 		<div class="grid grid-cols-1 content-center md:grid-cols-2 gap-5 place-items-center">
 			<div class="order-last self-center text-center md:order-first md:text-left">
 				<div class="flex flex-col">
-					<h1 class="font-bold text-3xl mb-4">
-						বাংলাদেশের সবচেয়ে বড় অডিও বইয়ের সম্ভার নিয়ে আসছে "বইকণ্ঠ"
+					<h1 class="font-bold text-3xl mb-4 hack-font">
+						দেশের সর্ববৃহৎ অডিও বই ও ইবুকের সম্ভার নিয়ে আসছে <span style="color: red">বইকণ্ঠ</span>
 					</h1>
 					<a
 						href="/register"
@@ -35,6 +35,16 @@
 </section>
 
 <style>
+	@font-face {
+		font-family: 'Solaiman Lipi Bold';
+		src: url('../assets/fonts/SolaimanLipi_Bold_10-03-12.ttf');
+	}
+	.hack-font{
+		font-family: 'Solaiman Lipi Bold';
+		font-size: 46px;
+		font-weight: 400;
+		line-height: 3.3rem;
+	}
 	.hack-btn:hover i {
 		right: 10%;
 	}
