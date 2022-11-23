@@ -12,7 +12,7 @@
 					</h1>
 					<a
 						href="/register"
-						class="bg-[#602D90] w-[80%] md:w-[70%] lg:w-[50%] md:mx-[inherit] mx- mx-auto relative transition-all duration-300 hover:bg-[#602d90bf] text-white py-3 px-8 rounded hack-btn"
+						class="bg-btnColor w-[80%] md:w-[70%] lg:w-[50%] md:mx-[inherit] mx- mx-auto relative transition-all duration-300 hover:bg-[#602d90bf] text-white py-3 px-8 rounded hack-btn"
 						>প্রি-রেজিস্ট্রেশন করুন <i
 							class="fa-solid fa-arrow-right absolute top-[35%] right-[15%] transition-all"
 						/></a
@@ -20,7 +20,7 @@
 
 					<a
 						href="/details"
-						class="bg-[#fff] border border-[#602D90] text-[#602D90] w-[80%] md:w-[70%] lg:w-[50%] md:mx-[inherit] mx-auto relative mt-5 transition-all duration-300 py-3 px-8 rounded hack-btn"
+						class="bg-white border border-btnColor text-btnColor w-[80%] md:w-[70%] lg:w-[50%] md:mx-[inherit] mx-auto relative mt-5 transition-all duration-300 py-3 px-8 rounded hack-btn"
 						>বিস্তারিত জানুন<i
 							class="fa-solid fa-arrow-right absolute top-[35%] right-[15%] transition-all"
 						/></a
@@ -39,7 +39,7 @@
 		font-family: 'Solaiman Lipi Bold';
 		src: url('../assets/fonts/SolaimanLipi_Bold_10-03-12.ttf');
 	}
-	.hack-font{
+	.hack-font {
 		font-family: 'Solaiman Lipi Bold';
 		font-size: 46px;
 		font-weight: 400;
@@ -47,5 +47,11 @@
 	}
 	.hack-btn:hover i {
 		right: 10%;
+	}
+	@media (max-width: 768px) {
+		.hack-font {
+			font-size: 35px;
+			line-height: 3rem;
+		}
 	}
 </style>

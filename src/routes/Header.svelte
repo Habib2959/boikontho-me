@@ -12,11 +12,13 @@
 		$page?.routeId?.includes('register') ||
 		$page?.routeId?.includes('otp')}
 >
-	<div class="flex justify-between px-3 md:max-w-[92%] md:mx-auto">
-		<img class="w-[200px]" src={logo} alt="logo" />
+	<div class="flex justify-between items-center px-3 md:max-w-[92%] md:mx-auto">
+		<a href="/">
+			<img class="w-[150px] sm:w-[200px]" src={logo} alt="logo" />
+		</a>
 		<a
 			href="/register"
-			class="bg-[#602D90] transition-colors duration-300 hover:bg-[#602d90bf] text-white p-3 rounded"
+			class="bg-btnColor transition-colors duration-300 hover:bg-[#602d90bf] text-white p-3 rounded"
 			><i class="fa-solid fa-gift mr-2" />প্রি-রেজিস্ট্রেশন</a
 		>
 	</div>
@@ -35,6 +37,6 @@
 	}
 	header {
 		box-shadow: 0 0 9px 1px rgba(79, 75, 147, 0.15);
-		z-index: 10000;
+		z-index: 1000000;
 	}
 </style>
