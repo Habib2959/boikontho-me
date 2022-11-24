@@ -1,5 +1,5 @@
 <script lang="ts">
-	import logo from '$lib/images/double_logo.svg';
+	import logo from '$lib/images/typography_logo.svg';
 	import ill1 from '$lib/images/Illustration 1.svg';
 </script>
 
