@@ -57,7 +57,7 @@
 		<InputBox type="password" placeholder="Confirm Password" bind:value={values.confirmPassword} />
 		<div>
 			<p>
-				By continuing , you agree to Uthti’s <a href="/" class="hack-text-red">Conditions of Use</a>
+				By continuing , you agree to Boikontho’s <a href="/" class="hack-text-red">Conditions of Use</a>
 				and
 				<a href="/" class="hack-text-red">Privacy Policy</a>
 			</p>

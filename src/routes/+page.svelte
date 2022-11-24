@@ -5,8 +5,8 @@
 </script>
 
 <svelte:head>
-  <title>Home</title>
-  <meta name="description" content="Svelte demo app" />
+  <title>Largest Bangla Audio Book & Bangla E-Book Platform | Boikontho.com</title>
+  <meta name="description" content="Largest Bangla Audio Book & Bangla E-Book Platform" />
 </svelte:head>
 
 

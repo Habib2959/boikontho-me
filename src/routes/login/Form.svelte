@@ -37,7 +37,7 @@
 
 <div class="hack-content-box">
 	<h1 class="hack-title text-3xl text-semibold">
-			Welcome back to Uthti
+			Welcome back to Boikontho
 	</h1>
 	<form on:submit|preventDefault={submitSigninHandler}>
 			<TelInput type="text" placeholder="Mobile Number" bind:value={values.tel} />
