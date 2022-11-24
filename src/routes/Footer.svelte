@@ -46,10 +46,10 @@
 				<div class="hack-footer-icon-wrapper">
 					<div class="hack-title">Follow us</div>
 					<div class="hack-icon">
-						<i class="fa-brands fa-linkedin" />
-						<i class="fa-brands fa-square-facebook" />
-						<i class="fa-brands fa-instagram" />
-						<i class="fa-brands fa-twitter" />
+						<a href="https://www.linkedin.com/company/boikontho"><i class="fa-brands fa-linkedin" /></a>
+						<a href="https://www.facebook.com/BoiKonthoOfficial"><i class="fa-brands fa-square-facebook" /></a>
+						<a href="#"><i class="fa-brands fa-instagram" /></a>
+						<a href="#"><i class="fa-brands fa-twitter" /></a>
 					</div>
 				</div>
 			</div>
