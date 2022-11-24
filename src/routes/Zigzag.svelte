@@ -1,7 +1,7 @@
 <script lang="ts">
-	import ill2 from '$lib/images/ill2.svg';
-	import ill3 from '$lib/images/ill3.svg';
-	import ill4 from '$lib/images/ill4.svg';
+	import ill2 from '$lib/images/Illustration 2.svg';
+	import ill3 from '$lib/images/Illustration 3.svg';
+	import ill4 from '$lib/images/Illustration 4.svg';
 	import Countdown from './Countdown.svelte';
 	let data = [
 		{
@@ -9,7 +9,7 @@
 			title: 'প্রি-বুকিং অফার',
 			desc: 'উদ্বোধনের আগে রেজিস্ট্রেশনকারীরা পাবেন ২ মাসের ফ্রি সাবস্ক্রিপশন',
 			btn: 'প্রি-রেজিস্ট্রেশন করুন',
-			src: ill4,
+			src: ill2,
 			link: '/register'
 		},
 		{
@@ -25,7 +25,7 @@
 			title: 'নিজের অডিওবুক প্রকাশ করুন',
 			desc: 'যদি আপনি স্পষ্ট ও সাবলীল ভাবে বই পড়তে দক্ষ হন তাহলে আপনিও বইকন্ঠ প্ল্যাটফর্মে নিজের বই প্রকাশ করে নিজের মেধা ছড়িয়ে দেওয়ার পাশাপাশি আয় করতে পারেন।',
 			btn: 'বিস্তারিত জানুন',
-			src: ill2,
+			src: ill4,
 			link: '/creator-details'
 		}
 	];
@@ -47,7 +47,7 @@
 			<div class="py-3">
 				<a
 					href={info.link}
-					class="bg-btnColor transition-colors duration-300  hover:bg-[#602d90bf] text-white p-3 rounded"
+					class="bg-btnColor transition-colors duration-300  hover:bg-btnHoverColor text-white p-3 rounded"
 					>{info.btn}</a
 				>
 			</div>
@@ -57,11 +57,11 @@
 
 <style>
 	@font-face {
-		font-family: 'Solaiman Lipi Bold';
-		src: url('../assets/fonts/SolaimanLipi_Bold_10-03-12.ttf');
+		font-family: 'Hind Siliguri Semi Bold';
+		src: url('../lib/fonts/Hind_Siliguri_SemiBold-Regular.ttf');
 	}
 	.hack-font {
-		font-family: 'Solaiman Lipi Bold';
+		font-family: 'Hind Siliguri Semi Bold';
 		font-size: 36px;
 		font-weight: 400;
 		line-height: 3.3rem;

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import logo from '$lib/images/Hackules.png';
+	import logo from '$lib/images/double_logo.svg';
 </script>
 
 <footer
@@ -56,10 +56,7 @@
 		</div>
 		<div class="hack-divider" />
 		<div class="hack-footer-bottom">
-			<p>
-				&copy; Hacules Registered in England and Wales Company number: 09677925 Registered address:
-				Highlands House, Basingstoke Road, Spencers Wood, Reading, Berkshire, RG7 1NT.
-			</p>
+			<p>© All rights reserved 2022 Boikontho</p>
 		</div>
 	</div>
 </footer>

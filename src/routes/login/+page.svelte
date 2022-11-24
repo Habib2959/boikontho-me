@@ -1,12 +1,12 @@
 <script>
 	import Form from './Form.svelte';
-	import UthtiImage from './UthtiImage.svelte';
+	import AuthLeft from '$lib/AuthLeft.svelte';
 </script>
 
 <div class="chack-ontainer">
 	<div class="hack-row">
 		<div class="hack-col-1">
-			<UthtiImage />
+			<AuthLeft />
 		</div>
 		<div class="hack-col-2">
 			<Form />

@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Set the date we're counting down to
-	let countDownDate = new Date('Jan 5, 2024 15:37:25').getTime();
+	let countDownDate = new Date('Jan 1, 2023 0:0:0').getTime();
 	let days: number | string = 0;
 	let hours: number | string = 0;
 	let minutes: number | string = 0;

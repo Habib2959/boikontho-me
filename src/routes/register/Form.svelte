@@ -51,7 +51,7 @@
 	<form on:submit|preventDefault={submitSignupHandler}>
 		<InputBox type="text" placeholder="Full Name" bind:value={values.userName} />
 		<TelInput type="text" placeholder="Mobile Number" bind:value={values.tel} />
-		<Dropdown type="text" placeholder="Choose a role" bind:value={values.role} {Roles} />
+		<!-- <Dropdown type="text" placeholder="Choose a role" bind:value={values.role} {Roles} /> -->
 		<InputBox type="email" placeholder="Email Address" bind:value={values.email} />
 		<InputBox type="password" placeholder="Password" bind:value={values.password} />
 		<InputBox type="password" placeholder="Confirm Password" bind:value={values.confirmPassword} />

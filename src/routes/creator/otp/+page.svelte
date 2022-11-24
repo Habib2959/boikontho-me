@@ -1,12 +1,12 @@
 <script>
 	import OtpInputs from './OtpInputs.svelte';
-	import UthtiImage from '../login/UthtiImage.svelte';
+	import AuthLeft from '$lib/AuthLeft.svelte';
 </script>
 
 <div class="hack-container">
 	<div class="hack-row">
 		<div class="hack-col-1">
-			<UthtiImage />
+			<AuthLeft />
 		</div>
 		<div class="hack-col-2">
 			<OtpInputs />

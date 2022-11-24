@@ -1,5 +1,5 @@
 <script lang="ts">
-	import logo from '$lib/images/Hackules.png';
+	import logo from '$lib/images/double_logo.svg';
 	let y: number;
 	import { page } from '$app/stores';
 </script>
@@ -18,7 +18,7 @@
 		</a>
 		<a
 			href="/register"
-			class="bg-btnColor transition-colors duration-300 hover:bg-[#602d90bf] text-white p-3 rounded"
+			class="bg-btnColor transition-colors duration-300 hover:bg-btnHoverColor text-white p-3 rounded"
 			><i class="fa-solid fa-gift mr-2" />প্রি-রেজিস্ট্রেশন</a
 		>
 	</div>
