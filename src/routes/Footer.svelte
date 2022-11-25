@@ -31,32 +31,32 @@
 			<div class="hack-right">
 				<div class="hack-footer-nav">
 					<ul>
-						<li>Home</li>
-						<li>price</li>
-						<li>price</li>
-						<li>price</li>
+						<li>About Us</li>
+						<li>Publish on Boikontho</li>
+						<li>Careers</li>
+						<li>CSR</li>
 					</ul>
-					<ul>
-						<li>Home</li>
-						<li>price</li>
-						<li>price</li>
-						<li>price</li>
-					</ul>
+					<!-- <ul>
+						<li>Terms of Use</li>
+						<li>Privacy Policy</li>
+						<li>FAQ</li>
+					</ul> -->
 				</div>
 				<div class="hack-footer-icon-wrapper">
 					<div class="hack-title">Follow us</div>
 					<div class="hack-icon">
 						<a href="https://www.linkedin.com/company/boikontho"><i class="fa-brands fa-linkedin" /></a>
 						<a href="https://www.facebook.com/BoiKonthoOfficial"><i class="fa-brands fa-square-facebook" /></a>
-						<a href="https://www.instagram.com/boikonthobd/"><i class="fa-brands fa-instagram" /></a>
-						<a href="#"><i class="fa-brands fa-twitter" /></a>
+						<a href="https://www.instagram.com/boikonthobd"><i class="fa-brands fa-instagram" /></a>
+						<a href="https://www.youtube.com/channel/UCz9OyAvi3dhlNZaDRs2SPOQ"><i class="fa-brands fa-youtube" /></a>
+						<!-- <a href="#"><i class="fa-brands fa-twitter" /></a> -->
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="hack-divider" />
 		<div class="hack-footer-bottom">
-			<p>© All rights reserved 2022 Boikontho</p>
+			<p>© 2022 Boikontho.com | Terms of Use | Privacy Policy | FAQ</p>
 		</div>
 	</div>
 </footer>
