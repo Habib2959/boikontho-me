@@ -26,7 +26,7 @@
 			desc: 'যদি আপনি স্পষ্ট ও সাবলীল ভাবে বই পড়তে দক্ষ হন তাহলে আপনিও বইকন্ঠ প্ল্যাটফর্মে নিজের বই প্রকাশ করে নিজের মেধা ছড়িয়ে দেওয়ার পাশাপাশি আয় করতে পারেন।',
 			btn: 'বিস্তারিত জানুন',
 			src: ill4,
-			link: '/creator-details'
+			link: '/publish'
 		}
 	];
 </script>
@@ -48,7 +48,7 @@
 				<a
 					href={info.link}
 					class="bg-btnColor transition-colors duration-300  hover:bg-btnHoverColor text-white p-3 rounded"
-					>{info.btn}</a
+					class:hack-btn-animation={info.id === 1}>{info.btn}</a
 				>
 			</div>
 		</div>
@@ -72,5 +72,27 @@
 		width: 100%;
 		padding: 50px 30px;
 		margin: 10px 0px;
+	}
+	.hack-btn-animation {
+		animation-name: pulse;
+		animation-duration: 2.5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: both;
+		animation-play-state: running;
+		display: inline-block;
+	}
+	@keyframes pulse {
+		0% {
+			transform: scale(0.95);
+		}
+
+		70% {
+			transform: scale(1.15);
+		}
+
+		100% {
+			transform: scale(0.95);
+		}
 	}
 </style>

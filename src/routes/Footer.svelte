@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import logo from '$lib/images/double_logo.svg';
+	import gplay from '$lib/images/google-play.png';
+	import app from '$lib/images/app-store.png';
 </script>
 
 <footer
@@ -11,95 +13,90 @@
 >
 	<div class="hack-container">
 		<div class="hack-footer-bg">
-			<svg
-				width="1100"
-				height="357"
-				viewBox="0 0 1100 357"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<path
-					d="M337.968 0H40C17.9086 0 0 17.9086 0 40V357H1100V112.5C1100 90.4086 1082.09 72.5 1060 72.5H410.468C390.448 72.5 374.218 56.2703 374.218 36.25C374.218 16.2297 357.989 0 337.968 0Z"
-					fill="#F5F5F5"
-				/>
-			</svg>
-		</div>
-		<div class="hack-footer-top">
-			<div class="hack-left">
-				<img src={logo} alt="logo" width="50%" />
-			</div>
-			<div class="hack-right">
-				<div class="hack-footer-nav">
+			<div class="hack-footer-top">
+				<div class="hack-left">
+					<img src={logo} alt="logo" width="50%" class="hack-footer-logo" />
 					<ul>
-						<li>About Us</li>
-						<li>Publish on Boikontho</li>
-						<li>Careers</li>
-						<li>CSR</li>
+						<li>Silver Book Technologies Bangladesh Limited</li>
+						<li>
+							<i class="fa-solid fa-location-dot mr-3 text-btnColor" />101 Shukrabad, Dhaka - 1212,
+							Bangladesh
+						</li>
+						<li><i class="fa-solid fa-phone mr-3 text-btnColor" />+8809666745745</li>
+						<li><i class="fa-solid fa-envelope mr-3 text-btnColor" />support@pickaboo.com</li>
 					</ul>
-					<!-- <ul>
-						<li>Terms of Use</li>
-						<li>Privacy Policy</li>
-						<li>FAQ</li>
-					</ul> -->
 				</div>
-				<div class="hack-footer-icon-wrapper">
-					<div class="hack-title">Follow us</div>
-					<div class="hack-icon">
-						<a href="https://www.linkedin.com/company/boikontho"><i class="fa-brands fa-linkedin" /></a>
-						<a href="https://www.facebook.com/BoiKonthoOfficial"><i class="fa-brands fa-square-facebook" /></a>
-						<a href="https://www.instagram.com/boikonthobd"><i class="fa-brands fa-instagram" /></a>
-						<a href="https://www.youtube.com/channel/UCz9OyAvi3dhlNZaDRs2SPOQ"><i class="fa-brands fa-youtube" /></a>
-						<!-- <a href="#"><i class="fa-brands fa-twitter" /></a> -->
+				<div class="hack-about">
+					<h3>About</h3>
+					<ul>
+						<li><a href="/about-us"> About Us</a></li>
+						<li>
+							<a href="/publish">Publish on Boikontho</a>
+						</li>
+						<li><a href="/careers">Careers</a></li>
+						<li><a href="/csr">CSR</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3>Download</h3>
+					<img src={gplay} alt="logo" class="hack-download-img" />
+					<img src={app} alt="logo" class="hack-download-img" />
+				</div>
+			</div>
+			<div class="hack-divider" />
+			<div class="hack-footer-bottom">
+				<div>
+					<p>© 2022 Boikontho.com | Terms of Use | Privacy Policy | FAQ</p>
+				</div>
+				<div>
+					<div class="hack-footer-icon-wrapper">
+						<div class="hack-title">Follow us</div>
+						<div class="hack-icon">
+							<a href="https://www.linkedin.com/company/boikontho"
+								><i class="fa-brands fa-linkedin" /></a
+							>
+							<a href="https://www.facebook.com/BoiKonthoOfficial" class="ml-3"
+								><i class="fa-brands fa-square-facebook" /></a
+							>
+							<a href="https://www.instagram.com/boikonthobd" class="ml-3"
+								><i class="fa-brands fa-instagram" /></a
+							>
+							<a href="https://www.youtube.com/channel/UCz9OyAvi3dhlNZaDRs2SPOQ" class="ml-3"
+								><i class="fa-brands fa-youtube" /></a
+							>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="hack-divider" />
-		<div class="hack-footer-bottom">
-			<p>© 2022 Boikontho.com | Terms of Use | Privacy Policy | FAQ</p>
 		</div>
 	</div>
 </footer>
 
 <style>
 	.hack-container {
-		max-width: 1100px;
-		padding-top: 8.2rem;
-		padding-right: 5rem;
-		padding-left: 5rem;
+		max-width: 1400px;
 		position: relative;
 		margin: 0px auto;
 	}
 	.hack-footer-bg {
-		position: absolute;
-		left: 0;
-		top: auto;
-		right: 0;
-		bottom: 0;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		z-index: -1;
+		padding-top: 7rem;
+		padding-right: 3rem;
+		padding-left: 3rem;
+		background-image: url(../lib/images/footerbg.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 	.hack-footer-top {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: center;
 		padding: 0px 40px;
 	}
-	.hack-right {
-		display: flex;
-		width: 60%;
-		justify-content: space-between;
+	.hack-footer-logo {
+		margin-bottom: 40px;
 	}
-	.hack-left {
-		display: flex;
-		width: 40%;
-	}
-	.hack-footer-nav {
-		display: flex;
-	}
+
 	ul {
 		padding: 0;
 		margin: 0;
@@ -107,24 +104,17 @@
 	li {
 		list-style: none;
 	}
-	.hack-footer-nav {
-		display: flex;
-		width: 70%;
-		justify-content: space-around;
-	}
-	.hack-footer-icon-wrapper {
-		width: 30%;
-	}
 	.hack-icon {
 		display: flex;
 		font-size: 30px;
-		justify-content: space-between;
 	}
 	.hack-footer-bottom {
 		padding: 0px 40px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 	.hack-footer-bottom p {
-		width: 50%;
 		line-height: 20px;
 	}
 	.hack-divider {
@@ -144,10 +134,19 @@
 	.fa-instagram:hover {
 		color: #8a3ab9;
 	}
-	.fa-twitter:hover {
-		color: #00acee;
+	.hack-download-img {
+		max-width: 200px;
 	}
-
+	.fa-youtube {
+		transition: 0.3s;
+	}
+	.fa-youtube:hover {
+		color: #ff0000;
+	}
+	h3 {
+		font-size: 20px;
+		font-weight: 700;
+	}
 	/* .scnd {
 		position: relative;
 	}
@@ -158,14 +157,14 @@
 	} */
 	@media (max-width: 1200px) {
 		.hack-container {
-			max-width: 900px;
+			max-width: 1000px;
 			padding-right: 0;
 			padding-left: 0;
 		}
-		.hack-footer-bottom p {
+		/* .hack-footer-bottom p {
 			width: 80%;
 			line-height: 20px;
-		}
+		} */
 	}
 	@media (max-width: 992px) {
 		.hack-container {
@@ -173,13 +172,41 @@
 			padding: 30px 0;
 		}
 		.hack-footer-bg {
-			display: none;
+			background-image: none;
+			padding-top: 1rem;
+			padding-right: 1rem;
+			padding-left: 1rem;
 		}
 		.hack-footer {
 			background-color: #f5f5f5;
 		}
 		.hack-icon {
 			font-size: 22px;
+		}
+		.hack-download-img {
+			max-width: 150px;
+		}
+		.hack-footer-logo {
+			margin-bottom: 30px;
+		}
+		.hack-footer-bg {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+	@media (max-width: 768px) {
+		.hack-title {
+			font-weight: 700;
+			margin-top: 10px;
+		}
+		.hack-footer-top {
+			flex-wrap: wrap;
+		}
+		h3 {
+			margin-top: 20px;
+		}
+		.hack-download-img {
+			max-width: 120px;
 		}
 	}
 	@media (max-width: 600px) {
@@ -192,6 +219,36 @@
 		}
 		.hack-footer-bottom p {
 			width: 100%;
+		}
+		.hack-footer-logo {
+			margin-bottom: 20px;
+		}
+		.hack-icon {
+			column-gap: 0px;
+		}
+		.hack-left {
+			flex: 0 0 100%;
+		}
+		.hack-about {
+			flex: 0 0 100%;
+		}
+		.hack-footer-bottom {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	@media (max-width: 480px) {
+		.hack-about {
+			flex: 0 0 auto;
+		}
+		.hack-footer-top {
+			padding: 0 20px;
+		}
+		.hack-footer-bottom {
+			padding: 0 20px;
+		}
+		.hack-divider {
+			margin: 20px 20px;
 		}
 	}
 </style>

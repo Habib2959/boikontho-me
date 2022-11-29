@@ -6,7 +6,7 @@
 
 <svelte:window bind:scrollY={y} />
 <header
-	class="py-4 fixed top-0 left-0 right-0 bg-[#fff] transition-all duration-300 max-w-[1500px] mx-auto"
+	class="py-2 fixed top-0 left-0 right-0 bg-[#fff] transition-all duration-300 max-w-[1400px] mx-auto"
 	class:scrolled={y > 0}
 	class:hidden={$page?.routeId?.includes('login') ||
 		$page?.routeId?.includes('register') ||
@@ -14,7 +14,7 @@
 >
 	<div class="flex justify-between items-center px-3 md:max-w-[92%] md:mx-auto">
 		<a href="/">
-			<img class="w-[150px] sm:w-[200px]" src={logo} alt="logo" />
+			<img class="w-[150px] sm:w-[170px]" src={logo} alt="logo" />
 		</a>
 		<a
 			href="/register"
@@ -38,5 +38,10 @@
 	header {
 		box-shadow: 0 0 9px 1px rgba(79, 75, 147, 0.15);
 		z-index: 1000000;
+	}
+	@media (max-width: 600px) {
+		.scrolled img {
+			width: 160px;
+		}
 	}
 </style>

@@ -9,7 +9,7 @@
 </script>
 
 <section class="flex items-center justify-center min-h-screen">
-	<div class="container mx-auto">
+	<div class="container mx-auto w-[90%] sm:w-[100%]">
 		<div
 			class="px-3 py-2 bg-white border shadow-sm border-slate-300 rounded-md max-w-[800px] mx-auto"
 		>

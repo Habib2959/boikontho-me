@@ -5,11 +5,11 @@
 
 <section class="hack-bg">
 	<div class="hack-logo-div">
-		<img src={logo} alt="man" class="mx-auto" />
+		<img src={logo} alt="man" class="mx-auto max-w-[65%]" />
 		<!-- <h2>উঠতি উদ্যোক্তাদের প্ল্যাটফর্ম</h2> -->
 	</div>
 	<div class="hack-rocket-div">
-		<img src={ill1} alt="man" class="mx-auto" />
+		<img src={ill1} alt="man" class="mx-auto max-w-[90%]" />
 	</div>
 </section>
 
