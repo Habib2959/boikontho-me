@@ -1,5 +1,5 @@
 <script lang="ts">
-	import logo from '$lib/images/double_logo.svg';
+	import logo from '$lib/images/logo.svg';
 	let y: number;
 	import { page } from '$app/stores';
 </script>
@@ -29,12 +29,12 @@
 		border-bottom-left-radius: 15px;
 		border-bottom-right-radius: 15px;
 		background-color: rgba(255, 255, 255, 0.8);
-		padding: 10px 0px;
+		/* padding: 10px 0px; */
 		transition: background-color 0.3s ease-in, padding 0.2s ease-in;
 	}
-	.scrolled img {
+	/* .scrolled img {
 		width: 200px;
-	}
+	} */
 	header {
 		box-shadow: 0 0 9px 1px rgba(79, 75, 147, 0.15);
 		z-index: 1000000;

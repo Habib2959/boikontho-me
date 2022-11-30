@@ -19,10 +19,12 @@
 	emplpoyeeRole.subscribe((updatedRole) => {
 		values.role = updatedRole;
 	});
-	let Roles = ['Graphics Designer', 'Web developer', 'Content Writer', 'SEO'];
+	let loading = false;
 	async function submitSigninHandler() {
+		loading = true;
 		await login(values.tel, values.password);
 		userInfo.set(values);
+		loading = false;
 		const auth = localStorage.getItem('token');
 		if (auth) {
 			userAuthenticated.set(true);
@@ -32,24 +34,19 @@
 			userAuthenticated.set(false);
 		}
 	}
-
 </script>
 
 <div class="hack-content-box">
-	<h1 class="hack-title text-3xl text-semibold">
-			Welcome back to Boikontho
-	</h1>
+	<h1 class="hack-title text-3xl text-semibold">Welcome back to Boikontho</h1>
 	<form on:submit|preventDefault={submitSigninHandler}>
-			<TelInput type="text" placeholder="Mobile Number" bind:value={values.tel} />
-			<InputBox type="password" placeholder="Password" bind:value={values.password} />
+		<TelInput type="text" placeholder="Mobile Number" bind:value={values.tel} />
+		<InputBox type="password" placeholder="Password" bind:value={values.password} />
 
-		<Button mode = "Sign in" />
+		<Button mode="Sign in" {loading} />
 	</form>
 	<p class="hack-text-center hack-switch-signup">
-			Don't have an account
-		<a href="/register" class="hack-sign-in-text"
-			>Sign up</a
-		>
+		Don't have an account
+		<a href="/register" class="hack-sign-in-text">Sign up</a>
 	</p>
 </div>
 

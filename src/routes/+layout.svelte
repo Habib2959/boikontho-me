@@ -3,6 +3,17 @@
 	import Footer from './Footer.svelte';
 	import Header from './Header.svelte';
 	import './styles.css';
+	import { userAuthenticated } from '../store';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		const auth = localStorage.getItem('token');
+		if (auth) {
+			userAuthenticated.set(true);
+		} else {
+			userAuthenticated.set(false);
+		}
+	});
 </script>
 
 <div

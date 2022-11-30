@@ -3,7 +3,7 @@
 	import Button from '../login/Button.svelte';
 	import { userInfo } from '../../store';
 	import { otpResend, otpVerify } from './otpApi';
-	let startTimer:any = undefined;
+	let startTimer: any = undefined;
 	let info = {
 		tel: ''
 	};
@@ -16,7 +16,7 @@
 		{ id: 5, value: '', backspacePressCount: 0 },
 		{ id: 6, value: '', backspacePressCount: 0 }
 	];
-
+	let loading = false;
 	onMount(() => {
 		// start resend time
 		startTimer = setInterval(() => {
@@ -29,10 +29,10 @@
 			clearInterval(startTimer);
 		}
 	}
-	userInfo.subscribe((updatedInfo):void => {
+	userInfo.subscribe((updatedInfo): void => {
 		info = updatedInfo;
 	});
-	function handleKeyup(e:any, id:string | number) {
+	function handleKeyup(e: any, id: string | number) {
 		// on backspace press previous input focus\
 
 		if (e.key === 'Backspace') {
@@ -45,7 +45,7 @@
 			return;
 		}
 	}
-	function handleInput(e:any, id:string | number) {
+	function handleInput(e: any, id: string | number) {
 		// checking the inut to be numbers only
 		let newValue = e.target.value.replace(new RegExp(/[^\d]/, 'ig'), '');
 		e.target.value = newValue;
@@ -56,8 +56,6 @@
 		if (e.target.value !== '') {
 			e.target?.nextElementSibling?.focus();
 		}
-		console.log(e.target.value);
-		
 	}
 	async function handlesubmit() {
 		// validation for blank input
@@ -65,11 +63,13 @@
 		if (blankInput) {
 			alert('Put a valid otp');
 		} else {
+			loading = true;
 			let finalOtp = '';
 			values.map((item) => {
 				finalOtp += item.value;
 			});
 			const otpRes = await otpVerify(finalOtp, info?.tel);
+			loading = false;
 			console.log(otpRes);
 		}
 	}
