@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import logo from '$lib/images/double_logo.svg';
-	import gplay from '$lib/images/google-play.png';
-	import app from '$lib/images/app-store.png';
+	import gplay from '$lib/images/google-play.svg';
+	import app from '$lib/images/app-store.svg';
 </script>
 
 <footer
