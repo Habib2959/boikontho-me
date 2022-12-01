@@ -8,7 +8,7 @@
 			<div class="order-last self-center text-center md:order-first md:text-left">
 				<div class="flex flex-col">
 					<h1 class="font-bold text-3xl mb-4 hack-font">
-						দেশের সর্ববৃহৎ অডিও বই ও ইবুকের সম্ভার নিয়ে আসছে বইকণ্ঠ
+						দেশের সর্ববৃহৎ অডিওবুক ও ই-বুকের সম্ভার নিয়ে আসছে বইকণ্ঠ
 					</h1>
 					<a
 						href="/register"

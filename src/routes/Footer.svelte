@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import logo from '$lib/images/double_logo.svg';
+	import logo from '$lib/images/logo.svg';
 	import gplay from '$lib/images/google-play.svg';
 	import app from '$lib/images/app-store.svg';
 </script>
@@ -15,15 +15,15 @@
 		<div class="hack-footer-bg">
 			<div class="hack-footer-top">
 				<div class="hack-left">
-					<img src={logo} alt="logo" width="50%" class="hack-footer-logo" />
+					<img src={logo} alt="logo" width="40%" class="hack-footer-logo" />
 					<ul>
-						<li>Silver Book Technologies Bangladesh Limited</li>
+						<li>দেশের সর্ববৃহৎ অডিওবুক ও ই-বুকের সম্ভার</li>
 						<li>
 							<i class="fa-solid fa-location-dot mr-3 text-btnColor" />101 Shukrabad, Dhaka - 1212,
 							Bangladesh
 						</li>
-						<li><i class="fa-solid fa-phone mr-3 text-btnColor" />+8809666745745</li>
-						<li><i class="fa-solid fa-envelope mr-3 text-btnColor" />support@pickaboo.com</li>
+						<li><i class="fa-solid fa-phone mr-3 text-btnColor" />+8801322666140</li>
+						<li><i class="fa-solid fa-envelope mr-3 text-btnColor" />support@boikontho.com</li>
 					</ul>
 				</div>
 				<div class="hack-about">
@@ -33,7 +33,7 @@
 						<li>
 							<a href="/publish">Publish on Boikontho</a>
 						</li>
-						<li><a href="/details/career">Careers</a></li>
+						<li><a href="/details/career">Career</a></li>
 						<li><a href="/csr">CSR</a></li>
 					</ul>
 				</div>
@@ -87,7 +87,7 @@
 		margin: 0px auto;
 	}
 	.hack-footer-bg {
-		padding-top: 7rem;
+		padding-top: 4rem;
 		padding-right: 3rem;
 		padding-left: 3rem;
 		background-image: url(../lib/images/footerbg.svg);
@@ -98,11 +98,11 @@
 		position: relative;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: baseline;
 		padding: 0px 40px;
 	}
 	.hack-footer-logo {
-		margin-bottom: 40px;
+		margin-bottom: 10px;
 	}
 
 	ul {
@@ -121,6 +121,9 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	}
+	.hack-left ul li:nth-child(1) {
+		margin-bottom: 20px;
 	}
 	.hack-footer-bottom p {
 		line-height: 20px;
@@ -177,16 +180,22 @@
 	@media (max-width: 992px) {
 		.hack-container {
 			width: 100%;
-			padding: 30px 0;
+			padding: 30px 0px 0px 0px;
 		}
 		.hack-footer-bg {
-			background-image: none;
-			padding-top: 1rem;
+			background-image: url(../lib/images/footerbg.svg);
+			padding-top: 3rem;
 			padding-right: 1rem;
 			padding-left: 1rem;
 		}
-		.hack-footer {
+		/* .hack-footer {
 			background-color: #f5f5f5;
+		} */
+		.hack-footer-top {
+			align-items: baseline;
+		}
+		.hack-left ul li:nth-child(1) {
+			margin-bottom: 20px;
 		}
 		.hack-icon {
 			font-size: 22px;
@@ -195,7 +204,7 @@
 			width: 150px;
 		}
 		.hack-footer-logo {
-			margin-bottom: 30px;
+			margin-bottom: 10px;
 		}
 		.hack-footer-bg {
 			padding-right: 0;
@@ -218,6 +227,13 @@
 		}
 	}
 	@media (max-width: 600px) {
+		.hack-footer-bg {
+			background-image: none;
+			padding-top: 0;
+		}
+		.hack-footer {
+			background-color: #f5f5f5;
+		}
 		.hack-icon {
 			font-size: 16px;
 			column-gap: 5px;

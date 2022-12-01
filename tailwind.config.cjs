@@ -17,6 +17,7 @@ module.exports = {
       'black': '#000',
       'countdown': '#ccc',
       'countdownBg': '#222',
+      'footerBg': '#F5F5F5'
     },
     extend: {}
   },
