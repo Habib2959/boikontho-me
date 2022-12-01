@@ -27,7 +27,7 @@
 					</ul>
 				</div>
 				<div class="hack-about">
-					<h3>About</h3>
+					<h3>Quick Links</h3>
 					<ul>
 						<li><a href="/about-us"> About Us</a></li>
 						<li>
@@ -40,13 +40,17 @@
 				<div>
 					<h3>Download</h3>
 					<img src={gplay} alt="logo" class="hack-download-img" />
-					<img src={app} alt="logo" class="hack-download-img" />
+					<img src={app} alt="logo" class="hack-download-img mt-2" />
 				</div>
 			</div>
 			<div class="hack-divider" />
 			<div class="hack-footer-bottom">
 				<div>
-					<p>© 2022 Boikontho.com | Terms of Use | Privacy Policy | FAQ</p>
+					<p>
+						© 2022 Boikontho.com | <a href="/details/terms-of-use">Terms of Use</a> |
+						<a href="/details/privacy-policy">Privacy Policy</a>
+						| <a href="/details/faq">FAQ</a>
+					</p>
 				</div>
 				<div>
 					<div class="hack-footer-icon-wrapper">
@@ -135,7 +139,7 @@
 		color: #8a3ab9;
 	}
 	.hack-download-img {
-		max-width: 200px;
+		width: 150px;
 	}
 	.fa-youtube {
 		transition: 0.3s;
@@ -184,7 +188,7 @@
 			font-size: 22px;
 		}
 		.hack-download-img {
-			max-width: 150px;
+			width: 150px;
 		}
 		.hack-footer-logo {
 			margin-bottom: 30px;
