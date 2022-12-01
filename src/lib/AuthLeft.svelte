@@ -1,26 +1,26 @@
 <script lang="ts">
-	import logo from '$lib/images/typography_logo.svg';
-	import ill1 from '$lib/images/Illustration 1.svg';
+	import logo from '$lib/images/logo.svg';
+	import ill4 from '$lib/images/Illustration 4.svg';
 </script>
 
 <section class="hack-bg">
 	<div class="hack-logo-div">
-		<img src={logo} alt="man" class="mx-auto max-w-[65%]" />
-		<!-- <h2>উঠতি উদ্যোক্তাদের প্ল্যাটফর্ম</h2> -->
+		<img src={logo} alt="man" class="mx-auto max-w-[45%]" />
+		<h2>দেশের সর্ববৃহৎ অডিওবুক ও ই-বুকের সম্ভার</h2>
 	</div>
 	<div class="hack-rocket-div">
-		<img src={ill1} alt="man" class="mx-auto max-w-[90%]" />
+		<img src={ill4} alt="man" class="mx-auto max-w-[75%]" />
 	</div>
 </section>
 
 <style>
-	/* @font-face {
+	@font-face {
 		font-family: 'Li Alinur Bihongo Unicode';
-		src: url('../../../assets/fonts/Unicode/Li Alinur Bihongo Unicode.ttf');
-	} */
+		src: url('../assets/fonts/Unicode/Li Alinur Bihongo Unicode.ttf');
+	}
 	.hack-bg {
-		background-image: linear-gradient(270deg, #b989d3 -4.7%, #f9f0c9 65.56%);
-		background: linear-gradient(270deg, #b989d3 -4.7%, #f9f0c9 65.56%);
+		background-image: linear-gradient(270deg, #b8c6db -4.7%, #f5f7fa 65.56%);
+		background: linear-gradient(270deg, #b8c6db -4.7%, #f5f7fa 65.56%);
 		border-radius: 0px 70px 70px 0px;
 		height: 100%;
 		display: flex;
@@ -30,11 +30,12 @@
 	.hack-logo-div {
 		text-align: center;
 	}
-	/* .hack-logo-div h2 {
+	.hack-logo-div h2 {
 		font-family: 'Li Alinur Bihongo Unicode';
 		font-size: 36px;
 		font-weight: 400;
-	} */
+		margin-top: 20px;
+	}
 	.hack-rocket-div {
 		text-align: right;
 		padding-right: 50px;

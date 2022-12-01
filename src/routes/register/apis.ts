@@ -1,7 +1,7 @@
-export const register = async (username:string, password:string) => {
+export const register = async (username: string, password: string) => {
     const res = await fetch("https://banana.hackules.com/kheyal/tele/register/", {
         method: "POST",
-        headers: {"Content-Type": "application/json; charset=UTF-8"},
+        headers: { "Content-Type": "application/json; charset=UTF-8" },
         body: JSON.stringify({
             username,
             password
@@ -13,6 +13,6 @@ export const register = async (username:string, password:string) => {
         return data;
     } else {
         localStorage.clear();
-        return "There is an error"
+        return data;
     }
 }

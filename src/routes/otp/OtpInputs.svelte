@@ -147,7 +147,7 @@
 	}
 	.hack-form input:focus-visible {
 		outline: none;
-		border: 2px solid #9e72fd;
+		border: 2px solid #f43131;
 		box-shadow: 1px 1px 5px #eaeaea;
 	}
 	.hack-btn-div {
@@ -173,9 +173,9 @@
 		cursor: not-allowed;
 	}
 	.hack-btn-enable {
-		background: #f28c28;
+		background: #999999;
 		color: #fff;
-		border: 2px solid #f28c28;
+		border: 2px solid #999999;
 	}
 	@media (max-width: 1200px) {
 		.hack-otp-box {

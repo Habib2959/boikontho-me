@@ -30,23 +30,27 @@
 			try {
 				let data = await register(values.tel, values.password);
 				userInfo.set(values);
-				console.log(values);
+				console.log(data);
 				loading = false;
+				if (data.detail) {
+					throw new Error(data.details);
+				}
 				goto('/otp');
 			} catch (error) {
+				console.log(error);
 				loading = false;
 			}
 		}
 	}
-	function handleNewsletter() {
-		if (yes) {
-			yes = false;
-			values.newsletter = yes;
-		} else {
-			yes = true;
-			values.newsletter = yes;
-		}
-	}
+	// function handleNewsletter() {
+	// 	if (yes) {
+	// 		yes = false;
+	// 		values.newsletter = yes;
+	// 	} else {
+	// 		yes = true;
+	// 		values.newsletter = yes;
+	// 	}
+	// }
 </script>
 
 <div class="hack-content-box">
@@ -58,7 +62,7 @@
 		<InputBox type="email" placeholder="Email Address" bind:value={values.email} />
 		<InputBox type="password" placeholder="Password" bind:value={values.password} />
 		<InputBox type="password" placeholder="Confirm Password" bind:value={values.confirmPassword} />
-		<div>
+		<!-- <div>
 			<p>
 				By continuing , you agree to Boikontho’s <a href="/" class="hack-text-red"
 					>Conditions of Use</a
@@ -73,10 +77,10 @@
 					on:click={handleNewsletter}
 					class="accent-slate-500"
 				/>
-				Signup to the newsletters
-				<!-- <span class="hack-checkmark" /> -->
-			</label>
-		</div>
+				Signup to the newsletters -->
+		<!-- eita baad <span class="hack-checkmark" /> -->
+		<!-- </label>
+		</div> -->
 
 		<Button mode="Sign up" {loading} />
 	</form>
@@ -100,22 +104,22 @@
 		margin-bottom: 50px;
 		margin-top: 30px;
 	}
-	.hack-newsletter-check {
+	/* .hack-newsletter-check {
 		margin: 20px 0px 10px 0px;
 		display: block;
-	}
+	} */
 	.hack-content-box {
 		width: 500px;
 		margin: 0 auto;
 	}
-	.hack-text-red {
+	/* .hack-text-red {
 		color: red;
-	}
+	} */
 
-	label {
+	/* label {
 		position: relative;
 		cursor: pointer;
-	}
+	} */
 	.hack-sign-in-text {
 		font-weight: 600;
 		text-decoration: underline;

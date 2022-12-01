@@ -3,12 +3,17 @@
 	export let loading: boolean;
 </script>
 
-<button type="submit" class:button--loading={loading === true} disabled={loading}>{mode}</button>
+<button
+	type="submit"
+	class:button--loading={loading === true}
+	disabled={loading}
+	class="bg-btnColor">{mode}</button
+>
 
 <style>
 	button {
 		margin-top: 20px;
-		background: #9e72fd;
+		/* background: #9e72fd; */
 		color: #fff;
 		border-radius: 8px;
 		outline: none;
@@ -22,7 +27,7 @@
 		position: relative;
 	}
 	.button--loading {
-		background: #9e72fda8;
+		background: #f431319a;
 	}
 	.button--loading::after {
 		content: '';
