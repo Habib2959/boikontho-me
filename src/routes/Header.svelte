@@ -13,14 +13,18 @@
 		$page?.routeId?.includes('otp')}
 >
 	<div class="flex justify-between items-center px-3 md:max-w-[92%] md:mx-auto">
-		<a href="/">
-			<img class="w-[150px] sm:w-[170px]" src={logo} alt="logo" />
-		</a>
-		<a
-			href="/register"
-			class="bg-btnColor transition-colors duration-300 hover:bg-btnHoverColor text-white p-3 rounded"
-			><i class="fa-solid fa-gift mr-2" />প্রি-রেজিস্ট্রেশন</a
-		>
+		<div>
+			<a href="/">
+				<img class="w-[150px] sm:w-[100px]" src={logo} alt="logo" />
+			</a>
+		</div>
+		<div>
+			<a
+				href="/register"
+				class="bg-btnColor transition-colors duration-300 hover:bg-btnHoverColor text-white p-3 rounded"
+				><i class="fa-solid fa-gift mr-2" />প্রি-রেজিস্ট্রেশন</a
+			>
+		</div>
 	</div>
 </header>
 
@@ -39,9 +43,9 @@
 		box-shadow: 0 0 9px 1px rgba(79, 75, 147, 0.15);
 		z-index: 1000000;
 	}
-	@media (max-width: 600px) {
+	/* @media (max-width: 600px) {
 		.scrolled img {
 			width: 160px;
 		}
-	}
+	} */
 </style>

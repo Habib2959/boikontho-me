@@ -1,5 +1,5 @@
 <script>
-	import { emplpoyeeRole } from '../../../store';
+	import { emplpoyeeRole } from '../../store';
 	export let type, value, placeholder, Roles;
 	let showDropdown = false;
 	function typeAction(node) {

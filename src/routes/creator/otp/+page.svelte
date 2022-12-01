@@ -3,6 +3,10 @@
 	import AuthLeft from '$lib/AuthLeft.svelte';
 </script>
 
+<svelte:head>
+  <title>Verify Account | Boikontho.com</title>
+</svelte:head>
+
 <div class="hack-container">
 	<div class="hack-row">
 		<div class="hack-col-1">

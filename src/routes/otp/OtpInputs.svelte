@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import Button from '../login/Button.svelte';
+	import Button from '$lib/Button.svelte';
 	import { userInfo } from '../../store';
 	import { otpResend, otpVerify } from './otpApi';
+	import { goto } from '$app/navigation';
 	let startTimer: any = undefined;
 	let info = {
 		tel: ''
@@ -71,6 +72,7 @@
 			const otpRes = await otpVerify(finalOtp, info?.tel);
 			loading = false;
 			console.log(otpRes);
+			goto('/');
 		}
 	}
 	function handleResendOtp() {
@@ -93,7 +95,7 @@
 			/>
 		{/each}
 		<div class="hack-btn-div">
-			<Button mode="Verify" />
+			<Button mode="Verify" {loading} />
 		</div>
 	</form>
 	<button

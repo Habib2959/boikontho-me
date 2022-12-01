@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import Button from '../login/Button.svelte';
+	import Button from '$lib/Button.svelte';
 	import { userInfo } from '../../../store';
 	import { otpResend, otpVerify } from './otpApi';
+	import { goto } from '$app/navigation';
 	let startTimer: any = undefined;
 	let info = {
 		tel: ''
@@ -16,7 +17,7 @@
 		{ id: 5, value: '', backspacePressCount: 0 },
 		{ id: 6, value: '', backspacePressCount: 0 }
 	];
-
+	let loading = false;
 	onMount(() => {
 		// start resend time
 		startTimer = setInterval(() => {
@@ -56,7 +57,6 @@
 		if (e.target.value !== '') {
 			e.target?.nextElementSibling?.focus();
 		}
-		console.log(e.target.value);
 	}
 	async function handlesubmit() {
 		// validation for blank input
@@ -64,12 +64,15 @@
 		if (blankInput) {
 			alert('Put a valid otp');
 		} else {
+			loading = true;
 			let finalOtp = '';
 			values.map((item) => {
 				finalOtp += item.value;
 			});
 			const otpRes = await otpVerify(finalOtp, info?.tel);
+			loading = false;
 			console.log(otpRes);
+			goto('/');
 		}
 	}
 	function handleResendOtp() {
@@ -92,7 +95,7 @@
 			/>
 		{/each}
 		<div class="hack-btn-div">
-			<Button mode="Verify" />
+			<Button mode="Verify" {loading} />
 		</div>
 	</form>
 	<button

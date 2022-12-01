@@ -5,11 +5,15 @@
 	import './styles.css';
 	import { userAuthenticated } from '../store';
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 
 	onMount(() => {
 		const auth = localStorage.getItem('token');
 		if (auth) {
 			userAuthenticated.set(true);
+			if ($page?.routeId?.includes('login')) {
+				goto('/');
+			}
 		} else {
 			userAuthenticated.set(false);
 		}

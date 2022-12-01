@@ -1,6 +1,6 @@
 <script>
 	import InputBox from './InputBox.svelte';
-	import Button from './Button.svelte';
+	import Button from '$lib/Button.svelte';
 	import { emplpoyeeRole, userAuthenticated } from '../../store';
 	import { userInfo } from '../../store';
 	import { goto } from '$app/navigation';

@@ -1,8 +1,8 @@
 <script>
 	import InputBox from './InputBox.svelte';
-	import Button from './Button.svelte';
-	import Dropdown from './Dropdown.svelte';
-	import { emplpoyeeRole } from '../../../store';
+	import Button from '$lib/Button.svelte';
+	// import Dropdown from './Dropdown.svelte';
+	import { emplpoyeeRole, userAuthenticated } from '../../../store';
 	import { userInfo } from '../../../store';
 	import { goto } from '$app/navigation';
 	import TelInput from './TelInput.svelte';
@@ -20,19 +20,22 @@
 	emplpoyeeRole.subscribe((updatedRole) => {
 		values.role = updatedRole;
 	});
-	let Roles = ['Graphics Designer', 'Web developer', 'Content Writer', 'SEO'];
+	// let Roles = ['Graphics Designer', 'Web developer', 'Content Writer', 'SEO'];
+	let loading = false;
 	async function submitSignupHandler() {
-		if (values.role === '') {
-			alert('Set a role');
-		} else if (values.password !== values.confirmPassword) {
+		if (values.password !== values.confirmPassword) {
 			alert("password didn't matched");
 		} else {
+			loading = true;
 			try {
 				let data = await register(values.tel, values.password);
 				userInfo.set(values);
 				console.log(values);
+				loading = false;
 				goto('/otp');
-			} catch (error) {}
+			} catch (error) {
+				loading = false;
+			}
 		}
 	}
 	function handleNewsletter() {
@@ -51,13 +54,15 @@
 	<form on:submit|preventDefault={submitSignupHandler}>
 		<InputBox type="text" placeholder="Full Name" bind:value={values.userName} />
 		<TelInput type="text" placeholder="Mobile Number" bind:value={values.tel} />
-		<Dropdown type="text" placeholder="Choose a role" bind:value={values.role} {Roles} />
+		<!-- <Dropdown type="text" placeholder="Choose a role" bind:value={values.role} {Roles} /> -->
 		<InputBox type="email" placeholder="Email Address" bind:value={values.email} />
 		<InputBox type="password" placeholder="Password" bind:value={values.password} />
 		<InputBox type="password" placeholder="Confirm Password" bind:value={values.confirmPassword} />
 		<div>
 			<p>
-				By continuing , you agree to Boikontho’s <a href="/" class="hack-text-red">Conditions of Use</a>
+				By continuing , you agree to Boikontho’s <a href="/" class="hack-text-red"
+					>Conditions of Use</a
+				>
 				and
 				<a href="/" class="hack-text-red">Privacy Policy</a>
 			</p>
@@ -73,13 +78,15 @@
 			</label>
 		</div>
 
-		<Button mode="Sign up" />
+		<Button mode="Sign up" {loading} />
 	</form>
-	<p class="hack-text-center hack-switch-signup">
-		Have an account?
+	{#if !$userAuthenticated}
+		<p class="hack-text-center hack-switch-signup">
+			Have an account?
 
-		<a href="/login" class="hack-sign-in-text">Sign in</a>
-	</p>
+			<a href="/login" class="hack-sign-in-text">Sign in</a>
+		</p>
+	{/if}
 </div>
 
 <style>

@@ -1,6 +1,6 @@
 <script>
 	import InputBox from './InputBox.svelte';
-	import Button from './Button.svelte';
+	import Button from '$lib/Button.svelte';
 	import { emplpoyeeRole, userAuthenticated } from '../../../store';
 	import { userInfo } from '../../../store';
 	import { goto } from '$app/navigation';
@@ -19,10 +19,12 @@
 	emplpoyeeRole.subscribe((updatedRole) => {
 		values.role = updatedRole;
 	});
-	let Roles = ['Graphics Designer', 'Web developer', 'Content Writer', 'SEO'];
+	let loading = false;
 	async function submitSigninHandler() {
+		loading = true;
 		await login(values.tel, values.password);
 		userInfo.set(values);
+		loading = false;
 		const auth = localStorage.getItem('token');
 		if (auth) {
 			userAuthenticated.set(true);
@@ -40,7 +42,7 @@
 		<TelInput type="text" placeholder="Mobile Number" bind:value={values.tel} />
 		<InputBox type="password" placeholder="Password" bind:value={values.password} />
 
-		<Button mode="Sign in" />
+		<Button mode="Sign in" {loading} />
 	</form>
 	<p class="hack-text-center hack-switch-signup">
 		Don't have an account

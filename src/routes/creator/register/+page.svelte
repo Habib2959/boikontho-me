@@ -3,6 +3,10 @@
 	import AuthLeft from '$lib/AuthLeft.svelte';
 </script>
 
+<svelte:head>
+  <title>Register to Boikontho | Boikontho.com</title>
+</svelte:head>
+
 <div class="chack-ontainer">
 	<div class="hack-row">
 		<div class="hack-col-1">

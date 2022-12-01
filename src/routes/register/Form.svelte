@@ -1,8 +1,8 @@
 <script>
 	import InputBox from './InputBox.svelte';
-	import Button from './Button.svelte';
+	import Button from '$lib/Button.svelte';
 	// import Dropdown from './Dropdown.svelte';
-	import { emplpoyeeRole } from '../../store';
+	import { emplpoyeeRole, userAuthenticated } from '../../store';
 	import { userInfo } from '../../store';
 	import { goto } from '$app/navigation';
 	import TelInput from './TelInput.svelte';
@@ -51,7 +51,7 @@
 
 <div class="hack-content-box">
 	<h1 class="hack-title text-3xl text-semibold">Welcome to boikontho.com</h1>
-	<form on:submit|preventDefault={submitSignupHandler}>
+	<form on:submit|preventDefault={submitSignupHandler} autocomplete="off">
 		<InputBox type="text" placeholder="Full Name" bind:value={values.userName} />
 		<TelInput type="text" placeholder="Mobile Number" bind:value={values.tel} />
 		<!-- <Dropdown type="text" placeholder="Choose a role" bind:value={values.role} {Roles} /> -->
@@ -80,11 +80,13 @@
 
 		<Button mode="Sign up" {loading} />
 	</form>
-	<p class="hack-text-center hack-switch-signup">
-		Have an account?
+	{#if !$userAuthenticated}
+		<p class="hack-text-center hack-switch-signup">
+			Have an account?
 
-		<a href="/login" class="hack-sign-in-text">Sign in</a>
-	</p>
+			<a href="/login" class="hack-sign-in-text">Sign in</a>
+		</p>
+	{/if}
 </div>
 
 <style>

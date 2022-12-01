@@ -3,7 +3,7 @@
 	export let loading: boolean;
 </script>
 
-<button type="submit" class:button--loading={loading === true}>{mode}</button>
+<button type="submit" class:button--loading={loading === true} disabled={loading}>{mode}</button>
 
 <style>
 	button {

@@ -19,8 +19,10 @@
 	<input use:typeAction {placeholder} bind:value class="hack-input" required />
 	{#if type === 'password'}
 		{#if showPass}
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<i class="fa-sharp fa-solid fa-eye" on:click={(e) => handleShowPass(e)} />
 		{:else}
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<i class="fa-solid fa-eye-slash" on:click={(e) => handleShowPass(e)} />
 		{/if}
 	{/if}
@@ -57,12 +59,18 @@
 	.hack-input::placeholder {
 		margin-left: 20px;
 	}
+	@media (max-width: 1200px) {
+		.fa-sharp,
+		.fa-solid {
+			margin-top: 7%;
+		}
+	}
 	/* media query */
 	@media (max-width: 600px) {
 		.fa-sharp,
 		.fa-solid {
 			margin-left: -30px;
-			margin-top: 7%;
+			margin-top: 9%;
 			cursor: pointer;
 			color: #6f6f6f;
 		}

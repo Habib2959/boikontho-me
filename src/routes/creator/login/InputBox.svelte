@@ -60,12 +60,18 @@
 	.hack-input::placeholder {
 		margin-left: 20px;
 	}
+	@media (max-width: 1200px) {
+		.fa-sharp,
+		.fa-solid {
+			margin-top: 7%;
+		}
+	}
 	/* media query */
 	@media (max-width: 600px) {
 		.fa-sharp,
 		.fa-solid {
 			margin-left: -30px;
-			margin-top: 7%;
+			margin-top: 9%;
 			cursor: pointer;
 			color: #6f6f6f;
 		}
