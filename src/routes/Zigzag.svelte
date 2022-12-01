@@ -34,7 +34,7 @@
 {#each data as info}
 	<div class="grid grid-cols-1 content-center py-4 px-3 md:grid-cols-2">
 		<div class:md:order-last={info.id % 2 === 0}>
-			<img src={info.src} alt="demo" class="my-4 mx-auto w-2/3 md:w-full md:px-10" />
+			<img src={info.src} alt="demo" class="my-4 mx-auto w-[90%] md:w-full md:px-10" />
 		</div>
 		<div class="self-center text-center md:px-10 md:text-justify">
 			<h2 class="text-3xl my-3 font-bold hack-font">{info.title}</h2>

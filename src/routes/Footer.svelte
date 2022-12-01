@@ -58,7 +58,7 @@
 				</div>
 				<div>
 					<div class="hack-footer-icon-wrapper">
-						<div class="hack-title">Follow us</div>
+						<div class="hack-title mr-2">Follow us :</div>
 						<div class="hack-icon">
 							<a href="https://www.linkedin.com/company/boikontho"
 								><i class="fa-brands fa-linkedin" /></a
@@ -166,6 +166,13 @@
 		position: absolute;
 		top: 0px;
 	} */
+	.hack-footer-icon-wrapper {
+		display: flex;
+		align-items: center;
+	}
+	.hack-title {
+		font-weight: 700;
+	}
 	@media (max-width: 1200px) {
 		.hack-container {
 			max-width: 1000px;
@@ -213,7 +220,6 @@
 	}
 	@media (max-width: 768px) {
 		.hack-title {
-			font-weight: 700;
 			margin-top: 10px;
 		}
 		.hack-footer-top {
@@ -224,6 +230,16 @@
 		}
 		.hack-download-img {
 			max-width: 120px;
+		}
+		.hack-footer-icon-wrapper {
+			align-items: baseline;
+		}
+		.hack-footer-bottom {
+			align-items: baseline;
+		}
+		.hack-footer-bottom {
+			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 	@media (max-width: 600px) {
@@ -254,7 +270,7 @@
 			flex: 0 0 100%;
 		}
 		.hack-about {
-			flex: 0 0 100%;
+			flex: 0 0 auto;
 		}
 		.hack-footer-bottom {
 			flex-direction: column;
