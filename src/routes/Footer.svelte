@@ -29,18 +29,22 @@
 				<div class="hack-about">
 					<h3>Quick Links</h3>
 					<ul>
-						<li><a href="/about-us"> About Us</a></li>
+						<li><a href="/details/about-us"> About Us</a></li>
 						<li>
 							<a href="/publish">Publish on Boikontho</a>
 						</li>
-						<li><a href="/careers">Careers</a></li>
+						<li><a href="/details/career">Careers</a></li>
 						<li><a href="/csr">CSR</a></li>
 					</ul>
 				</div>
 				<div>
 					<h3>Download</h3>
-					<img src={gplay} alt="logo" class="hack-download-img" />
-					<img src={app} alt="logo" class="hack-download-img mt-2" />
+					<a href="/">
+						<img src={gplay} alt="logo" class="hack-download-img" />
+					</a>
+					<a href="/">
+						<img src={app} alt="logo" class="hack-download-img mt-2" />
+					</a>
 				</div>
 			</div>
 			<div class="hack-divider" />
