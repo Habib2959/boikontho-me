@@ -3,14 +3,16 @@
 	import Footer from './Footer.svelte';
 	import Header from './Header.svelte';
 	import './styles.css';
-	import { userAuthenticated } from '../store';
+	import { userAuthenticated, username } from '../store';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 
 	onMount(() => {
 		const auth = localStorage.getItem('token');
+		const userName = localStorage.getItem('user');
 		if (auth) {
 			userAuthenticated.set(true);
+			username.set(JSON.parse(userName));
 			if ($page?.routeId?.includes('login')) {
 				goto('/');
 			}

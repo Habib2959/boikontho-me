@@ -6,7 +6,7 @@
 	import { userInfo } from '../../../store';
 	import { goto } from '$app/navigation';
 	import TelInput from './TelInput.svelte';
-	import { register } from './apis';
+	import { register } from '$lib/apis/publisher/register';
 	let yes = true;
 	export let values = {
 		userName: '',
@@ -30,23 +30,26 @@
 			try {
 				let data = await register(values.tel, values.password);
 				userInfo.set(values);
-				console.log(values);
 				loading = false;
+				if (data.detail) {
+					alert(data.detail);
+					throw new Error(data.detail);
+				}
 				goto('/otp');
 			} catch (error) {
 				loading = false;
 			}
 		}
 	}
-	function handleNewsletter() {
-		if (yes) {
-			yes = false;
-			values.newsletter = yes;
-		} else {
-			yes = true;
-			values.newsletter = yes;
-		}
-	}
+	// function handleNewsletter() {
+	// 	if (yes) {
+	// 		yes = false;
+	// 		values.newsletter = yes;
+	// 	} else {
+	// 		yes = true;
+	// 		values.newsletter = yes;
+	// 	}
+	// }
 </script>
 
 <div class="hack-content-box">

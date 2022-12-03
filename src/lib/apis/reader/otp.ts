@@ -1,5 +1,7 @@
+import { baseUrl } from "../baseUrl";
+
 export const otpVerify = async (otp:string, mobile:string) => {
-    const res = await fetch("https://banana.hackules.com/kheyal/tele/otp_verify/", {
+    const res = await fetch(`${baseUrl}/otp_verify/`, {
         method: "POST",
         headers: { "Content-Type": "application/json; charset=UTF-8" },
         body: JSON.stringify({
@@ -13,13 +15,13 @@ export const otpVerify = async (otp:string, mobile:string) => {
         return data
     } else {
         localStorage.clear();
-        return "Put a valid otp"
+        return data
     }
 
 }
 
 export const otpResend = async (mobile:string) => {
-    const res = await fetch("https://banana.hackules.com/kheyal/tele/otp_resend/", {
+    const res = await fetch(`${baseUrl}/otp_resend/`, {
         method: "POST",
         headers: { "Content-Type": "application/json; charset=UTF-8" },
         body: JSON.stringify({
@@ -32,7 +34,7 @@ export const otpResend = async (mobile:string) => {
         return data
     } else {
         localStorage.clear();
-        return "Failed to resend otp"
+        return data
     }
 
 }

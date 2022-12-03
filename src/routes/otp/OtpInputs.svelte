@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import Button from '$lib/Button.svelte';
 	import { userInfo } from '../../store';
-	import { otpResend, otpVerify } from './otpApi';
+	import { otpResend, otpVerify } from '$lib/apis/reader/otp';
 	import { goto } from '$app/navigation';
 	let startTimer: any = undefined;
 	let info = {
@@ -69,14 +69,30 @@
 			values.map((item) => {
 				finalOtp += item.value;
 			});
-			const otpRes = await otpVerify(finalOtp, info?.tel);
-			loading = false;
-			console.log(otpRes);
-			goto('/');
+			try {
+				const otpRes = await otpVerify(finalOtp, info?.tel);
+				loading = false;
+				if (otpRes.detail) {
+					alert(otpRes.detail);
+					throw new Error(otpRes.detail);
+				}
+				goto('/');
+			} catch (err) {
+				loading = false;
+			}
 		}
 	}
-	function handleResendOtp() {
-		otpResend(info.tel);
+	async function handleResendOtp() {
+		try {
+			const data = await otpResend(info.tel);
+			loading = false;
+			if (data.detail) {
+				alert(data.detail);
+				throw new Error(data.detail);
+			}
+		} catch (err) {
+			loading = false;
+		}
 	}
 </script>
 

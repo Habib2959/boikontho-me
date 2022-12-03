@@ -1,5 +1,7 @@
+import { baseUrl } from "../baseUrl";
+
 export const register = async (username: string, password: string) => {
-    const res = await fetch("https://banana.hackules.com/kheyal/tele/register/", {
+    const res = await fetch(`${baseUrl}/pub_register/`, {
         method: "POST",
         headers: { "Content-Type": "application/json; charset=UTF-8" },
         body: JSON.stringify({

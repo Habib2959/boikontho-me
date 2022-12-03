@@ -1,0 +1,1 @@
+export const baseUrl = 'https://banana.hackules.com/boikontho';

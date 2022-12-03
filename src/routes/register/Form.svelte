@@ -6,7 +6,7 @@
 	import { userInfo } from '../../store';
 	import { goto } from '$app/navigation';
 	import TelInput from './TelInput.svelte';
-	import { register } from './apis';
+	import { register } from '$lib/apis/reader/register';
 	let yes = true;
 	export let values = {
 		userName: '',
@@ -30,14 +30,13 @@
 			try {
 				let data = await register(values.tel, values.password);
 				userInfo.set(values);
-				console.log(data);
 				loading = false;
 				if (data.detail) {
-					throw new Error(data.details);
+					alert(data.detail);
+					throw new Error(data.detail);
 				}
 				goto('/otp');
 			} catch (error) {
-				console.log(error);
 				loading = false;
 			}
 		}

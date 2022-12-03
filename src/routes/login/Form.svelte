@@ -1,36 +1,40 @@
 <script>
 	import InputBox from './InputBox.svelte';
 	import Button from '$lib/Button.svelte';
-	import { emplpoyeeRole, userAuthenticated } from '../../store';
+	import { userAuthenticated, username } from '../../store';
 	import { userInfo } from '../../store';
 	import { goto } from '$app/navigation';
 	import TelInput from './TelInput.svelte';
-	import { login } from './apis';
-	let yes = true;
+	import { login } from '$lib/apis/reader/login';
 	export let values = {
-		userName: '',
 		password: '',
-		tel: '',
-		confirmPassword: '',
-		email: '',
-		role: '',
-		newsletter: yes
+		tel: ''
 	};
-	emplpoyeeRole.subscribe((updatedRole) => {
-		values.role = updatedRole;
-	});
+
 	let loading = false;
 	async function submitSigninHandler() {
 		loading = true;
-		await login(values.tel, values.password);
+		try {
+			const loginRes = await login(values.tel, values.password);
+			loading = false;
+			if (loginRes.detail) {
+				alert(loginRes.detail);
+				throw new Error(loginRes.detail);
+			}
+		} catch (err) {
+			loading = false;
+		}
+
 		userInfo.set(values);
 		loading = false;
 		const auth = localStorage.getItem('token');
 		if (auth) {
+			const user = localStorage.getItem('user');
 			userAuthenticated.set(true);
+			// @ts-ignore
+			username.set(JSON.parse(user));
 			goto('/');
 		} else {
-			alert('user is not authinticated');
 			userAuthenticated.set(false);
 		}
 	}

@@ -1,13 +1,13 @@
 <script lang="ts">
 	import logo from '$lib/images/logo.svg';
 	import { page } from '$app/stores';
-	import { userAuthenticated } from '../store';
+	import { userAuthenticated, username } from '../store';
 	import avatar from '$lib/images/avatar.svg';
 	let y: number;
 	import { goto } from '$app/navigation';
 	import down from '$lib/images/down.svg';
 
-	let name = 'habib';
+	// let name = 'habib';
 	function logout() {
 		localStorage.clear();
 		userAuthenticated.set(false);
@@ -43,19 +43,19 @@
 					<div class="hack-dropdown-container">
 						<div class="hack-dropdown-menu flex cursor-pointer items-center">
 							<img src={avatar} alt="pp" width="30" />
-							<div class="ml-1 text-[.9rem]">{name}</div>
+							<div class="ml-1 text-[.9rem]">{$username}</div>
 							<img src={down} alt="arrow" width="10" class="hack-down ml-1 rounded-full" />
 						</div>
 						<div
 							class="hack-dropdown absolute right-[0px] top-[100%] bg-[#f5f5f5] p-3 rounded-md w-max"
 						>
 							<ul>
-								<li class="flex mb-2 cursor-pointer">
+								<!-- <li class="flex mb-2 cursor-pointer">
 									<a href="/dashboard"><i class="fa-solid fa-gauge inline mr-2" />Dashboard</a>
 								</li>
 								<li class="flex mb-2 cursor-pointer">
 									<a href="/"><i class="fa-solid fa-globe inline mr-2" />Goto Website</a>
-								</li>
+								</li> -->
 								<!-- svelte-ignore a11y-click-events-have-key-events -->
 								<li class="flex cursor-pointer" on:click={logout}>
 									<p><i class="fa-solid fa-right-from-bracket inline mr-2" />Logout</p>

@@ -1,5 +1,7 @@
+import { baseUrl } from "../baseUrl";
+
 export const login = async (username:string, password:string) => {
-    const res = await fetch("https://banana.hackules.com/kheyal/tele/login/", {
+    const res = await fetch(`${baseUrl}/login/`, {
         method: "POST",
         headers: {"Content-Type": "application/json; charset=UTF-8"},
         body: JSON.stringify({
@@ -11,10 +13,10 @@ export const login = async (username:string, password:string) => {
 
     if (res.ok) {
         localStorage.setItem("token", JSON.stringify(data.token));
+        localStorage.setItem("user", JSON.stringify(data.user.username));
+        return data;
     } else {
         localStorage.clear();
-        return "There is an error"
+        return data
     }
 }
-
-
