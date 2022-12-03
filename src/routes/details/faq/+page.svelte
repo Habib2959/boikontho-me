@@ -1,15 +1,25 @@
 <script>
 	import Item from './Item.svelte';
-	const data = {
-		foo: [1, 2, 3],
-		bar: [4, 5, 6, 7, 8, 9, 10, 11],
-		baz: [12, 24, 42]
-	};
+	const data = [
+		{
+			question: 'foo',
+			ans: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.'
+		},
+		{
+			question: 'bar',
+			ans: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.'
+		},
+		{
+			question: 'my question',
+			ans: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.'
+		}
+	];
 </script>
 
-<section class="md:mx-2 lg:mx-4 xl:mx-0 2xl:min-h-[55vh] 2xl:flex 2xl:items-center">
-	<div class="container mx-auto">
-		{#each Object.entries(data) as entry}
+<section class="mt-3 md:mt-6 md:mx-2 lg:mx-4 xl:mx-0 2xl:min-h-[58vh] 2xl:flex 2xl:items-center">
+	<div class="container mx-auto w-[90%] md:w-full">
+		<h1 class="text-2xl font-bold text-center mb-5 lg:text-5xl lg:pb-5">Boikontho faq</h1>
+		{#each data as entry}
 			<Item {entry} />
 		{/each}
 	</div>

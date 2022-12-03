@@ -56,30 +56,30 @@
 				<h2 class="text-xl text-center lg:text-3xl">Drop Your Resume Here</h2>
 				<p class="text-center mb-3">We’ll reach you soon...</p>
 				<div
-					class="px-3 py-2 bg-white border shadow-sm border-slate-300 rounded-md max-w-[800px] mx-auto"
+					class="px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] rounded-md max-w-[800px] mx-auto"
 				>
 					<form on:submit|preventDefault={handleSubmit}>
 						<input
 							type="text"
-							class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 							placeholder="Name"
 							bind:value={name}
 						/>
 						<input
 							type="email"
-							class="mt-2 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 							placeholder="Email"
 							bind:value={email}
 						/>
 						<input
 							type="tel"
-							class="mt-2 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 							placeholder="Mobile Number"
 							bind:value={num}
 						/>
 						<select
 							bind:value={location}
-							class="mt-2 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 						>
 							{#if locationPlaceholder}
 								<option value="" disabled selected>{locationPlaceholder}</option>
@@ -92,7 +92,7 @@
 						</select>
 						<select
 							bind:value={dept}
-							class="mt-2 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 						>
 							{#if deptPlaceholder}
 								<option value="" disabled selected>{deptPlaceholder}</option>
@@ -105,7 +105,7 @@
 						</select>
 						<select
 							bind:value={prgram}
-							class="mt-2 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 						>
 							{#if prgramPlaceholder}
 								<option value="" disabled selected>{prgramPlaceholder}</option>
@@ -117,14 +117,15 @@
 							{/each}
 						</select>
 						<textarea
-							class="mt-2 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 							placeholder="Message"
 							bind:value={message}
 						/>
-						<input bind:files type="file" class="mt-2" />
+						<label for="cv" class="mt-2 block">Choose your CV</label>
+						<input id="cv" bind:files type="file" />
 						<button
 							type="submit"
-							class="mt-3 px-3 py-2 text-[#fff] bg-btnColor border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-3 px-3 py-2 text-[#fff] bg-btnColor border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 							>Send</button
 						>
 					</form>

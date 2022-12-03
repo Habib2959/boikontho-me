@@ -51,14 +51,14 @@
 
 <div class="hack-content-box">
 	<h1 class="hack-title text-3xl text-semibold">Welcome to boikontho.com</h1>
-	<form on:submit|preventDefault={submitSignupHandler}>
+	<form on:submit|preventDefault={submitSignupHandler} autocomplete="off">
 		<InputBox type="text" placeholder="Full Name" bind:value={values.userName} />
 		<TelInput type="text" placeholder="Mobile Number" bind:value={values.tel} />
 		<!-- <Dropdown type="text" placeholder="Choose a role" bind:value={values.role} {Roles} /> -->
 		<InputBox type="email" placeholder="Email Address" bind:value={values.email} />
 		<InputBox type="password" placeholder="Password" bind:value={values.password} />
 		<InputBox type="password" placeholder="Confirm Password" bind:value={values.confirmPassword} />
-		<div>
+		<!-- <div>
 			<p>
 				By continuing , you agree to Boikontho’s <a href="/" class="hack-text-red"
 					>Conditions of Use</a
@@ -73,10 +73,10 @@
 					on:click={handleNewsletter}
 					class="accent-slate-500"
 				/>
-				Signup to the newsletters
-				<!-- <span class="hack-checkmark" /> -->
-			</label>
-		</div>
+				Signup to the newsletters -->
+		<!-- eita baad <span class="hack-checkmark" /> -->
+		<!-- </label>
+		</div> -->
 
 		<Button mode="Sign up" {loading} />
 	</form>
@@ -100,22 +100,22 @@
 		margin-bottom: 50px;
 		margin-top: 30px;
 	}
-	.hack-newsletter-check {
+	/* .hack-newsletter-check {
 		margin: 20px 0px 10px 0px;
 		display: block;
-	}
+	} */
 	.hack-content-box {
 		width: 500px;
 		margin: 0 auto;
 	}
-	.hack-text-red {
+	/* .hack-text-red {
 		color: red;
-	}
+	} */
 
-	label {
+	/* label {
 		position: relative;
 		cursor: pointer;
-	}
+	} */
 	.hack-sign-in-text {
 		font-weight: 600;
 		text-decoration: underline;

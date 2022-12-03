@@ -7,7 +7,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="acrdion-btn" on:click={toggle} aria-expanded={isOpen}>
-	<h3>{entry[0]}</h3>
+	<h3 class="text-lg font-semibold">{entry?.question}</h3>
 	<svg
 		style="tran"
 		width="20"
@@ -21,28 +21,21 @@
 	>
 </div>
 {#if isOpen}
-	<ul transition:slide={{ duration: 300 }}>
-		{#each entry[1] as item}
-			<li>{item}</li>
-		{/each}
-	</ul>
+	<div class="mx-2" transition:slide={{ duration: 300 }}>
+		<p class="px-3 bg-footerBg">{entry?.ans}</p>
+	</div>
 {/if}
 
 <style>
 	.acrdion-btn {
-		border: none;
-		background: none;
 		display: flex;
 		color: inherit;
-		font-size: 36px;
 		cursor: pointer;
-		margin: 0;
-		padding-bottom: 0.5em;
-		padding-top: 0.5em;
 		justify-content: space-between;
 		align-items: center;
+		border-bottom: 1px solid #e9e7e7;
+		padding: 5px 0px;
 	}
-
 	svg {
 		transition: transform 0.2s ease-in;
 	}
