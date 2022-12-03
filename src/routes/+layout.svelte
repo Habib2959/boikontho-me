@@ -21,7 +21,7 @@
 </script>
 
 <div
-	class="app max-w-[1500px] mx-auto"
+	class="app max-w-[1400px] mx-auto"
 	class:full-width={$page?.routeId?.includes('login') ||
 		$page?.routeId?.includes('register') ||
 		$page?.routeId?.includes('otp')}

@@ -1,8 +1,8 @@
 <script>
-	import MobileNav from './MobileNav.svelte';
+	import Nav from './Nav.svelte';
 </script>
 
 <main class="max-w-[1400px] mx-auto">
-	<MobileNav />
+	<Nav />
 	<slot />
 </main>

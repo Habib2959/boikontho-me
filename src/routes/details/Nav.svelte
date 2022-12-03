@@ -26,7 +26,7 @@
 </div>
 
 <section class="shadow-md">
-	<div class="container">
+	<div class="container mx-auto">
 		<div>
 			<ul class="flex justify-around text-sm text-gray md:text-lg xl:text-xl">
 				<li class="pt-2 pb-1" class:active={$page.routeId === '/details/faq'}>

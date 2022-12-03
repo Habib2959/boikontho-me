@@ -6,12 +6,12 @@
 </script>
 
 <footer
-	class="hack-footer mt-4"
+	class="hack-footer mt-4 md:mx-1"
 	class:hidden={$page?.routeId?.includes('login') ||
 		$page?.routeId?.includes('register') ||
 		$page?.routeId?.includes('otp')}
 >
-	<div class="hack-container">
+	<div class="hack-container mx-auto">
 		<div class="hack-footer-bg">
 			<div class="hack-footer-top">
 				<div class="hack-left">
