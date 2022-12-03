@@ -2,8 +2,8 @@
 	import ill1 from '$lib/images/Illustration 1.svg';
 </script>
 
-<section class="md:pt-40 pt-[150px] md:pb-16 pb-8 z-1 lg:px-10">
-	<div class="container mx-auto">
+<section class="md:pt-40 pt-[100px] md:pb-16 pb-8 z-1 lg:px-10">
+	<div class="container mx-auto w-[92%] lg:w-full">
 		<div class="grid grid-cols-1 content-center md:grid-cols-2 gap-5 place-items-center">
 			<div class="order-last self-center text-center md:order-first md:text-left">
 				<div class="flex flex-col">

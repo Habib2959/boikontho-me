@@ -42,28 +42,28 @@
 
 <div class="flex items-center justify-center mb-3">
 	<div
-		class="bg-countdownBg text-countdown text-2xl md:text-lg lg:text-2xl px-5 py-3 md:px-3 lg:px-5 md:py-2 lg:py-3 mx-2 rounded-md relative hack-coundown"
+		class="bg-countdownBg text-countdown text-xl md:text-lg lg:text-2xl px-4 py-2 md:px-3 lg:px-5 md:py-2 lg:py-3 mx-2 rounded-md relative hack-coundown"
 	>
 		{days}
 		<p class="absolute top-[105%]  text-[14px]">Days</p>
 	</div>
 	<div
-		class="bg-countdownBg text-countdown text-2xl md:text-lg lg:text-2xl px-5 py-3 md:px-3 lg:px-5 md:py-2 lg:py-3 mx-2 rounded-md relative hack-coundown"
+		class="bg-countdownBg text-countdown text-xl md:text-lg lg:text-2xl px-4 py-2 md:px-3 lg:px-5 md:py-2 lg:py-3 mx-2 rounded-md relative hack-coundown"
 	>
 		{hours}
 		<p class="absolute top-[105%] right-[15%] text-[14px] md:right-[0%] lg:right-[15%]">Hours</p>
 	</div>
 	<div
-		class="bg-countdownBg text-countdown text-2xl md:text-lg lg:text-2xl px-5 py-3 md:px-3 lg:px-5 md:py-2 lg:py-3 mx-2 rounded-md relative hack-coundown"
+		class="bg-countdownBg text-countdown text-xl md:text-lg lg:text-2xl px-4 py-2 md:px-3 lg:px-5 md:py-2 lg:py-3 mx-2 rounded-md relative hack-coundown"
 	>
 		{minutes}
-		<p class="absolute top-[105%] right-[15%] text-[14px] md:right-[0%] lg:right-[15%]">Minute</p>
+		<p class="absolute top-[105%] right-[7%] text-[14px] md:right-[0%] lg:right-[15%]">Minute</p>
 	</div>
 	<div
-		class="bg-countdownBg text-countdown text-2xl md:text-lg lg:text-2xl px-5 py-3 md:px-3 lg:px-5 md:py-2 lg:py-3 mx-2 rounded-md relative hack-coundown"
+		class="bg-countdownBg text-countdown text-xl md:text-lg lg:text-2xl px-4 py-2 md:px-3 lg:px-5 md:py-2 lg:py-3 mx-2 rounded-md relative hack-coundown"
 	>
 		{seconds}
-		<p class="absolute top-[105%] right-[15%] text-[14px] md:right-[0%] lg:right-[15%]">Second</p>
+		<p class="absolute top-[105%] right-[7%] text-[14px] md:right-[0%] lg:right-[15%]">Second</p>
 	</div>
 </div>
 
