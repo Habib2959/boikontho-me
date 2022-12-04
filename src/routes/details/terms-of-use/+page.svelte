@@ -7,75 +7,51 @@
 		</div>
 		<ol class="list-decimal mx-auto w-[90%] mb-3">
 			<li>
-				The stated terms and conditions outline the rules and regulations for the use of Sindabad
-				Website, located at Sindabad.com Ltd.
+				These terms and conditions outline the rules and regulations for the use of Boikontho.com's Website, located at boikontho.com.
 			</li>
 			<li>
-				This website is operated by Sindabad.com Ltd. By visiting our website and purchasing
-				anything from us, we assume that you accept these terms and conditions. Please read these
-				Terms of Service carefully before accessing or using our website. If you do not agree to all
-				the terms and conditions of this agreement, then you may not access the website or use any
-				of our services.
+				By accessing this website we assume you accept these terms and conditions. Do not continue to use Boikontho if you do not agree to take all of the terms and conditions stated on this page.
 			</li>
 			<li>
-				The following terminology applies to these Terms and Conditions, Privacy Statement and
-				Disclaimer Notice and all Agreements: Throughout the site, the terms "We", "Us" and "Our"
-				refer to Sindabad.com Ltd. Ltd and "You" and "Your" refers to you, the person log on this
-				website and compliant to the Company’s terms and conditions. These Terms and conditions are
-				applicable to all users of the site, including users without limitations who are browsers,
-				vendors, customers, merchants and contributors of content.
+				The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.
 			</li>
 		</ol>
 		<div class="border-b-2 border-btnColor mb-3 hack-terms-title pb-[1px]">
 			<h1 class="text-lg font-bold lg:text-2xl bg-btnColor text-[#fff] py-1 pr-10 pl-1">
-				Communication
+				Cookies
 			</h1>
 		</div>
 		<ol class="list-decimal mx-auto w-[90%] mb-3">
 			<li>
-				The stated terms and conditions outline the rules and regulations for the use of Sindabad
-				Website, located at Sindabad.com Ltd.
+				We employ the use of cookies. By accessing Boikontho, you agreed to use cookies in agreement with the Boikontho.com's Privacy Policy.
 			</li>
 			<li>
-				This website is operated by Sindabad.com Ltd. By visiting our website and purchasing
-				anything from us, we assume that you accept these terms and conditions. Please read these
-				Terms of Service carefully before accessing or using our website. If you do not agree to all
-				the terms and conditions of this agreement, then you may not access the website or use any
-				of our services.
-			</li>
-			<li>
-				The following terminology applies to these Terms and Conditions, Privacy Statement and
-				Disclaimer Notice and all Agreements: Throughout the site, the terms "We", "Us" and "Our"
-				refer to Sindabad.com Ltd. Ltd and "You" and "Your" refers to you, the person log on this
-				website and compliant to the Company’s terms and conditions. These Terms and conditions are
-				applicable to all users of the site, including users without limitations who are browsers,
-				vendors, customers, merchants and contributors of content.
+				Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.
 			</li>
 		</ol>
 		<div class="border-b-2 border-btnColor mb-3 hack-terms-title pb-[1px]">
 			<h1 class="text-lg font-bold lg:text-2xl bg-btnColor text-[#fff] py-1 pr-10 pl-1">
-				Eligibility
+				License
 			</h1>
 		</div>
 		<ol class="list-decimal mx-auto w-[90%] mb-3">
 			<li>
-				The stated terms and conditions outline the rules and regulations for the use of Sindabad
-				Website, located at Sindabad.com Ltd.
+				Unless otherwise stated, Boikontho.com and/or its licensors own the intellectual property rights for all material on Boikontho. All intellectual property rights are reserved. You may access this from Boikontho for your own personal use subjected to restrictions set in these terms and conditions.
 			</li>
 			<li>
-				This website is operated by Sindabad.com Ltd. By visiting our website and purchasing
-				anything from us, we assume that you accept these terms and conditions. Please read these
-				Terms of Service carefully before accessing or using our website. If you do not agree to all
-				the terms and conditions of this agreement, then you may not access the website or use any
-				of our services.
+				You must not: Republish material from Boikontho; Sell, rent or sub-license material from Boikontho; Reproduce, duplicate or copy material from Boikontho; Redistribute content from Boikontho.
 			</li>
 			<li>
-				The following terminology applies to these Terms and Conditions, Privacy Statement and
-				Disclaimer Notice and all Agreements: Throughout the site, the terms "We", "Us" and "Our"
-				refer to Sindabad.com Ltd. Ltd and "You" and "Your" refers to you, the person log on this
-				website and compliant to the Company’s terms and conditions. These Terms and conditions are
-				applicable to all users of the site, including users without limitations who are browsers,
-				vendors, customers, merchants and contributors of content.
+				Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Boikontho.com does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of Boikontho.com,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, Boikontho.com shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.
+			</li>
+			<li>
+				Boikontho.com reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.
+			</li>
+			<li>
+				You warrant and represent that: You are entitled to post the Comments on our website and have all necessary licenses and consents to do so; The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party; The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy; The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.
+			</li>
+			<li>
+				You hereby grant Boikontho.com a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.
 			</li>
 		</ol>
 	</div>
