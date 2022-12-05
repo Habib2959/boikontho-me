@@ -1,6 +1,6 @@
 <script>
 	import us from '$lib/images/us.png';
-	import ill from '$lib/images/illustration 1.svg';
+	import ill from '$lib/images/Illustration 1.svg';
 	import bannner from '$lib/images/publish.png';
 </script>
 
