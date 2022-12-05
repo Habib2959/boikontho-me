@@ -9,7 +9,7 @@
 			<div>
 				<img src={us} alt="us" class="rounded-lg" />
 			</div>
-			<div class="text-center">
+			<div class="text-center md:text-left">
 				<h2 class="text-xl font-semibold lg:text-3xl">আমাদের গল্প</h2>
 				<p class="mt-3">
 					তথ্য ও প্রযুক্তি আমাদের দৈনন্দিন জীবনের গুরুত্বপূর্ণ অংশ হয়ে গেছে, কিন্তু শিক্ষা ক্ষেত্রে

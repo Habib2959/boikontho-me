@@ -1,4 +1,8 @@
 <script>
+	import insta from '$lib/images/instagram.svg';
+	import fb from '$lib/images/facebook.svg';
+	import ln from '$lib/images/linkedin.svg';
+	import yt from '$lib/images/youtube.svg';
 	let name = '';
 	let email = '';
 	let num = '';
@@ -53,17 +57,22 @@
 			<div class="w-[90%] md:w-full mx-auto">
 				<div class="mt-5">
 					<h2 class="text-xl font-semibold lg:text-3xl">Contact Boikontho</h2>
-					<p><span>Email :</span><a href="/">support@boikontho.com</a></p>
-					<p><span>Mobile :</span>01322666140</p>
+					<p><span>Email: </span><a href="/">support@boikontho.com</a></p>
+					<p><span>Mobile: </span>01322666140</p>
 					<h3 class="font-semibold text-xl mt-4 lg:text-2xl">FIND US ON</h3>
-					<div>
-						<a href="/" class="mr-2"
-							><i class="fa-brands fa-facebook text-[#4F6AA3] text-[35px]" /></a
+					<div class="hack-icon">
+						<a href="https://www.linkedin.com/company/boikontho"
+							><img src={ln} alt="ln" class="w-[1.5rem] inline-block hack-svg-ln" /></a
 						>
-						<a href="/" class="mr-2"
-							><i class="fa-brands fa-linkedin text-[#1A85BD] text-[35px]" /></a
+						<a href="https://www.facebook.com/BoiKonthoOfficial" class="ml-3"
+							><img src={fb} alt="fb" class="w-[1.5rem] inline-block hack-svg-fb" /></a
 						>
-						<a href="/"><i class="fa-brands fa-instagram text-[#E4457B] text-[35px]" /></a>
+						<a href="https://www.instagram.com/boikonthobd" class="ml-3"
+							><img src={insta} alt="insta" class="w-[1.5rem] inline-block hack-svg-insta" /></a
+						>
+						<a href="https://www.youtube.com/channel/UCz9OyAvi3dhlNZaDRs2SPOQ" class="ml-3"
+							><img src={yt} alt="yt" class="w-[1.5rem] inline-block hack-svg-yt" /></a
+						>
 					</div>
 				</div>
 			</div>
@@ -74,5 +83,29 @@
 <style>
 	.hack-card {
 		background: linear-gradient(270deg, #ed1c24 0%, #c11f47 100%);
+	}
+	.hack-svg-ln,
+	.hack-svg-fb,
+	.hack-svg-yt,
+	.hack-svg-insta {
+		transition: 0.3s;
+		filter: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(5244%) hue-rotate(76deg)
+			brightness(117%) contrast(91%);
+	}
+	.hack-svg-ln:hover {
+		filter: brightness(0) saturate(100%) invert(27%) sepia(91%) saturate(1414%) hue-rotate(175deg)
+			brightness(97%) contrast(89%);
+	}
+	.hack-svg-fb:hover {
+		filter: brightness(0) saturate(100%) invert(46%) sepia(97%) saturate(4147%) hue-rotate(201deg)
+			brightness(96%) contrast(97%);
+	}
+	.hack-svg-insta:hover {
+		filter: brightness(0) saturate(100%) invert(27%) sepia(59%) saturate(2541%) hue-rotate(262deg)
+			brightness(86%) contrast(87%);
+	}
+	.hack-svg-yt:hover {
+		filter: brightness(0) saturate(100%) invert(16%) sepia(79%) saturate(7483%) hue-rotate(358deg)
+			brightness(101%) contrast(110%);
 	}
 </style>

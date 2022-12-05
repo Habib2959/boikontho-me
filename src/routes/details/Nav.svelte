@@ -1,27 +1,54 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
-	import ill1 from '$lib/images/Illustration 1.svg';
-	import ill2 from '$lib/images/Illustration 2.svg';
-	import ill3 from '$lib/images/Illustration 3.svg';
 	import { page } from '$app/stores';
 	$: outerWidth = 0;
 </script>
 
 <svelte:window bind:outerWidth />
 
-<div class="mt-[80px]">
+<div class="mt-[60px] hack-banner py-6 lg:py-12">
 	{#if $page.routeId === '/details/faq'}
-		<img src={ill1} alt="img1" class="h-[200px] w-full" in:fade={{ duration: 1000 }} />
+		<div
+			class="h-[90px] w-[90px] lg:w-[150px] lg:h-[150px] rounded-full text-center mx-auto border border-[#000] p-2 flex items-center justify-center bg-[#fff]"
+			in:fade={{ duration: 1000 }}
+		>
+			<p class="lg:text-2xl lg:font-semibold">FAQ</p>
+		</div>
 	{:else if $page.routeId === '/details/about-us'}
-		<img src={ill2} alt="img1" class="h-[200px] w-full" in:fade={{ duration: 1000 }} />
+		<div
+			class="h-[90px] w-[90px] lg:w-[150px] lg:h-[150px] rounded-full text-center mx-auto border border-[#000] p-2 flex items-center justify-center bg-[#fff]"
+			in:fade={{ duration: 1000 }}
+		>
+			<p class="lg:text-2xl lg:font-semibold">ABOUT US</p>
+		</div>
 	{:else if $page.routeId === '/details/career'}
-		<img src={ill3} alt="img1" class="h-[200px] w-full" in:fade={{ duration: 1000 }} />
+		<div
+			class="h-[90px] w-[90px] lg:w-[150px] lg:h-[150px] rounded-full text-center mx-auto border border-[#000] p-2 flex items-center justify-center bg-[#fff]"
+			in:fade={{ duration: 1000 }}
+		>
+			<p class="lg:text-2xl lg:font-semibold">CAREER</p>
+		</div>
 	{:else if $page.routeId === '/details/contact-us'}
-		<img src={ill1} alt="img1" class="h-[200px] w-full" in:fade={{ duration: 1000 }} />
+		<div
+			class="h-[90px] w-[90px] lg:w-[150px] lg:h-[150px] rounded-full text-center mx-auto border border-[#000] p-2 flex items-center justify-center bg-[#fff]"
+			in:fade={{ duration: 1000 }}
+		>
+			<p class="lg:text-2xl lg:font-semibold">CONTACT</p>
+		</div>
 	{:else if $page.routeId === '/details/privacy-policy'}
-		<img src={ill2} alt="img1" class="h-[200px] w-full" in:fade={{ duration: 1000 }} />
+		<div
+			class="h-[90px] w-[90px] lg:w-[150px] lg:h-[150px] rounded-full text-center mx-auto border border-[#000] p-2 flex items-center justify-center bg-[#fff]"
+			in:fade={{ duration: 1000 }}
+		>
+			<p class="lg:text-2xl lg:font-semibold">PRIVACY</p>
+		</div>
 	{:else if $page.routeId === '/details/terms-of-use'}
-		<img src={ill3} alt="img1" class="h-[200px] w-full" in:fade={{ duration: 1000 }} />
+		<div
+			class="h-[90px] w-[90px] lg:w-[150px] lg:h-[150px] rounded-full text-center mx-auto border border-[#000] p-2 flex items-center justify-center bg-[#fff]"
+			in:fade={{ duration: 1000 }}
+		>
+			<p class="lg:text-2xl lg:font-semibold">TERMS</p>
+		</div>
 	{/if}
 </div>
 
@@ -56,5 +83,11 @@
 	.active {
 		border-bottom: 2px solid #f43131;
 		color: #f43131;
+	}
+	.hack-banner {
+		background: url('../../lib/images/background.png');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 </style>

@@ -9,9 +9,7 @@
 	};
 </script>
 
-<section
-	class="flex items-center justify-center mt-[80px] xl:mt-0 xl:min-h-[70vh] 2xl:min-h-[80vh]"
->
+<section class="flex items-center justify-center mt-[80px] 2xl:min-h-[80vh]">
 	<div class="container mx-auto w-[90%] lg:w-[100%]">
 		<div class="text-center max-w-[800px] mx-auto">
 			<h2 class="text-3xl my-3 font-bold text-btnColor">আপনার পছন্দের বই বইকন্ঠে!</h2>
