@@ -15,6 +15,6 @@ export const bookChoice = async (name: string, notifier: string, book_list: stri
   if (res.ok) {
     return data;
   } else {
-    return data
+    throw data
   }
 }

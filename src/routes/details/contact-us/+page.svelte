@@ -3,12 +3,22 @@
 	import fb from '$lib/images/facebook.svg';
 	import ln from '$lib/images/linkedin.svg';
 	import yt from '$lib/images/youtube.svg';
+	import { contact } from '$lib/apis/public/contact';
+	import { goto } from '$app/navigation';
+	import { successText } from '../../../store';
 	let name = '';
 	let email = '';
 	let num = '';
 	let message = '';
-	const handleSubmit = () => {
-		console.log(name, email, num, message);
+	const handleSubmit = async () => {
+		try {
+			const data = await contact(name, num, email, message);
+			successText.set(data.detail);
+			goto('/success');
+		} catch (err) {
+			alert(err);
+		}
+		// console.log(name, email, num, message);
 	};
 </script>
 
@@ -28,18 +38,21 @@
 							class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 							placeholder="Name"
 							bind:value={name}
+							required
 						/>
 						<input
 							type="email"
 							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 							placeholder="Email"
 							bind:value={email}
+							required
 						/>
 						<input
 							type="tel"
 							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 							placeholder="Mobile Number"
 							bind:value={num}
+							required
 						/>
 						<textarea
 							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"

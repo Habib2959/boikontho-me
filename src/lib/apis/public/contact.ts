@@ -16,6 +16,6 @@ export const contact = async (name: string, phone: string, email: string, messag
   if (res.ok) {
     return data;
   } else {
-    return data
+    throw data
   }
 }

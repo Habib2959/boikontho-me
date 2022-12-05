@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { quintOut } from 'svelte/easing';
-	import { fade, draw, fly } from 'svelte/transition';
+	import { fade, draw } from 'svelte/transition';
 	import { expand } from './custom-transitions';
 	import { onMount } from 'svelte';
+	import { successText } from '../../store';
 
 	let visible: boolean;
 	onMount(() => {
@@ -12,7 +13,7 @@
 
 <div class="wrapper">
 	{#if visible}
-		<h1>আপনার পছন্দের বই গুলো নিয়ে user-first strategy তে আমরা কাজ করব। ধন্যবাদ</h1>
+		<h1>{$successText}</h1>
 		<svg id="svg5046" version="1.1" viewBox="0 0 50 50" height="50mm" width="50mm">
 			<defs id="defs5040" />
 

@@ -1,11 +1,18 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { bookChoice } from '$lib/apis/public/bookChoice';
+	import { successText } from '../../store';
 	let mobileOrEmail = '';
 	let booklist = '';
 	let name = '';
-	const handleSubmit = () => {
-		console.log(mobileOrEmail, booklist, name);
-		goto('/success');
+	const handleSubmit = async () => {
+		try {
+			const data = await bookChoice(name, mobileOrEmail, booklist);
+			successText.set(data.detail);
+			goto('/success');
+		} catch (err) {
+			alert(err);
+		}
 	};
 </script>
 

@@ -1,4 +1,7 @@
-<script>
+<script lang="ts">
+	import { career } from '$lib/apis/public/career';
+	import { successText } from '../../../store';
+	import { goto } from '$app/navigation';
 	let name = '';
 	let email = '';
 	let num = '';
@@ -30,8 +33,16 @@
 	let locationPlaceholder = 'Select your location you wish to work';
 	let deptPlaceholder = 'Select department you wish to work';
 	let prgramPlaceholder = 'Select department you wish to work';
-	const handleSubmit = () => {
-		console.log(name, email, num, location, dept, prgram, message, files);
+	const handleSubmit = async () => {
+		try {
+			const formEl = document.forms.namedItem('form');
+			let formData = new FormData(formEl);
+			const data = await career(formData);
+			successText.set(data.detail);
+			goto('/success');
+		} catch (err) {
+			alert(err);
+		}
 	};
 </script>
 
@@ -58,31 +69,38 @@
 				<div
 					class="px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] rounded-md max-w-[800px] mx-auto"
 				>
-					<form on:submit|preventDefault={handleSubmit}>
+					<form enctype="multipart/form-data" on:submit|preventDefault={handleSubmit} name="form">
 						<input
 							type="text"
-							class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 							placeholder="Name"
 							bind:value={name}
+							name="name"
 						/>
 						<input
 							type="email"
-							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 							placeholder="Email"
 							bind:value={email}
+							name="email"
 						/>
 						<input
 							type="tel"
-							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 							placeholder="Mobile Number"
 							bind:value={num}
+							name="phone"
 						/>
 						<select
 							bind:value={location}
-							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							required
+							name="job_location"
 						>
 							{#if locationPlaceholder}
-								<option value="" disabled selected>{locationPlaceholder}</option>
+								<option class="hack-disabled" value="" disabled selected
+									>{locationPlaceholder}</option
+								>
 							{/if}
 							{#each locationDropdown as locations}
 								<option value={locations.text}>
@@ -92,10 +110,12 @@
 						</select>
 						<select
 							bind:value={dept}
-							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							required
+							name="department"
 						>
 							{#if deptPlaceholder}
-								<option value="" disabled selected>{deptPlaceholder}</option>
+								<option class="hack-disabled" value="" disabled selected>{deptPlaceholder}</option>
 							{/if}
 							{#each deptDropdown as depts}
 								<option value={depts.text}>
@@ -105,10 +125,13 @@
 						</select>
 						<select
 							bind:value={prgram}
-							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							required
+							name="program"
 						>
 							{#if prgramPlaceholder}
-								<option value="" disabled selected>{prgramPlaceholder}</option>
+								<option class="hack-disabled" value="" disabled selected>{prgramPlaceholder}</option
+								>
 							{/if}
 							{#each prgramDropdown as prgrams}
 								<option value={prgrams.text}>
@@ -117,15 +140,16 @@
 							{/each}
 						</select>
 						<textarea
-							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 							placeholder="Message"
 							bind:value={message}
+							name="message"
 						/>
 						<label for="cv" class="mt-2 block">Choose your CV</label>
-						<input id="cv" bind:files type="file" />
+						<input id="cv" bind:files type="file" name="cv" />
 						<button
 							type="submit"
-							class="mt-3 px-3 py-2 text-[#fff] bg-btnColor border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+							class="mt-3 px-3 py-2 text-[#fff] bg-btnColor border shadow-sm border-[#e9e7e7] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
 							>Send</button
 						>
 					</form>
@@ -141,3 +165,13 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	select:required:invalid {
+		color: #9e9e9e;
+	}
+	select,
+	option {
+		color: #000;
+	}
+</style>
