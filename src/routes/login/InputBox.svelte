@@ -1,6 +1,8 @@
 <script lang="ts">
 	// todo
 	export let type: any, value: string | number, placeholder: string;
+	import eye from '$lib/images/show password.svg';
+	import eyeslash from '$lib/images/hide password.svg';
 	let showPass = false;
 	function typeAction(node: any) {
 		node.type = type;
@@ -21,21 +23,31 @@
 	{#if type === 'password'}
 		{#if showPass}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<i class="fa-sharp fa-solid fa-eye" on:click={(e) => handleShowPass(e)} />
+			<img
+				src={eye}
+				alt="eye"
+				class="w-[1.1rem] md:w-[.9rem] hack-svg-color"
+				on:click={(e) => handleShowPass(e)}
+			/>
 		{:else}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<i class="fa-solid fa-eye-slash" on:click={(e) => handleShowPass(e)} />
+			<img
+				src={eyeslash}
+				alt="eye"
+				class="w-[1.1rem] md:w-[.9rem] hack-svg-color"
+				on:click={(e) => handleShowPass(e)}
+			/>
 		{/if}
 	{/if}
 </div>
 
 <style>
-	.fa-sharp,
-	.fa-solid {
+	.hack-svg-color {
 		margin-left: -30px;
-		margin-top: 5%;
+		margin-top: -4%;
 		cursor: pointer;
-		color: #6f6f6f;
+		filter: brightness(0) saturate(100%) invert(43%) sepia(4%) saturate(15%) hue-rotate(125deg)
+			brightness(99%) contrast(96%);
 	}
 	.hack-input-container {
 		display: flex;
@@ -61,19 +73,14 @@
 		margin-left: 20px;
 	}
 	@media (max-width: 1200px) {
-		.fa-sharp,
-		.fa-solid {
-			margin-top: 7%;
+		.hack-svg-color {
+			margin-top: -6%;
 		}
 	}
 	/* media query */
 	@media (max-width: 600px) {
-		.fa-sharp,
-		.fa-solid {
-			margin-left: -30px;
-			margin-top: 9%;
-			cursor: pointer;
-			color: #6f6f6f;
+		.hack-svg-color {
+			margin-top: -8%;
 		}
 	}
 </style>

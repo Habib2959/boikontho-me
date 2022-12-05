@@ -87,7 +87,7 @@
 		<p class="hack-text-center hack-switch-signup">
 			Have an account?
 
-			<a href="/login" class="hack-sign-in-text">Sign in</a>
+			<a href="/publish/login" class="hack-sign-in-text">Sign in</a>
 		</p>
 	{/if}
 </div>

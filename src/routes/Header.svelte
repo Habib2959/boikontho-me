@@ -34,7 +34,7 @@
 				<a
 					href="/register"
 					class="bg-btnColor p-2 transition-colors duration-300 hover:bg-btnHoverColor text-sm sm:text-base text-white sm:p-3 rounded"
-					><i class="fa-solid fa-gift mr-2" />প্রি-রেজিস্ট্রেশন</a
+					>প্রি-রেজিস্ট্রেশন</a
 				>
 			</div>
 		{:else}

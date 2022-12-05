@@ -50,7 +50,7 @@
 	</form>
 	<p class="hack-text-center hack-switch-signup">
 		Don't have an account
-		<a href="/register" class="hack-sign-in-text">Sign up</a>
+		<a href="/publish/register" class="hack-sign-in-text">Sign up</a>
 	</p>
 </div>
 

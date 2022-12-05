@@ -3,6 +3,13 @@
 	import logo from '$lib/images/logo.svg';
 	import gplay from '$lib/images/google-play.svg';
 	import app from '$lib/images/app-store.svg';
+	import location from '$lib/images/location.svg';
+	import mail from '$lib/images/mail.svg';
+	import phone from '$lib/images/phone.svg';
+	import insta from '$lib/images/instagram.svg';
+	import fb from '$lib/images/facebook.svg';
+	import ln from '$lib/images/linkedin.svg';
+	import yt from '$lib/images/youtube.svg';
 </script>
 
 <footer
@@ -19,11 +26,27 @@
 					<ul>
 						<li>দেশের সর্ববৃহৎ অডিওবুক ও ই-বুকের সম্ভার</li>
 						<li>
-							<i class="fa-solid fa-location-dot mr-3 text-btnColor" />101 Shukrabad, Dhaka - 1212,
-							Bangladesh
+							<img
+								src={location}
+								alt="location"
+								class="w-[0.65rem] md:w-[.9rem] mr-3 inline-block hack-svg-color"
+							/>
+							101 Shukrabad, Dhaka - 1212, Bangladesh
 						</li>
-						<li><i class="fa-solid fa-phone mr-3 text-btnColor" />+8801322666140</li>
-						<li><i class="fa-solid fa-envelope mr-3 text-btnColor" />support@boikontho.com</li>
+						<li>
+							<img
+								src={phone}
+								alt="location"
+								class="w-[0.65rem] md:w-[.9rem] mr-3 inline-block hack-svg-color"
+							/>+8801322666140
+						</li>
+						<li>
+							<img
+								src={mail}
+								alt="location"
+								class="w-[0.65rem] md:w-[.9rem] mr-3 inline-block hack-svg-color"
+							/>support@boikontho.com
+						</li>
 					</ul>
 				</div>
 				<div class="hack-about">
@@ -61,16 +84,16 @@
 						<div class="hack-title mr-2">Follow us :</div>
 						<div class="hack-icon">
 							<a href="https://www.linkedin.com/company/boikontho"
-								><i class="fa-brands fa-linkedin" /></a
+								><img src={ln} alt="ln" class="w-[1.375rem] inline-block hack-svg-ln" /></a
 							>
 							<a href="https://www.facebook.com/BoiKonthoOfficial" class="ml-3"
-								><i class="fa-brands fa-square-facebook" /></a
+								><img src={fb} alt="fb" class="w-[1.375rem] inline-block hack-svg-fb" /></a
 							>
 							<a href="https://www.instagram.com/boikonthobd" class="ml-3"
-								><i class="fa-brands fa-instagram" /></a
+								><img src={insta} alt="insta" class="w-[1.375rem] inline-block hack-svg-insta" /></a
 							>
 							<a href="https://www.youtube.com/channel/UCz9OyAvi3dhlNZaDRs2SPOQ" class="ml-3"
-								><i class="fa-brands fa-youtube" /></a
+								><img src={yt} alt="yt" class="w-[1.375rem] inline-block hack-svg-yt" /></a
 							>
 						</div>
 					</div>
@@ -93,6 +116,10 @@
 		background-image: url(../lib/images/footerbg.svg);
 		background-repeat: no-repeat;
 		background-size: cover;
+	}
+	.hack-svg-color {
+		filter: invert(45%) sepia(65%) saturate(5584%) hue-rotate(339deg) brightness(100%)
+			contrast(123%);
 	}
 	.hack-footer-top {
 		position: relative;
@@ -133,26 +160,32 @@
 		background-color: #002f4c;
 		margin: 20px 40px;
 	}
-	.fa-brands {
+	.hack-svg-ln,
+	.hack-svg-fb,
+	.hack-svg-yt,
+	.hack-svg-insta {
 		transition: 0.3s;
+		filter: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(5244%) hue-rotate(76deg)
+			brightness(117%) contrast(91%);
 	}
-	.fa-linkedin:hover {
-		color: #0e76a8;
+	.hack-svg-ln:hover {
+		filter: brightness(0) saturate(100%) invert(27%) sepia(91%) saturate(1414%) hue-rotate(175deg)
+			brightness(97%) contrast(89%);
 	}
-	.fa-square-facebook:hover {
-		color: #1877f2;
+	.hack-svg-fb:hover {
+		filter: brightness(0) saturate(100%) invert(46%) sepia(97%) saturate(4147%) hue-rotate(201deg)
+			brightness(96%) contrast(97%);
 	}
-	.fa-instagram:hover {
-		color: #8a3ab9;
+	.hack-svg-insta:hover {
+		filter: brightness(0) saturate(100%) invert(27%) sepia(59%) saturate(2541%) hue-rotate(262deg)
+			brightness(86%) contrast(87%);
 	}
 	.hack-download-img {
 		width: 150px;
 	}
-	.fa-youtube {
-		transition: 0.3s;
-	}
-	.fa-youtube:hover {
-		color: #ff0000;
+	.hack-svg-yt:hover {
+		filter: brightness(0) saturate(100%) invert(16%) sepia(79%) saturate(7483%) hue-rotate(358deg)
+			brightness(101%) contrast(110%);
 	}
 	h3 {
 		font-size: 20px;
@@ -250,10 +283,6 @@
 		.hack-footer {
 			background-color: #f5f5f5;
 		}
-		.hack-icon {
-			font-size: 16px;
-			column-gap: 5px;
-		}
 		.hack-footer {
 			font-size: 12px;
 		}
@@ -265,6 +294,7 @@
 		}
 		.hack-icon {
 			column-gap: 0px;
+			justify-content: center;
 		}
 		.hack-left {
 			flex: 0 0 100%;
@@ -289,6 +319,9 @@
 		}
 		.hack-divider {
 			margin: 20px 20px;
+		}
+		.hack-footer-logo {
+			margin-bottom: 10px;
 		}
 	}
 </style>
