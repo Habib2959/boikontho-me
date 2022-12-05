@@ -18,7 +18,7 @@
 						<img
 							src={arrow}
 							alt="arrow"
-							class="top-[40%] right-[10%] absolute transition-all w-[18px]"
+							class="top-[35%] right-[10%] absolute transition-all w-[18px] hack-svg-white"
 						/>
 						<!-- <i class="fa-solid fa-arrow-right absolute top-[35%] right-[15%] transition-all" /> -->
 					</a>
@@ -30,7 +30,7 @@
 						<img
 							src={arrow}
 							alt="arrow"
-							class="top-[40%] right-[10%] absolute transition-all w-[18px] hack-svg-color"
+							class="top-[35%] right-[10%] absolute transition-all w-[18px] hack-svg-color"
 						/>
 					</a>
 				</div>
@@ -59,6 +59,10 @@
 	.hack-svg-color {
 		filter: invert(45%) sepia(65%) saturate(5584%) hue-rotate(339deg) brightness(100%)
 			contrast(123%);
+	}
+	.hack-svg-white {
+		filter: brightness(0) saturate(100%) invert(100%) sepia(51%) saturate(828%) hue-rotate(295deg)
+			brightness(123%) contrast(100%);
 	}
 	@media (max-width: 768px) {
 		.hack-font {

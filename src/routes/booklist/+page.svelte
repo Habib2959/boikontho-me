@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { bookChoice } from '$lib/apis/public/bookChoice';
-	import { successText } from '../../store';
+	import { successbtnLink, successBtnText, successText } from '../../store';
 	let mobileOrEmail = '';
 	let booklist = '';
 	let name = '';
@@ -9,6 +9,8 @@
 		try {
 			const data = await bookChoice(name, mobileOrEmail, booklist);
 			successText.set(data.detail);
+			successBtnText.set('Go to home');
+			successbtnLink.set('/');
 			goto('/success');
 		} catch (err) {
 			alert(err);

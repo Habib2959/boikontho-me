@@ -1,8 +1,8 @@
 <script lang="ts">
 	// todo
 	export let type: any, value: string | number, placeholder: string;
-	import eye from '$lib/images/show password.svg';
-	import eyeslash from '$lib/images/hide password.svg';
+	import eye from '$lib/images/show.svg';
+	import eyeslash from '$lib/images/hide.svg';
 	let showPass = false;
 	function typeAction(node: any) {
 		node.type = type;

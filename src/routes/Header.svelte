@@ -6,6 +6,7 @@
 	let y: number;
 	import { goto } from '$app/navigation';
 	import down from '$lib/images/down.svg';
+	import gift from '$lib/images/gift.svg';
 
 	// let name = 'habib';
 	function logout() {
@@ -33,8 +34,12 @@
 			<div>
 				<a
 					href="/register"
-					class="bg-btnColor p-2 transition-colors duration-300 hover:bg-btnHoverColor text-sm sm:text-base text-white sm:p-3 rounded"
-					>প্রি-রেজিস্ট্রেশন</a
+					class="bg-btnColor p-2 transition-colors duration-300 hover:bg-btnHoverColor text-sm  sm:text-base text-white sm:p-3 rounded"
+					><img
+						src={gift}
+						alt="gift"
+						class="w-[12px] mr-2 md:w-[15px] hack-svg-white inline md:mr-3 mb-1"
+					/>প্রি-রেজিস্ট্রেশন</a
 				>
 			</div>
 		{:else}
@@ -89,6 +94,10 @@
 			width: 160px;
 		}
 	} */
+	.hack-svg-white {
+		filter: brightness(0) saturate(100%) invert(100%) sepia(51%) saturate(828%) hue-rotate(295deg)
+			brightness(123%) contrast(100%);
+	}
 	.hack-down {
 		transition: 0.3s;
 	}

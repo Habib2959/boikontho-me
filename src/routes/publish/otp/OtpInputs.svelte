@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Button from '$lib/Button.svelte';
-	import { userInfo } from '../../../store';
+	import { userInfo, successBtnText, successText, successbtnLink } from '../../../store';
 	import { otpResend, otpVerify } from '$lib/apis/publisher/otp';
 	import { goto } from '$app/navigation';
 	let startTimer: any = undefined;
@@ -72,11 +72,10 @@
 			try {
 				const otpRes = await otpVerify(finalOtp, info?.tel);
 				loading = false;
-				if (otpRes.detail) {
-					alert(otpRes.detail);
-					throw new Error(otpRes.detail);
-				}
-				goto('/');
+				successText.set(otpRes.detail);
+				successBtnText.set('Go to login');
+				successbtnLink.set('/login');
+				goto('/success');
 			} catch (err) {
 				loading = false;
 			}
@@ -86,10 +85,7 @@
 		try {
 			const data = await otpResend(info.tel);
 			loading = false;
-			if (data.detail) {
-				alert(data.detail);
-				throw new Error(data.detail);
-			}
+			alert(data.detail);
 		} catch (err) {
 			loading = false;
 		}

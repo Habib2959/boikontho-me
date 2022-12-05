@@ -15,7 +15,7 @@ export const otpVerify = async (otp: string, mobile: string) => {
         return data
     } else {
         localStorage.clear();
-        return data
+        throw data
     }
 
 }
@@ -34,7 +34,7 @@ export const otpResend = async (mobile: string) => {
         return data
     } else {
         localStorage.clear();
-        return data
+        throw data
     }
 
 }

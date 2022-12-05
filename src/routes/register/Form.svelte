@@ -28,7 +28,7 @@
 		} else {
 			loading = true;
 			try {
-				let data = await register(values.tel, values.password);
+				let data = await register(values.userName, values.email, values.tel, values.password);
 				userInfo.set(values);
 				loading = false;
 				if (data.detail) {

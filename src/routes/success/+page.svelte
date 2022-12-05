@@ -3,7 +3,7 @@
 	import { fade, draw } from 'svelte/transition';
 	import { expand } from './custom-transitions';
 	import { onMount } from 'svelte';
-	import { successText } from '../../store';
+	import { successText, successBtnText, successbtnLink } from '../../store';
 
 	let visible: boolean;
 	onMount(() => {
@@ -48,6 +48,12 @@
 			</g>
 		</svg>
 	{/if}
+
+	<a
+		href={$successbtnLink ? $successbtnLink : '/'}
+		class="bg-btnColor p-2 mt-4 transition-colors duration-300 hover:bg-btnHoverColor text-sm sm:text-base text-white sm:p-3 rounded"
+		>{$successBtnText ? $successBtnText : 'Go to home'}</a
+	>
 </div>
 
 <link href="https://fonts.googleapis.com/css?family=Overpass:100,400" rel="stylesheet" />

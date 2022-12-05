@@ -1,12 +1,14 @@
 import { baseUrl } from "../baseUrl";
 
-export const register = async (username: string, password: string) => {
+export const register = async (name: string, email: string, username: string, password: string) => {
     const res = await fetch(`${baseUrl}/register/`, {
         method: "POST",
         headers: { "Content-Type": "application/json; charset=UTF-8" },
         body: JSON.stringify({
-            username,
-            password
+            name,
+            email,
+            password,
+            username
         })
     });
     let data = await res.json();
@@ -15,6 +17,6 @@ export const register = async (username: string, password: string) => {
         return data;
     } else {
         localStorage.clear();
-        return data;
+        throw data;
     }
 }
