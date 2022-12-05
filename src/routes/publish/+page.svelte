@@ -1,5 +1,4 @@
 <script>
-	import us from '$lib/images/us.png';
 	import ill from '$lib/images/Illustration 1.svg';
 </script>
 
@@ -8,22 +7,22 @@
 	<div class="container mx-auto w-[90%] md:w-full">
 		<div class="grid gap-8 md:grid-cols-2 md:items-center">
 			<div>
-				<img src={us} alt="us" class="rounded-lg" />
+				<img src={ill} alt="us" class="rounded-lg" />
 			</div>
 			<div class="text-center md:text-left">
-				<h2 class="text-xl font-semibold lg:text-3xl">আমাদের গল্প</h2>
+				<h2 class="text-xl font-semibold lg:text-3xl">Our Story</h2>
 				<p class="mt-3">
-					তথ্য ও প্রযুক্তি আমাদের দৈনন্দিন জীবনের গুরুত্বপূর্ণ অংশ হয়ে গেছে, কিন্তু শিক্ষা ক্ষেত্রে
-					এখনও গতানুগতিক ধারাটিই রয়ে গেছে। Shikho মনে করে বাংলাদেশের শিক্ষা ক্ষেত্রে প্রযুক্তির
-					বিপ্লব ঘটানোর এখনই উপযুক্ত সময়।
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat."
 				</p>
 				<p class="mt-3">
-					আমাদের মূল লক্ষ্য শুধুই গতানুগতিক শিক্ষার আধুনিকায়ন নয়, সেইসাথে আধুনিক প্রযুক্তি ব্যবহার
-					করে শেখার নতুন কৌশলকে সহজলভ্য করে তোলা এবং ইন্টারনেটকে কাজে লাগিয়ে দেশজুড়ে সবার কাছে
-					মানসম্মত শিক্ষা পৌঁছে দেয়া। নতুন কিছু করার ভাবনা থেকেই প্রতিটি কোর্স শিক্ষার্থীদের জন্য
-					উপযোগী, সহজবোধ্য এবং আনন্দদায়ক করে তৈরি করা হয়েছে। অভিজ্ঞ শিক্ষক এবং অত্যাধুনিক প্রযুক্তির
-					সমন্বয়ে আমরা এমন একটি অভিজ্ঞতা গড়ে তুলেছি, যা শিক্ষার মান উন্নয়নে গুরুত্বপূর্ণ ভূমিকা
-					রাখবে।
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+					sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+					est laborum."
 				</p>
 				<div class="text-center mt-5">
 					<a

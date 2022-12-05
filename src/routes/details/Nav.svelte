@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import { page } from '$app/stores';
 	$: outerWidth = 0;
 </script>
@@ -7,49 +7,23 @@
 <svelte:window bind:outerWidth />
 
 <div class="mt-[60px] hack-banner py-6 lg:py-12">
-	{#if $page.routeId === '/details/faq'}
-		<div
-			class="h-[90px] w-[90px] lg:w-[150px] lg:h-[150px] rounded-full text-center mx-auto border border-[#000] p-2 flex items-center justify-center bg-[#fff]"
-			in:fade={{ duration: 1000 }}
-		>
-			<p class="lg:text-2xl lg:font-semibold">FAQ</p>
-		</div>
-	{:else if $page.routeId === '/details/about-us'}
-		<div
-			class="h-[90px] w-[90px] lg:w-[150px] lg:h-[150px] rounded-full text-center mx-auto border border-[#000] p-2 flex items-center justify-center bg-[#fff]"
-			in:fade={{ duration: 1000 }}
-		>
-			<p class="lg:text-2xl lg:font-semibold">ABOUT US</p>
-		</div>
-	{:else if $page.routeId === '/details/career'}
-		<div
-			class="h-[90px] w-[90px] lg:w-[150px] lg:h-[150px] rounded-full text-center mx-auto border border-[#000] p-2 flex items-center justify-center bg-[#fff]"
-			in:fade={{ duration: 1000 }}
-		>
-			<p class="lg:text-2xl lg:font-semibold">CAREER</p>
-		</div>
-	{:else if $page.routeId === '/details/contact-us'}
-		<div
-			class="h-[90px] w-[90px] lg:w-[150px] lg:h-[150px] rounded-full text-center mx-auto border border-[#000] p-2 flex items-center justify-center bg-[#fff]"
-			in:fade={{ duration: 1000 }}
-		>
-			<p class="lg:text-2xl lg:font-semibold">CONTACT</p>
-		</div>
-	{:else if $page.routeId === '/details/privacy-policy'}
-		<div
-			class="h-[90px] w-[90px] lg:w-[150px] lg:h-[150px] rounded-full text-center mx-auto border border-[#000] p-2 flex items-center justify-center bg-[#fff]"
-			in:fade={{ duration: 1000 }}
-		>
-			<p class="lg:text-2xl lg:font-semibold">PRIVACY</p>
-		</div>
-	{:else if $page.routeId === '/details/terms-of-use'}
-		<div
-			class="h-[90px] w-[90px] lg:w-[150px] lg:h-[150px] rounded-full text-center mx-auto border border-[#000] p-2 flex items-center justify-center bg-[#fff]"
-			in:fade={{ duration: 1000 }}
-		>
-			<p class="lg:text-2xl lg:font-semibold">TERMS</p>
-		</div>
-	{/if}
+	<div
+		class="h-[90px] w-[90px] lg:w-[150px] lg:h-[150px] rounded-full text-center mx-auto border border-[#000] p-2 flex items-center justify-center bg-[#fff]"
+	>
+		{#if $page.routeId === '/details/faq'}
+			<p in:fly={{ x: -20, duration: 500 }} class="lg:text-2xl lg:font-semibold">FAQ</p>
+		{:else if $page.routeId === '/details/about-us'}
+			<p in:fly={{ x: -20, duration: 500 }} class="lg:text-2xl lg:font-semibold">ABOUT</p>
+		{:else if $page.routeId === '/details/career'}
+			<p in:fly={{ x: -20, duration: 500 }} class="lg:text-2xl lg:font-semibold">CAREER</p>
+		{:else if $page.routeId === '/details/contact-us'}
+			<p in:fly={{ x: -20, duration: 500 }} class="lg:text-2xl lg:font-semibold">CONTACT</p>
+		{:else if $page.routeId === '/details/privacy-policy'}
+			<p in:fly={{ x: -20, duration: 500 }} class="lg:text-2xl lg:font-semibold">PRIVACY</p>
+		{:else if $page.routeId === '/details/terms-of-use'}
+			<p in:fly={{ x: -20, duration: 1000 }} class="lg:text-2xl lg:font-semibold">TERMS</p>
+		{/if}
+	</div>
 </div>
 
 <section class="shadow-md">

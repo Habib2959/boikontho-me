@@ -1,9 +1,9 @@
 import { baseUrl } from "../baseUrl";
 
-export const login = async (username:string, password:string) => {
-    const res = await fetch(`${baseUrl}/pub_login/`, {
+export const login = async (username: string, password: string) => {
+    const res = await fetch(`${baseUrl}/pub-login/`, {
         method: "POST",
-        headers: {"Content-Type": "application/json; charset=UTF-8"},
+        headers: { "Content-Type": "application/json; charset=UTF-8" },
         body: JSON.stringify({
             username,
             password
