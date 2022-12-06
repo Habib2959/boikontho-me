@@ -1,5 +1,5 @@
 <script>
-	import ill from '$lib/images/Illustration 1.svg';
+	import ill from '$lib/images/our-story.png';
 </script>
 
 <section class="mt-3 md:mt-6 md:mx-2 lg:mx-4 xl:mx-0 2xl:min-h-[58vh] 2xl:flex 2xl:items-center">

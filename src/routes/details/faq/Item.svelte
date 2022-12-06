@@ -6,7 +6,7 @@
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="acrdion-btn" on:click={toggle} aria-expanded={isOpen}>
+<div class="acrdion-btn" on:click={() => toggle()} aria-expanded={isOpen}>
 	<h3 class="text-lg font-semibold">{entry?.question}</h3>
 	<svg
 		style="tran"
@@ -21,8 +21,8 @@
 	>
 </div>
 {#if isOpen}
-	<div class="mx-2" transition:slide={{ duration: 300 }}>
-		<p class="px-3 bg-footerBg">{entry?.ans}</p>
+	<div class="bg-footerBg" transition:slide={{ duration: 300 }}>
+		<p class="p-3">{entry?.ans}</p>
 	</div>
 {/if}
 
@@ -33,7 +33,7 @@
 		cursor: pointer;
 		justify-content: space-between;
 		align-items: center;
-		border-bottom: 1px solid #e9e7e7;
+		border-top: 1px solid #e9e7e7;
 		padding: 5px 0px;
 	}
 	svg {

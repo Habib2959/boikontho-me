@@ -6,18 +6,15 @@
 	import { userAuthenticated, username } from '../store';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	import { baseUrl } from '$lib/apis/baseUrl';
 
 	onMount(async () => {
 		const auth = localStorage.getItem('token');
 
 		if (auth) {
-			const userNameGet = await fetch(`${baseUrl}/profile/`, {
-				method: 'GET',
-				headers: { Authorization: `Token ${JSON.parse(auth)}` }
-			});
-			const userName = await userNameGet.json();
-			username.set(userName.first_name);
+			const userName = localStorage.getItem('user');
+			if (userName) {
+				username.set(JSON.parse(userName));
+			}
 			userAuthenticated.set(true);
 			// username.set(JSON.parse(userName));
 			if ($page?.routeId?.includes('login')) {
@@ -36,7 +33,7 @@
 		$page?.routeId?.includes('otp')}
 >
 	<Header />
-	<main>
+	<main class="mb-10 lg:mb-12">
 		<slot />
 	</main>
 	<Footer />

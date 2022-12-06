@@ -18,7 +18,7 @@ export const login = async (username: string, password: string) => {
             headers: { Authorization: `Token ${data.token}` }
         });
         const userName = await userNameGet.json();
-        console.log(userName);
+        localStorage.setItem('user', JSON.stringify(userName.first_name))
         return data;
     } else {
         localStorage.clear();

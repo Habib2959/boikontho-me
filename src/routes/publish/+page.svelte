@@ -1,5 +1,5 @@
 <script>
-	import ill from '$lib/images/Illustration 1.svg';
+	import ill from '$lib/images/our-story.png';
 </script>
 
 <svelte:head>

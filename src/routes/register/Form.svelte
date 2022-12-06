@@ -31,10 +31,6 @@
 				let data = await register(values.userName, values.email, values.tel, values.password);
 				userInfo.set(values);
 				loading = false;
-				if (data.detail) {
-					alert(data.detail);
-					throw new Error(data.detail);
-				}
 				goto('/otp');
 			} catch (error) {
 				loading = false;
