@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>Register to Boikontho | Boikontho.com</title>
+	<title>Register to Boikontho | Boikontho.com</title>
 </svelte:head>
 
 <div class="chack-ontainer">

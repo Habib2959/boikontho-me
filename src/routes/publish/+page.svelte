@@ -2,6 +2,31 @@
 	import ill from '$lib/images/Illustration 1.svg';
 </script>
 
+<svelte:head>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org/publish",
+  "@type": "Organization",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Seattle",
+    "addressRegion": "WA",
+    "postalCode": "98052",
+    "streetAddress": "20341 Whitworth Institute 405 N. Whitworth"
+  },
+  "colleague": [
+    "http://www.xyz.edu/students/alicejones.html",
+    "http://www.xyz.edu/students/bobsmith.html"
+  ],
+  "email": "mailto:jane-doe@xyz.edu",
+  "image": "janedoe.jpg",
+  "jobTitle": "Professor",
+  "name": "Jane Doe",
+  "telephone": "(425) 123-4567",
+  "url": "http://www.janedoe.com"
+}
+	</script>
+</svelte:head>
 <div class="hack-banner" />
 <section class="mt-3 md:mt-6 md:mx-2 lg:mx-4 xl:mx-0 2xl:min-h-[58vh] 2xl:flex 2xl:items-center">
 	<div class="container mx-auto w-[90%] md:w-full">

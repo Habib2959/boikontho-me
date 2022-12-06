@@ -52,12 +52,12 @@
 				<div class="hack-about">
 					<h3>Quick Links</h3>
 					<ul>
-						<li><a href="/details/about-us"> About Us</a></li>
+						<li><a href="/details/about-us" class="hover:text-btnColor"> About Us</a></li>
 						<li>
-							<a href="/publish">Publish on Boikontho</a>
+							<a href="/publish" class="hover:text-btnColor">Publish on Boikontho</a>
 						</li>
-						<li><a href="/details/career">Career</a></li>
-						<li><a href="/csr">CSR</a></li>
+						<li><a href="/details/career" class="hover:text-btnColor">Career</a></li>
+						<li><a href="/details/contact-us" class="hover:text-btnColor">Contact us</a></li>
 					</ul>
 				</div>
 				<div>
@@ -74,9 +74,12 @@
 			<div class="hack-footer-bottom">
 				<div>
 					<p>
-						© 2022 Boikontho.com | <a href="/details/terms-of-use">Terms of Use</a> |
-						<a href="/details/privacy-policy">Privacy Policy</a>
-						| <a href="/details/faq">FAQ</a>
+						© 2022 Boikontho.com | <a href="/details/terms-of-use" class="hover:text-btnColor"
+							>Terms of Use</a
+						>
+						|
+						<a href="/details/privacy-policy" class="hover:text-btnColor">Privacy Policy</a>
+						| <a href="/details/faq" class="hover:text-btnColor">FAQ</a>
 					</p>
 				</div>
 				<div>

@@ -46,6 +46,7 @@
 	@font-face {
 		font-family: 'Hind Siliguri Semi Bold';
 		src: url('../lib/fonts/Hind_Siliguri_SemiBold-Regular.ttf');
+		font-display: swap;
 	}
 	.hack-font {
 		font-family: 'Hind Siliguri Semi Bold';

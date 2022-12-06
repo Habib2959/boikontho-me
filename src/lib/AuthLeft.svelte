@@ -17,6 +17,7 @@
 	@font-face {
 		font-family: 'Li Alinur Bihongo Unicode';
 		src: url('../assets/fonts/Unicode/Li Alinur Bihongo Unicode.ttf');
+		font-display: swap;
 	}
 	.hack-bg {
 		background-image: linear-gradient(270deg, #b8c6db -4.7%, #f5f7fa 65.56%);

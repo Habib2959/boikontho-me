@@ -4,38 +4,39 @@
 
 
 @font-face {
-    font-family: "baloo da 2";
-    src: url("../assets/fonts/BalooDa2-Regular.ttf");
-    src: url("../assets/fonts/BalooDa2-ExtraBold.ttf");
-    src: url("../assets/fonts/BalooDa2-Medium.ttf"),
-        url("../assets/fonts/BalooDa2-Bold.ttf"),
-        url("../assets/fonts/BalooDa2-SemiBold.ttf");
+  font-family: "baloo da 2";
+  src: url("../assets/fonts/BalooDa2-Regular.ttf");
+  src: url("../assets/fonts/BalooDa2-ExtraBold.ttf");
+  src: url("../assets/fonts/BalooDa2-Medium.ttf"),
+    url("../assets/fonts/BalooDa2-Bold.ttf"),
+    url("../assets/fonts/BalooDa2-SemiBold.ttf");
+  font-display: swap;
 }
 
 @layer base {
-    html {
-        font-family: 'baloo da 2';
-    }
+  html {
+    font-family: 'baloo da 2';
+  }
 }
 
 @layer components {
-    .card {
-      background-color: theme('colors.white');
-      border-radius: theme('borderRadius.lg');
-      padding: theme('spacing.6');
-      box-shadow: 0 0 9px 1px rgba(79, 75, 147, .15);
-      transition: .3s;
-    }
-  
-    .card:hover {
-      box-shadow: 0 0 3px 1px rgba(79, 75, 147, .35);
-    }
-  
-    .card-with-no-hover {
-      background-color: theme('colors.white');
-      border-radius: theme('borderRadius.lg');
-      padding: theme('spacing.6');
-      /* box-shadow: 0 0 9px 1px rgba(79, 75, 147, .15); */
-      border: 1px solid #dedede;
-    }
+  .card {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    padding: theme('spacing.6');
+    box-shadow: 0 0 9px 1px rgba(79, 75, 147, .15);
+    transition: .3s;
   }
+
+  .card:hover {
+    box-shadow: 0 0 3px 1px rgba(79, 75, 147, .35);
+  }
+
+  .card-with-no-hover {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    padding: theme('spacing.6');
+    /* box-shadow: 0 0 9px 1px rgba(79, 75, 147, .15); */
+    border: 1px solid #dedede;
+  }
+}
