@@ -22,19 +22,30 @@
 				<img src={ill} alt="us" class="rounded-lg" />
 			</div>
 			<div class="text-center md:text-left">
-				<h2 class="text-xl font-semibold lg:text-3xl">Our Story</h2>
+				<h2 class="text-xl font-semibold lg:text-3xl">আমাদের গল্প</h2>
 				<p class="mt-3">
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat."
+					মানুষের বন্ধু বই, আর বইয়ের বন্ধু বইকন্ঠ। বইকন্ঠ হলো একটি বহুমাত্রিক বইয়ের সমাধান এবং
+					বাংলাদেশের <span class="text-btnColor">প্রথম অডিওবুক ও ইবুক মার্কেটপ্লেস</span>। বইকে
+					শুধুমাত্র কাগজের পাতায় বন্দি না রেখে অডিও ও ডিজিটাল স্ক্রিনে তুলে ধরছে বইকন্ঠ। এটি যেমন
+					পরিবেশ বান্ধব একই সঙ্গে সাশ্রয়ী যা বইকন্ঠকে একটি কার্বন নিউট্রাল ব্র্যান্ডেও পরিণত করেছে।
 				</p>
 				<p class="mt-3">
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-					sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-					est laborum."
+					বইকন্ঠ, ‘<span class="text-btnColor">হ্যাকিউলিস লিমিটেড (Hackules Limited)</span>’ এর একটি
+					সাবসিডিয়ারি ব্র্যান্ড। ২০২১ সালের ২৬ এ আগস্ট বাংলাদেশ সরকার হতে লাইসেন্স প্রাপ্ত হওয়ার পর
+					থেকে দীর্ঘ একবছরের প্রচেষ্টায় আমরা গড়ে তুলেছি বাংলাদেশের সর্বাধুনিক প্রযুক্তির বইয়ের
+					প্ল্যাটফর্মঃ বইকন্ঠ।
+				</p>
+				<p class="mt-3">
+					শধুমাত্র যানজটের জন্য দেশে প্রতিদিন প্রায় ২ কোটি কর্মঘন্টা নষ্ট হয় এবং জিডিপির ৬-১০% ক্ষতি
+					হয়। <span class="text-btnColor">যানজটে</span> নিজের সময় ও মানসিক স্বাস্থ্য সুরক্ষায়
+					বইকন্ঠের অডিওবুক একটি কার্যকরি সমাধান। এছাড়াও
+					<span class="text-btnColor"> ভ্রমণে, অবসরে বা পরীক্ষার প্রস্তুতিতে</span> অডিওবুকের ভালো চাহিদা
+					রয়েছে।
+				</p>
+				<p class="mt-3">
+					আমাদের মুল লক্ষ্য সর্বাধুনিক ও অভিনব প্রযুক্তির মাধ্যমে বই পঠন ও শ্রবণ কে জনপ্রিয়করণের
+					মাধ্যমে মানুষ ও বইয়ের মধ্যকার ক্রমবর্ধমান দূরত্ব হ্রাস করা এবং বইকে আরও বেশি ​​সহজলভ্য করে
+					তোলা।
 				</p>
 				<div class="text-center mt-5">
 					<a
@@ -46,7 +57,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="mt-6 lg:mt-12">
+		<!-- <div class="mt-6 lg:mt-12">
 			<div class="border-b-2 border-btnColor mb-3 hack-terms-title pb-[1px]">
 				<h1 class="text-lg font-bold lg:text-2xl bg-btnColor text-[#fff] py-1 pr-10 pl-1">
 					Boikontho.com
@@ -132,16 +143,16 @@
 					</p>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </section>
 
 <style>
-	.hack-terms-title h1 {
+	/* .hack-terms-title h1 {
 		-webkit-clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
 		clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
 		display: inline-block;
-	}
+	} */
 	.hack-banner {
 		background: url('../../lib/images/publish.png');
 		padding: 90px;
