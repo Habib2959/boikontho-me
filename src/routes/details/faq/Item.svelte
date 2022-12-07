@@ -1,12 +1,23 @@
-<script>
+<script lang="ts">
 	import { slide } from 'svelte/transition';
-	export let entry;
-	let isOpen = false;
-	const toggle = () => (isOpen = !isOpen);
+	export let i: number;
+	export let show: null | number;
+	export let showCollapse: any;
+	interface Entry {
+		question: string;
+		ans: string;
+		id: number;
+	}
+	export let entry: Entry[];
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="acrdion-btn" on:click={() => toggle()} aria-expanded={isOpen}>
+<div
+	class="acrdion-btn"
+	id={`hack-acc-${entry?.id}`}
+	on:click={() => showCollapse(i)}
+	aria-expanded={show === i}
+>
 	<h3 class="text-lg font-semibold">{entry?.question}</h3>
 	<svg
 		style="tran"
@@ -20,7 +31,7 @@
 		stroke="currentColor"><path d="M9 5l7 7-7 7" /></svg
 	>
 </div>
-{#if isOpen}
+{#if show === i}
 	<div class="bg-footerBg" transition:slide={{ duration: 300 }}>
 		<p class="p-3">{entry?.ans}</p>
 	</div>
