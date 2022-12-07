@@ -76,8 +76,6 @@
 
 <style>
 	.scrolled {
-		border-bottom-left-radius: 15px;
-		border-bottom-right-radius: 15px;
 		background-color: rgba(255, 255, 255, 0.8);
 		/* padding: 10px 0px; */
 		transition: background-color 0.3s ease-in, padding 0.2s ease-in;
@@ -88,6 +86,8 @@
 	header {
 		box-shadow: 0 0 9px 1px rgba(79, 75, 147, 0.15);
 		z-index: 1000000;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
 	}
 	/* @media (max-width: 600px) {
 		.scrolled img {
