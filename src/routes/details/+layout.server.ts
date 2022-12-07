@@ -3,6 +3,6 @@ import type { LayoutServerLoad } from './$types';
 
 export const load: LayoutServerLoad = ({ routeId }) => {
   if (routeId === '/details') {
-    throw redirect(307, '/details/faq');
+    throw redirect(307, '/details/about-us');
   }
 }

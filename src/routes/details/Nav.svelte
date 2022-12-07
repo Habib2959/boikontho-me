@@ -30,11 +30,11 @@
 	<div class="container mx-auto">
 		<div>
 			<ul class="flex justify-around text-sm text-gray md:text-lg xl:text-xl">
-				<li class="pt-2 pb-1" class:active={$page.routeId === '/details/faq'}>
-					<a href="/details/faq">FAQ</a>
-				</li>
 				<li class="pt-2 pb-1" class:active={$page.routeId === '/details/about-us'}>
 					<a href="/details/about-us">About {outerWidth > 600 ? 'us' : ''} </a>
+				</li>
+				<li class="pt-2 pb-1" class:active={$page.routeId === '/details/faq'}>
+					<a href="/details/faq">FAQ</a>
 				</li>
 				<li class="pt-2 pb-1" class:active={$page.routeId === '/details/career'}>
 					<a href="/details/career">Career</a>

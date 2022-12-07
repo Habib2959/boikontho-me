@@ -10,6 +10,7 @@
 	import fb from '$lib/images/facebook.svg';
 	import ln from '$lib/images/linkedin.svg';
 	import yt from '$lib/images/youtube.svg';
+	import twitter from '$lib/images/twitter.svg';
 </script>
 
 <footer
@@ -24,8 +25,8 @@
 				<div class="hack-left">
 					<img src={logo} alt="logo" width="40%" class="hack-footer-logo" />
 					<ul>
-						<li>দেশের সর্ববৃহৎ অডিওবুক ও ই-বুকের সম্ভার</li>
-						<li>
+						<li class="text-sm md:text-base">দেশের সর্ববৃহৎ অডিওবুক ও ই-বুকের সম্ভার</li>
+						<li class="text-sm md:text-base">
 							<img
 								src={location}
 								alt="location"
@@ -33,14 +34,14 @@
 							/>
 							101 Shukrabad, Dhaka - 1212, Bangladesh
 						</li>
-						<li>
+						<li class="text-sm md:text-base">
 							<img
 								src={phone}
 								alt="location"
 								class="w-[0.65rem] md:w-[.9rem] mr-3 inline-block hack-svg-color"
 							/>+8801322666140
 						</li>
-						<li>
+						<li class="text-sm md:text-base">
 							<img
 								src={mail}
 								alt="location"
@@ -52,12 +53,18 @@
 				<div class="hack-about">
 					<h3>Quick Links</h3>
 					<ul>
-						<li><a href="/details/about-us" class="hover:text-btnColor"> About Us</a></li>
-						<li>
+						<li class="text-sm md:text-base">
+							<a href="/details/about-us" class="hover:text-btnColor"> About Us</a>
+						</li>
+						<li class="text-sm md:text-base">
 							<a href="/publish" class="hover:text-btnColor">Publish on Boikontho</a>
 						</li>
-						<li><a href="/details/career" class="hover:text-btnColor">Career</a></li>
-						<li><a href="/details/contact-us" class="hover:text-btnColor">Contact us</a></li>
+						<li class="text-sm md:text-base">
+							<a href="/details/career" class="hover:text-btnColor">Career</a>
+						</li>
+						<li class="text-sm md:text-base">
+							<a href="/details/contact-us" class="hover:text-btnColor">Contact us</a>
+						</li>
 					</ul>
 				</div>
 				<div>
@@ -73,7 +80,7 @@
 			<div class="hack-divider" />
 			<div class="hack-footer-bottom">
 				<div>
-					<p>
+					<p class="text-sm md:text-base">
 						© 2022 Boikontho.com | <a href="/details/terms-of-use" class="hover:text-btnColor"
 							>Terms of Use</a
 						>
@@ -94,6 +101,13 @@
 							>
 							<a href="https://www.instagram.com/boikonthobd" class="ml-3"
 								><img src={insta} alt="insta" class="w-[1.375rem] inline-block hack-svg-insta" /></a
+							>
+							<a href="https://twitter.com/BoikonthoBD" class="ml-3"
+								><img
+									src={twitter}
+									alt="yt"
+									class="w-[1.375rem] inline-block hack-svg-twitter"
+								/></a
 							>
 							<a href="https://www.youtube.com/channel/UCz9OyAvi3dhlNZaDRs2SPOQ" class="ml-3"
 								><img src={yt} alt="yt" class="w-[1.375rem] inline-block hack-svg-yt" /></a
@@ -166,7 +180,8 @@
 	.hack-svg-ln,
 	.hack-svg-fb,
 	.hack-svg-yt,
-	.hack-svg-insta {
+	.hack-svg-insta,
+	.hack-svg-twitter {
 		transition: 0.3s;
 		filter: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(5244%) hue-rotate(76deg)
 			brightness(117%) contrast(91%);
@@ -189,6 +204,10 @@
 	.hack-svg-yt:hover {
 		filter: brightness(0) saturate(100%) invert(16%) sepia(79%) saturate(7483%) hue-rotate(358deg)
 			brightness(101%) contrast(110%);
+	}
+	.hack-svg-twitter:hover {
+		filter: brightness(0) saturate(100%) invert(60%) sepia(52%) saturate(4882%) hue-rotate(176deg)
+			brightness(100%) contrast(90%);
 	}
 	h3 {
 		font-size: 20px;
