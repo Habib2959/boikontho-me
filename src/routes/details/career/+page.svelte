@@ -76,6 +76,7 @@
 							placeholder="Name"
 							bind:value={name}
 							name="name"
+							required
 						/>
 						<input
 							type="email"
@@ -83,6 +84,7 @@
 							placeholder="Email"
 							bind:value={email}
 							name="email"
+							required
 						/>
 						<input
 							type="tel"
@@ -90,6 +92,7 @@
 							placeholder="Mobile Number"
 							bind:value={num}
 							name="phone"
+							required
 						/>
 						<select
 							bind:value={location}
@@ -141,9 +144,10 @@
 						</select>
 						<textarea
 							class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-							placeholder="Message"
+							placeholder="Why you want to join Boikontho?"
 							bind:value={message}
 							name="message"
+							required
 						/>
 						<label for="cv" class="mt-2 block">Choose your CV</label>
 						<input id="cv" bind:files type="file" name="cv" />

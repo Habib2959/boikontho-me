@@ -60,7 +60,7 @@
 		outline: none;
 		transition: all 0.3s ease;
 		-webkit-transition: all 0.3s ease;
-		margin-bottom: 25px;
+		margin-bottom: 15px;
 		width: 100%;
 		text-indent: 30px;
 		font-family: 'Montserrat';

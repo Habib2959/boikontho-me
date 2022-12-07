@@ -22,6 +22,6 @@ export const login = async (username: string, password: string) => {
         return data;
     } else {
         localStorage.clear();
-        return data
+        throw data
     }
 }

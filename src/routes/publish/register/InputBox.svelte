@@ -43,7 +43,7 @@
 <style>
 	.hack-svg-color {
 		margin-left: -30px;
-		margin-top: -4%;
+		margin-top: -3%;
 		cursor: pointer;
 		filter: brightness(0) saturate(100%) invert(43%) sepia(4%) saturate(15%) hue-rotate(125deg)
 			brightness(99%) contrast(96%);
@@ -60,7 +60,7 @@
 		outline: none;
 		transition: all 0.3s ease;
 		-webkit-transition: all 0.3s ease;
-		margin-bottom: 25px;
+		margin-bottom: 12px;
 		width: 100%;
 		text-indent: 30px;
 		font-family: 'Montserrat';
@@ -73,14 +73,14 @@
 	}
 	@media (max-width: 1200px) {
 		.hack-svg-color {
-			margin-top: -6%;
+			margin-top: -4%;
 		}
 	}
 	/* media query */
 	@media (max-width: 600px) {
 		.hack-svg-color {
 			margin-left: -30px;
-			margin-top: -8%;
+			margin-top: -6%;
 		}
 	}
 </style>

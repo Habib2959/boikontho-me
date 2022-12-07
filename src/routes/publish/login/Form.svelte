@@ -6,22 +6,37 @@
 	import { goto } from '$app/navigation';
 	import TelInput from './TelInput.svelte';
 	import { login } from '$lib/apis/publisher/login';
+	import FormError from '$lib/FormError.svelte';
 	export let values = {
 		password: '',
 		tel: ''
 	};
-
+	let errorMessage = '';
+	let errorType = '';
 	let loading = false;
 	async function submitSigninHandler() {
+		if (!/^[0][1][3456789][0-9]{8}\b/g.test(values.tel)) {
+			errorMessage = 'Put a valid number';
+			errorType = 'numError';
+			return;
+		}
+		if (values.password.length < 8) {
+			errorMessage = 'Password must be minimum 8 characters';
+			errorType = 'passError';
+			return;
+		}
 		loading = true;
 		try {
 			const loginRes = await login(values.tel, values.password);
 			loading = false;
-			if (loginRes.detail) {
-				alert(loginRes.detail);
-				throw new Error(loginRes.detail);
-			}
+			errorMessage = '';
+			errorType = '';
+			goto('/');
 		} catch (err) {
+			if (err.detail) {
+				errorMessage = err.detail;
+				errorType = 'loginError';
+			}
 			loading = false;
 		}
 
@@ -42,10 +57,18 @@
 
 <div class="hack-content-box">
 	<h1 class="hack-title text-3xl text-semibold">Welcome back to Boikontho</h1>
+	<div class:hidden={errorType !== 'loginError'}>
+		<FormError {errorMessage} />
+	</div>
 	<form on:submit|preventDefault={submitSigninHandler}>
 		<TelInput type="text" placeholder="Mobile Number" bind:value={values.tel} />
+		<div class:hidden={errorType !== 'numError'}>
+			<FormError {errorMessage} />
+		</div>
 		<InputBox type="password" placeholder="Password" bind:value={values.password} />
-
+		<div class:hidden={errorType !== 'passError'}>
+			<FormError {errorMessage} />
+		</div>
 		<Button mode="Sign in" {loading} />
 	</form>
 	<p class="hack-text-center hack-switch-signup">

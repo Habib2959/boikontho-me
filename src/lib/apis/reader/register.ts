@@ -14,6 +14,7 @@ export const register = async (name: string, email: string, username: string, pa
     let data = await res.json();
 
     if (res.ok) {
+        localStorage.clear();
         return data;
     } else {
         localStorage.clear();

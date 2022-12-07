@@ -1,8 +1,8 @@
 <script lang="ts">
-	// TODO: 
-	export let type:any, value:string | number, placeholder:string; 
+	// TODO:
+	export let type: any, value: string | number, placeholder: string;
 
-	function typeAction(node:any) {
+	function typeAction(node: any) {
 		node.type = type;
 	}
 </script>
@@ -26,7 +26,7 @@
 		outline: none;
 		transition: all 0.3s ease;
 		-webkit-transition: all 0.3s ease;
-		margin-bottom: 25px;
+		margin-bottom: 12px;
 		width: 100%;
 		text-indent: 30px;
 		font-family: 'Montserrat';

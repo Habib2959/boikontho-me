@@ -46,7 +46,7 @@
 						bind:value={mobileOrEmail}
 					/>
 					<span class="block text-xs mt-2 mb-6 ml-2 font-medium text-slate-700">
-						( নটিফিকেশন পেতে )</span
+						( নোটিফিকেশন পেতে )</span
 					>
 				</label>
 				<textarea
