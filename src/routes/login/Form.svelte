@@ -4,21 +4,21 @@
 	import { userAuthenticated, username } from '../../store';
 	import { userInfo } from '../../store';
 	import { goto } from '$app/navigation';
-	import TelInput from './TelInput.svelte';
+	// import TelInput from './TelInput.svelte';
 	import { login } from '$lib/apis/reader/login';
 	import FormError from '$lib/FormError.svelte';
 	export let values = {
 		password: '',
-		tel: ''
+		email: ''
 	};
 
 	let loading = false;
 	let errorMessage = '';
 	let errorType = '';
 	async function submitSigninHandler() {
-		if (!/^[0][1][3456789][0-9]{8}\b/g.test(values.tel)) {
-			errorMessage = 'Put a valid number';
-			errorType = 'numError';
+		if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(values.email)) {
+			errorMessage = 'Put a valid email';
+			errorType = 'emailError';
 			return;
 		}
 		if (values.password.length < 8) {
@@ -28,7 +28,7 @@
 		}
 		loading = true;
 		try {
-			const loginRes = await login(values.tel, values.password);
+			const loginRes = await login(values.email, values.password);
 			loading = false;
 			errorMessage = '';
 			errorType = '';
@@ -62,8 +62,8 @@
 		<FormError {errorMessage} />
 	</div>
 	<form on:submit|preventDefault={submitSigninHandler}>
-		<TelInput type="text" placeholder="Mobile Number" bind:value={values.tel} />
-		<div class:hidden={errorType !== 'numError'}>
+		<InputBox type="email" placeholder="Email Address" bind:value={values.email} />
+		<div class:hidden={errorType !== 'emailError'}>
 			<FormError {errorMessage} />
 		</div>
 		<InputBox type="password" placeholder="Password" bind:value={values.password} />

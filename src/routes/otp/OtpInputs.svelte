@@ -6,9 +6,9 @@
 	import { goto } from '$app/navigation';
 	let startTimer: any = undefined;
 	let info = {
-		tel: ''
+		email: ''
 	};
-	let timer = 5;
+	let timer = 59;
 	let values = [
 		{ id: 1, value: '', backspacePressCount: 0 },
 		{ id: 2, value: '', backspacePressCount: 0 },
@@ -70,7 +70,7 @@
 				finalOtp += item.value;
 			});
 			try {
-				const otpRes = await otpVerify(finalOtp, info?.tel);
+				const otpRes = await otpVerify(finalOtp, info?.email);
 				loading = false;
 				successText.set(otpRes.detail);
 				successBtnText.set('Go to login');
@@ -83,7 +83,7 @@
 	}
 	async function handleResendOtp() {
 		try {
-			const data = await otpResend(info.tel);
+			const data = await otpResend(info.email);
 			alert(data.detail);
 		} catch (err) {
 			loading = false;
@@ -93,7 +93,9 @@
 
 <div class="hack-otp-box">
 	<h2 class="hack-title">Enter Your 6 Digit OTP</h2>
-	<p class="hack-subtitle">We have sent an OTP to your mobile number {info.tel ? info.tel : ''}</p>
+	<p class="hack-subtitle">
+		We have sent an OTP to your email <b>{info.email ? info.email : ''}</b>
+	</p>
 	<form class="hack-form" on:submit|preventDefault={handlesubmit}>
 		{#each values as otpValue}
 			<input

@@ -1,12 +1,12 @@
 import { baseUrl } from "../baseUrl";
 
-export const otpVerify = async (otp: string, mobile: string) => {
-    const res = await fetch(`${baseUrl}/pub-otp-verify/`, {
+export const otpVerify = async (otp: string, email: string) => {
+    const res = await fetch(`${baseUrl}/creator-otp-verify/`, {
         method: "POST",
         headers: { "Content-Type": "application/json; charset=UTF-8" },
         body: JSON.stringify({
             otp,
-            mobile
+            email
         })
     })
 
@@ -20,12 +20,12 @@ export const otpVerify = async (otp: string, mobile: string) => {
 
 }
 
-export const otpResend = async (mobile: string) => {
-    const res = await fetch(`${baseUrl}/pub-otp-resend/`, {
+export const otpResend = async (email: string) => {
+    const res = await fetch(`${baseUrl}/creator-otp-resend/`, {
         method: "POST",
         headers: { "Content-Type": "application/json; charset=UTF-8" },
         body: JSON.stringify({
-            mobile
+            email
         })
     })
 

@@ -1,13 +1,13 @@
 import { baseUrl } from "../baseUrl";
 
-export const register = async (name: string, email: string, username: string, password: string) => {
-    const res = await fetch(`${baseUrl}/pub-register/`, {
+export const register = async (name: string, email: string, mobile: string, password: string) => {
+    const res = await fetch(`${baseUrl}/creator-register/`, {
         method: "POST",
         headers: { "Content-Type": "application/json; charset=UTF-8" },
         body: JSON.stringify({
             name,
             email,
-            username,
+            mobile,
             password
         })
     });

@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 
 export const emplpoyeeRole = writable("");
-export const userInfo = writable({ tel: '' });
+export const userInfo = writable({ email: '' });
 export const userAuthenticated = writable(false);
 export const username = writable('');
 export const successText = writable('');
