@@ -24,7 +24,7 @@ export async function GET() {
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://boikontho.com/publish</loc>
+<loc>https://boikontho.com/creator</loc>
 <lastmod>2022-12-06T12:03:53+00:00</lastmod>
 <priority>0.80</priority>
 </url>
@@ -64,12 +64,12 @@ export async function GET() {
 <priority>0.64</priority>
 </url>
 <url>
-<loc>https://boikontho.com/publish/register</loc>
+<loc>https://boikontho.com/creator/register</loc>
 <lastmod>2022-12-06T12:03:53+00:00</lastmod>
 <priority>0.64</priority>
 </url>
 <url>
-<loc>https://boikontho.com/publish/login</loc>
+<loc>https://boikontho.com/creator/login</loc>
 <lastmod>2022-12-06T12:03:53+00:00</lastmod>
 <priority>0.64</priority>
 </url>

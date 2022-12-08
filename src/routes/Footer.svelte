@@ -57,7 +57,7 @@
 							<a href="/details/about-us" class="hover:text-btnColor"> About Us</a>
 						</li>
 						<li class="text-sm md:text-base">
-							<a href="/publish" class="hover:text-btnColor">Publish on Boikontho</a>
+							<a href="/creator" class="hover:text-btnColor">Boikontho Creator Program</a>
 						</li>
 						<li class="text-sm md:text-base">
 							<a href="/details/career" class="hover:text-btnColor">Career</a>

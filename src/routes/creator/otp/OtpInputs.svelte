@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import Button from '$lib/Button.svelte';
 	import { userInfo, successBtnText, successText, successbtnLink } from '../../../store';
-	import { otpResend, otpVerify } from '$lib/apis/publisher/otp';
+	import { otpResend, otpVerify } from '$lib/apis/creator/otp';
 	import { goto } from '$app/navigation';
 	let startTimer: any = undefined;
 	let info = {

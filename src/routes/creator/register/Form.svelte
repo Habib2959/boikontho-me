@@ -6,7 +6,7 @@
 	import { userInfo } from '../../../store';
 	import { goto } from '$app/navigation';
 	import TelInput from './TelInput.svelte';
-	import { register } from '$lib/apis/publisher/register';
+	import { register } from '$lib/apis/creator/register';
 	import FormError from '$lib/FormError.svelte';
 	let yes = true;
 	export let values = {
@@ -123,7 +123,7 @@
 		<p class="hack-text-center hack-switch-signup">
 			Have an account?
 
-			<a href="/publish/login" class="hack-sign-in-text">Sign in</a>
+			<a href="/creator/login" class="hack-sign-in-text">Sign in</a>
 		</p>
 	{/if}
 </div>

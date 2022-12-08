@@ -5,7 +5,7 @@
 	import { userInfo } from '../../../store';
 	import { goto } from '$app/navigation';
 	import TelInput from './TelInput.svelte';
-	import { login } from '$lib/apis/publisher/login';
+	import { login } from '$lib/apis/creator/login';
 	import FormError from '$lib/FormError.svelte';
 	export let values = {
 		password: '',
@@ -73,7 +73,7 @@
 	</form>
 	<p class="hack-text-center hack-switch-signup">
 		Don't have an account
-		<a href="/publish/register" class="hack-sign-in-text">Sign up</a>
+		<a href="/creator/register" class="hack-sign-in-text">Sign up</a>
 	</p>
 </div>
 
