@@ -7,8 +7,8 @@ export const register = async (name: string, email: string, mobile: string, pass
         body: JSON.stringify({
             name,
             email,
-            password,
-            mobile
+            mobile,
+            password
         })
     });
     let data = await res.json();

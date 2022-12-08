@@ -74,7 +74,7 @@
 				loading = false;
 				successText.set(otpRes.detail);
 				successBtnText.set('Go to login');
-				successbtnLink.set('/login');
+				successbtnLink.set('/creator/login');
 				goto('/success');
 			} catch (err) {
 				loading = false;

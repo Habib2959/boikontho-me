@@ -53,7 +53,7 @@
 			loading = false;
 			errorMessage = '';
 			errorType = '';
-			goto('/otp');
+			goto('/creator/otp');
 		} catch (err) {
 			if (err.detail) {
 				errorMessage = err.detail;

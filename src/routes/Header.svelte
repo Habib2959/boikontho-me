@@ -48,7 +48,7 @@
 					<div class="hack-dropdown-container">
 						<div class="hack-dropdown-menu flex cursor-pointer items-center">
 							<img src={avatar} alt="pp" width="30" />
-							<div class="ml-1 text-[.9rem]">{$username}</div>
+							<div class="ml-1 text-[.9rem]">{$username ? $username : ''}</div>
 							<img src={down} alt="arrow" width="10" class="hack-down ml-1 rounded-full" />
 						</div>
 						<div
