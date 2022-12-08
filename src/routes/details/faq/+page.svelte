@@ -3,18 +3,28 @@
 	let show: null | number = null;
 	const data = [
 		{
-			question: 'foo',
-			ans: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.',
+			question: 'বইকন্ঠ কি?',
+			ans: 'বইকণ্ঠ বাংলাদেশের প্রথম অডিওবুক ও ইবুক মার্কেটপ্লেস । বইকে শুধুমাত্র কাগজের পাতায় বন্দি না রেখে অডিও ও ডিজিটাল স্ক্রিনে তুলে ধরছে বইকন্ঠ।',
 			id: 1
 		},
 		{
-			question: 'bar',
-			ans: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.',
+			question: 'প্রি-রেজিস্ট্রেশনে ১ মাসের ফ্রি সাবস্ক্রিপশনের জন্য কি আমায় কোন টাকা পরিশোধ করতে হবে?',
+			ans: 'না।',
 			id: 2
 		},
 		{
-			question: 'my question',
-			ans: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.',
+			question: 'আমার একাউন্ট সম্পর্কিত যেকোন সমস্যার জন্য কোথায় যোগাযোগ করবো?',
+			ans: 'আপনার একাউন্ট সম্পর্কিত যেকোন সমস্যা বিস্তারিত লিখে পাঠিয়ে দিন support@boikontho.com এই মেইলে।',
+			id: 3
+		},
+		{
+			question: 'আপনাদের হেল্পলাইনে কখন কল করা যাবে?',
+			ans: 'আমাদের হেল্পলাইনে সকাল ১০ঃ০০ টা থেকে বিকাল ৫ঃ০০ টার মধ্যে কলে কথা বলতে পারবেন।',
+			id: 3
+		},
+		{
+			question: 'এছাড়াও আমার আরও কিছু প্রশ্ন আছে। কিভাবে করতে পারি?',
+			ans: 'আপনার সকল প্রশ্ন বিস্তারিত লিখে পাঠিয়ে দিন support@boikontho.com এই মেইলে।',
 			id: 3
 		}
 	];
