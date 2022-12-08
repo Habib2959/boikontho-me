@@ -51,24 +51,24 @@
 					</ul>
 				</div>
 				<div class="hack-about">
-					<h3>Quick Links</h3>
+					<h3>লিংক সমূহ</h3>
 					<ul>
 						<li class="text-sm md:text-base">
-							<a href="/details/about-us" class="hover:text-btnColor"> About Us</a>
+							<a href="/details/about-us" class="hover:text-btnColor">আমাদের গল্প</a>
 						</li>
 						<li class="text-sm md:text-base">
-							<a href="/creator" class="hover:text-btnColor">Boikontho Creator Program</a>
+							<a href="/creator" class="hover:text-btnColor">বইকন্ঠ ক্রিয়েটর প্রোগ্রাম</a>
 						</li>
 						<li class="text-sm md:text-base">
-							<a href="/details/career" class="hover:text-btnColor">Career</a>
+							<a href="/details/career" class="hover:text-btnColor">ক্যারিয়ার</a>
 						</li>
 						<li class="text-sm md:text-base">
-							<a href="/details/contact-us" class="hover:text-btnColor">Contact us</a>
+							<a href="/details/contact-us" class="hover:text-btnColor">যোগাযোগ</a>
 						</li>
 					</ul>
 				</div>
 				<div>
-					<h3>Download</h3>
+					<h3>ডাউনলোড</h3>
 					<a href="/">
 						<img src={gplay} alt="logo" class="hack-download-img" />
 					</a>
