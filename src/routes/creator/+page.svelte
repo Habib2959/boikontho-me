@@ -1,5 +1,9 @@
 <script>
 	import ill from '$lib/images/our-story.png';
+	import { language } from '../../store';
+	import { bn, en } from '$lib/lang/creator';
+	const { header, p1 } = bn();
+	const { headerEn, p1En } = en();
 </script>
 
 <svelte:head>
@@ -22,20 +26,28 @@
 				<img src={ill} alt="us" class="rounded-lg" />
 			</div> -->
 			<div class="text-center">
-				<h2 class="text-xl font-semibold lg:text-3xl">বইকন্ঠ ক্রিয়েটর প্রোগ্রাম</h2>
+				<h2 class="text-xl font-semibold lg:text-3xl">
+					{$language.lang === 'bn' ? header : headerEn}
+				</h2>
 				<p class="mt-3">
-					প্রতিটি বই এবং প্রতিটি কণ্ঠ শোনার যোগ্যতা রাখে। এই স্লোগান নিয়েই আমাদের <span
-						class="text-btnColor">বইকন্ঠ ক্রিয়েটর প্রোগ্রাম</span
-					> এর শুরু। যদি আপনি স্পষ্ট ও সাবলীল ভাবে বই পড়তে দক্ষ হন তাহলে আপনিও বইকন্ঠ মার্কেটপ্লেসে বই
-					প্রকাশ করে নিজের মেধা ছড়িয়ে দেওয়ার পাশাপাশি আয় করতে পারেন বইকন্ঠের সাথে।
+					{#if $language.lang === 'bn'}
+						{@html p1}
+					{:else}
+						{p1En}
+					{/if}
 				</p>
 				<div class="text-center mt-5">
 					<a
 						href="/creator/register"
 						class="bg-btnColor transition-colors duration-300  hover:bg-btnHoverColor text-white p-2 lg:p-3 rounded hack-btn-animation"
-						>ক্রিয়েটর একাউন্ট খুলুন</a
+						>{$language.lang === 'bn' ? 'ক্রিয়েটর একাউন্ট খুলুন' : 'Creator account'}</a
 					>
-					<p class="mt-3">অথবা <a href="/creator/login" class="text-btnColor">লগিন করুন</a></p>
+					<p class="mt-3">
+						{$language.lang === 'bn' ? 'অথবা ' : 'or'}
+						<a href="/creator/login" class="text-btnColor"
+							>{$language.lang === 'bn' ? 'লগিন করুন ' : 'login'}</a
+						>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -176,12 +188,12 @@
 	@media (min-width: 768px) {
 		.hack-banner {
 			margin-top: 65px;
-			min-height: 290px;
+			min-height: 350px;
 		}
 	}
 	@media (min-width: 1440px) {
 		.hack-banner {
-			min-height: 350px;
+			min-height: 400px;
 		}
 	}
 </style>

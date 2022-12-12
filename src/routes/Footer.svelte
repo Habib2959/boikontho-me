@@ -11,6 +11,43 @@
 	import ln from '$lib/images/linkedin.svg';
 	import yt from '$lib/images/youtube.svg';
 	import twitter from '$lib/images/twitter.svg';
+	import { language } from '../store';
+	const bnLinks = [
+		{
+			link: '/details/about-us',
+			text: 'আমাদের গল্প'
+		},
+		{
+			link: '/creator',
+			text: 'বইকন্ঠ ক্রিয়েটর প্রোগ্রাম'
+		},
+		{
+			link: '/details/career',
+			text: 'ক্যারিয়ার'
+		},
+		{
+			link: '/details/contact-us',
+			text: 'যোগাযোগ'
+		}
+	];
+	const enLinks = [
+		{
+			link: '/details/about-us',
+			text: 'Our story'
+		},
+		{
+			link: '/creator',
+			text: 'Boikontho creator program'
+		},
+		{
+			link: '/details/career',
+			text: 'Career'
+		},
+		{
+			link: '/details/contact-us',
+			text: 'Contact'
+		}
+	];
 </script>
 
 <footer
@@ -51,24 +88,25 @@
 					</ul>
 				</div>
 				<div class="hack-about">
-					<h3>লিংক সমূহ</h3>
+					<h3>{$language.lang === 'bn' ? 'লিংক সমূহ' : 'Links'}</h3>
 					<ul>
-						<li class="text-sm md:text-base">
-							<a href="/details/about-us" class="hover:text-btnColor">আমাদের গল্প</a>
-						</li>
-						<li class="text-sm md:text-base">
-							<a href="/creator" class="hover:text-btnColor">বইকন্ঠ ক্রিয়েটর প্রোগ্রাম</a>
-						</li>
-						<li class="text-sm md:text-base">
-							<a href="/details/career" class="hover:text-btnColor">ক্যারিয়ার</a>
-						</li>
-						<li class="text-sm md:text-base">
-							<a href="/details/contact-us" class="hover:text-btnColor">যোগাযোগ</a>
-						</li>
+						{#if $language.lang === 'bn'}
+							{#each bnLinks as bnContent}
+								<li class="text-sm md:text-base">
+									<a href={bnContent.link} class="hover:text-btnColor">{bnContent.text}</a>
+								</li>
+							{/each}
+						{:else}
+							{#each enLinks as enContent}
+								<li class="text-sm md:text-base">
+									<a href={enContent.link} class="hover:text-btnColor">{enContent.text}</a>
+								</li>
+							{/each}
+						{/if}
 					</ul>
 				</div>
 				<div>
-					<h3>ডাউনলোড</h3>
+					<h3>{$language.lang === 'bn' ? 'ডাউনলোড' : 'Download'}</h3>
 					<a href="/">
 						<img src={gplay} alt="logo" class="hack-download-img" />
 					</a>

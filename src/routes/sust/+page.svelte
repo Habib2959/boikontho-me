@@ -150,7 +150,7 @@
 		background-repeat: no-repeat;
 		margin-top: 60px;
 	}
-	.hack-btn-animation {
+	/* .hack-btn-animation {
 		animation-name: pulse;
 		animation-duration: 2.5s;
 		animation-iteration-count: infinite;
@@ -158,7 +158,7 @@
 		animation-fill-mode: both;
 		animation-play-state: running;
 		display: inline-block;
-	}
+	} */
 	@keyframes pulse {
 		0% {
 			transform: scale(0.95);

@@ -7,3 +7,4 @@ export const username = writable('');
 export const successText = writable('');
 export const successBtnText = writable('');
 export const successbtnLink = writable('');
+export const language = writable({lang: 'bn', flag: 'bd'});

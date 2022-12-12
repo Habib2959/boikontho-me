@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { career } from '$lib/apis/public/career';
-	import { successText } from '../../../store';
+	import { successText, language } from '../../../store';
 	import { goto } from '$app/navigation';
+	import { en, bn } from '$lib/lang/career';
 	let name = '';
 	let email = '';
 	let num = '';
@@ -44,28 +45,58 @@
 			alert(err);
 		}
 	};
+	const { header, header2, header3, p1, p2, p4, p5, mail } = bn();
+	const { headerEn, header2En, header3En, p1En, p2En, p4En, p5En, mailEn } = en();
 </script>
 
 <section class="mt-3 lg:mt-6">
 	<div class="container mx-auto w-[90%] sm:w-[100%]">
 		<div>
 			<h1 class="text-2xl font-bold text-center border-b pb-1 lg:text-5xl lg:pb-5">
-				Join Our Family
+				{#if $language.lang === 'bn'}
+					{header}
+				{:else}
+					{headerEn}
+				{/if}
 			</h1>
 			<div class="mt-3 lg:mt-5 md:text-center">
-				<h2 class="text-lg font-semibold text-center lg:text-3xl">WE DON’T BITE!</h2>
+				<h2 class="text-lg font-semibold text-center lg:text-3xl">
+					{#if $language.lang === 'bn'}
+						{header}
+					{:else}
+						{headerEn}
+					{/if}
+				</h2>
 				<p class="my-3">
-					Hi there! We are just another human who are in love with their work & has a proven record
-					of helping our people grow.
+					{#if $language.lang === 'bn'}
+						{p1}
+					{:else}
+						{p1En}
+					{/if}
 				</p>
 				<p>
-					We promise you, our 1st conversation will REALLY help you even if we don’t work together.
-					So please send your CV or Say a hi…
+					{#if $language.lang === 'bn'}
+						{p2}
+					{:else}
+						{p2En}
+					{/if}
 				</p>
 			</div>
 			<div class="mt-5 lg:mt-8">
-				<h2 class="text-xl text-center lg:text-3xl">Drop Your Resume Here</h2>
-				<p class="text-center mb-3">We’ll reach you soon...</p>
+				<h2 class="text-xl text-center lg:text-3xl">
+					{#if $language.lang === 'bn'}
+						{header3}
+					{:else}
+						{header3En}
+					{/if}
+				</h2>
+				<p class="text-center mb-3">
+					{#if $language.lang === 'bn'}
+						{p4}
+					{:else}
+						{p4En}
+					{/if}
+				</p>
 				<div
 					class="px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] rounded-md max-w-[800px] mx-auto"
 				>
@@ -161,10 +192,19 @@
 			</div>
 			<div class="text-center mt-5 lg:mt-8">
 				<p class="text-lg lg:text-xl">
-					If you think you fit in with our culture and our requirements then please send a short
-					email to
+					{#if $language.lang === 'bn'}
+						{p5}
+					{:else}
+						{p5En}
+					{/if}
 				</p>
-				<h3 class="font-semibold text-xl mt-2 lg:text-2xl">hr@boikontho.com</h3>
+				<h3 class="font-semibold text-xl mt-2 lg:text-2xl">
+					{#if $language.lang === 'bn'}
+						{mail}
+					{:else}
+						{mailEn}
+					{/if}
+				</h3>
 			</div>
 		</div>
 	</div>

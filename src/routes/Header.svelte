@@ -1,18 +1,30 @@
 <script lang="ts">
 	import logo from '$lib/images/logo.svg';
 	import { page } from '$app/stores';
-	import { userAuthenticated, username } from '../store';
+	import { userAuthenticated, username, language } from '../store';
 	import avatar from '$lib/images/avatar.svg';
 	let y: number;
 	import { goto } from '$app/navigation';
 	import down from '$lib/images/down.svg';
 	import gift from '$lib/images/gift.svg';
+	import uk from '$lib/images/uk.svg';
+	import bd from '$lib/images/bd.svg';
 
 	// let name = 'habib';
 	function logout() {
 		localStorage.clear();
 		userAuthenticated.set(false);
 		goto('/');
+	}
+	function toggleLang() {
+		if ($language.lang === 'en') {
+			const newLang = { lang: 'bn', flag: 'bd' };
+			localStorage.setItem('lang', JSON.stringify(newLang));
+			language.set(newLang);
+		} else {
+			localStorage.setItem('lang', JSON.stringify({ lang: 'en', flag: 'uk' }));
+			language.set({ lang: 'en', flag: 'uk' });
+		}
 	}
 </script>
 
@@ -31,7 +43,7 @@
 			</a>
 		</div>
 		{#if !$userAuthenticated}
-			<div>
+			<div class="flex items-center ">
 				<a
 					href="/register"
 					class="bg-btnColor p-2 transition-colors duration-300 hover:bg-btnHoverColor text-sm  sm:text-base text-white sm:p-3 rounded"
@@ -41,9 +53,33 @@
 						class="w-[12px] mr-2 md:w-[15px] hack-svg-white inline md:mr-3 mb-1"
 					/>প্রি-রেজিস্ট্রেশন</a
 				>
+				<div>
+					<div class="relative">
+						<div class="hack-dropdown-container-country">
+							<div class="hack-dropdown-menu flex cursor-pointer items-center">
+								<img src={$language.flag === 'uk' ? uk : bd} alt="pp" width="20" />
+								<div class="ml-1 text-[.9rem] uppercase">{$language.lang}</div>
+								<img src={down} alt="arrow" width="10" class="hack-down ml-1 rounded-full" />
+							</div>
+							<div
+								class="hack-dropdown absolute right-[5px] shadow-lg top-[100%] bg-[#fff] p-3 rounded-md w-max"
+							>
+								<ul>
+									<!-- svelte-ignore a11y-click-events-have-key-events -->
+									<li class="flex cursor-pointer" on:click={toggleLang}>
+										<img src={$language.flag === 'uk' ? bd : uk} alt="pp" width="20" />
+										<div class="ml-1 text-[.9rem] uppercase">
+											{$language.lang === 'en' ? 'BN' : 'EN'}
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		{:else}
-			<div>
+			<div class="flex items-center">
 				<div class="relative">
 					<div class="hack-dropdown-container">
 						<div class="hack-dropdown-menu flex cursor-pointer items-center">
@@ -52,7 +88,7 @@
 							<img src={down} alt="arrow" width="10" class="hack-down ml-1 rounded-full" />
 						</div>
 						<div
-							class="hack-dropdown absolute right-[0px] top-[100%] bg-[#f5f5f5] p-3 rounded-md w-max"
+							class="hack-dropdown absolute right-[0px] top-[101%] bg-[#fff] shadow-lg p-3 rounded-md w-max"
 						>
 							<ul>
 								<!-- <li class="flex mb-2 cursor-pointer">
@@ -63,9 +99,33 @@
 								</li> -->
 								<!-- svelte-ignore a11y-click-events-have-key-events -->
 								<li class="flex cursor-pointer" on:click={logout}>
-									<p><i class="fa-solid fa-right-from-bracket inline mr-2" />Logout</p>
+									<p>Logout</p>
 								</li>
 							</ul>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="relative">
+						<div class="hack-dropdown-container-country">
+							<div class="hack-dropdown-menu flex cursor-pointer items-center">
+								<img src={$language.flag === 'uk' ? uk : bd} alt="pp" width="20" />
+								<div class="ml-1 text-[.9rem] uppercase">{$language.lang}</div>
+								<img src={down} alt="arrow" width="10" class="hack-down ml-1 rounded-full" />
+							</div>
+							<div
+								class="hack-dropdown absolute right-[5px] shadow-lg top-[100%] bg-[#fff] p-3 rounded-md w-max"
+							>
+								<ul>
+									<!-- svelte-ignore a11y-click-events-have-key-events -->
+									<li class="flex cursor-pointer" on:click={toggleLang}>
+										<img src={$language.flag === 'uk' ? bd : uk} alt="pp" width="20" />
+										<div class="ml-1 text-[.9rem] uppercase">
+											{$language.lang === 'en' ? 'BN' : 'EN'}
+										</div>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -115,10 +175,18 @@
 	}
 	.hack-dropdown-container:hover .hack-dropdown {
 		max-height: 500px;
-		padding: 1rem;
+		padding: 0.5rem 0.8rem;
 		transition: max-height 0.15s ease-in;
 	}
 	.hack-dropdown-container:hover .hack-down {
+		transform: rotate(-180deg);
+	}
+	.hack-dropdown-container-country:hover .hack-dropdown {
+		max-height: 500px;
+		padding: 0.5rem 0.8rem;
+		transition: max-height 0.15s ease-in;
+	}
+	.hack-dropdown-container-country:hover .hack-down {
 		transform: rotate(-180deg);
 	}
 </style>

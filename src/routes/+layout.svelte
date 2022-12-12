@@ -3,12 +3,19 @@
 	import Footer from './Footer.svelte';
 	import Header from './Header.svelte';
 	import './styles.css';
-	import { userAuthenticated, username } from '../store';
+	import { userAuthenticated, username, language } from '../store';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 
 	onMount(async () => {
 		const auth = localStorage.getItem('token');
+		const lang = localStorage.getItem('lang');
+		if (lang) {
+			language.set(JSON.parse(lang));
+		} else {
+			localStorage.setItem('lang', JSON.stringify({ lang: 'bn', flag: 'bd' }));
+			language.set({ lang: 'bn', flag: 'bd' });
+		}
 
 		if (auth) {
 			const userName = localStorage.getItem('user');

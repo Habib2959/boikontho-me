@@ -1,6 +1,10 @@
 <script>
 	import ill1 from '$lib/images/Illustration 1.svg';
 	import arrow from '$lib/images/arrow.svg';
+	import { bn, en } from '$lib/lang/heroContent';
+	import { language } from '../store';
+	const { header, btn1, btn2 } = bn();
+	const { headerEn, btn1En, btn2En } = en();
 </script>
 
 <section class="md:pt-40 pt-[100px] md:pb-16 pb-8 z-1 lg:px-10">
@@ -9,12 +13,20 @@
 			<div class="order-last self-center text-center md:order-first md:text-left">
 				<div class="flex flex-col">
 					<h1 class="font-bold text-3xl mb-4 hack-font">
-						দেশের সর্ববৃহৎ অডিওবুক ও ই-বুকের সম্ভার নিয়ে আসছে বইকণ্ঠ
+						{#if $language.lang === 'bn'}
+							{header}
+						{:else}
+							{headerEn}
+						{/if}
 					</h1>
 					<a
 						href="/register"
 						class="bg-btnColor w-[80%] md:w-[70%] lg:w-[50%] md:mx-[inherit] mx- mx-auto relative transition-all duration-300 hover:bg-btnHoverColor text-white py-3 px-8 rounded hack-btn"
-						>প্রি-রেজিস্ট্রেশন করুন
+						>{#if $language.lang === 'bn'}
+							{btn1}
+						{:else}
+							{btn1En}
+						{/if}
 						<img
 							src={arrow}
 							alt="arrow"
@@ -26,7 +38,11 @@
 					<a
 						href="/details"
 						class="bg-white border border-btnColor text-btnColor w-[80%] md:w-[70%] lg:w-[50%] md:mx-[inherit] mx-auto relative mt-5 transition-all duration-300 py-3 px-8 rounded hack-btn"
-						>বিস্তারিত জানুন
+						>{#if $language.lang === 'bn'}
+							{btn2}
+						{:else}
+							{btn2En}
+						{/if}
 						<img
 							src={arrow}
 							alt="arrow"
