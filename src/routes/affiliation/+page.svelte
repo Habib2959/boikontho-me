@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { language } from '../../store';
 	let mobile = '';
 	let address = '';
@@ -6,7 +6,7 @@
 	let email = '';
 	let gender = '';
 	let dob = '';
-	let platform: string[] = [];
+	let platform = [];
 	let link = '';
 	let platformbn = [
 		{

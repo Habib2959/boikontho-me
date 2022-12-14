@@ -1,5 +1,6 @@
 <script>
 	import { language } from '../../store';
+	import avatar from '$lib/images/avatar.svg';
 	let mobileOrEmail = '';
 	let message = '';
 	let name = '';
@@ -44,6 +45,8 @@
 		<div
 			class="px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] rounded-md max-w-[800px] mx-auto"
 		>
+			<img src={avatar} class="w-[100px] mx-auto" alt="ceo" />
+			<h2 class="mt-2 text-center font-semibold">{$language.lang === 'en' ? 'CEO' : 'সি ই ও'}</h2>
 			<form on:submit|preventDefault={handleSubmit}>
 				<input
 					type="text"
