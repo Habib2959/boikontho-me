@@ -10,7 +10,7 @@
 	let dept = '';
 	let prgram = '';
 	let message = '';
-	let files;
+	let files: any;
 	let locationDropdown = [
 		{ id: 1, text: `Dhaka` },
 		{ id: 2, text: `Sylhet` },
@@ -24,7 +24,10 @@
 		{ id: 5, text: `Business Development` },
 		{ id: 6, text: `Marketing` },
 		{ id: 7, text: `Sales` },
-		{ id: 8, text: `Creative` }
+		{ id: 8, text: `Creative` },
+		{ id: 9, text: `Content Creator` },
+		{ id: 10, text: `Vocal Artist` },
+		{ id: 11, text: `Campus Ambassador` }
 	];
 	let prgramDropdown = [
 		{ id: 1, text: `Permanent` },
@@ -33,7 +36,7 @@
 	];
 	let locationPlaceholder = 'Select your location you wish to work';
 	let deptPlaceholder = 'Select department you wish to work';
-	let prgramPlaceholder = 'Select department you wish to work';
+	let prgramPlaceholder = 'Select employment role you want to join';
 	const handleSubmit = async () => {
 		try {
 			const formEl = document.forms.namedItem('form');

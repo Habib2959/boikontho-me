@@ -1,11 +1,12 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import Footer from './Footer.svelte';
 	import Header from './Header.svelte';
 	import './styles.css';
-	import { userAuthenticated, username, language } from '../store';
+	import { userAuthenticated, username, language, loginRole } from '../store';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
+	import { baseUrl } from '$lib/apis/baseUrl';
 
 	onMount(async () => {
 		const auth = localStorage.getItem('token');
@@ -18,14 +19,23 @@
 		}
 
 		if (auth) {
-			const userName = localStorage.getItem('user');
-			if (userName) {
-				username.set(JSON.parse(userName));
-			}
-			userAuthenticated.set(true);
-			// username.set(JSON.parse(userName));
-			if ($page?.routeId?.includes('login')) {
-				goto('/');
+			const authCheck = await fetch(`${baseUrl}/auth-test/`, {
+				method: 'GET',
+				headers: { Authorization: `Token ${JSON.parse(auth)}` }
+			});
+			if (authCheck.ok) {
+				const user = localStorage.getItem('user');
+				if (user) {
+					username.set(JSON.parse(user)?.name);
+					loginRole.set(JSON.parse(user)?.role);
+				}
+				userAuthenticated.set(true);
+				if ($page?.routeId?.includes('login')) {
+					goto('/');
+				}
+			} else {
+				localStorage.clear();
+				userAuthenticated.set(false);
 			}
 		} else {
 			userAuthenticated.set(false);

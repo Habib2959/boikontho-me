@@ -1,6 +1,6 @@
 import { baseUrl } from "../baseUrl";
 
-export const register = async (name: string, email: string, mobile: string, password: string) => {
+export const register = async (name: string, email: string, mobile: string, password: string, website: string) => {
     const res = await fetch(`${baseUrl}/creator-register/`, {
         method: "POST",
         headers: { "Content-Type": "application/json; charset=UTF-8" },
@@ -8,7 +8,8 @@ export const register = async (name: string, email: string, mobile: string, pass
             name,
             email,
             mobile,
-            password
+            password,
+            website
         })
     });
     let data = await res.json();

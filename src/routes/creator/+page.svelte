@@ -156,7 +156,7 @@
 		margin-top: 60px;
 	} */
 	.hack-banner {
-		background: url('../../lib/images/creator.png');
+		background: url('../../lib/images/campus-program.png');
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;

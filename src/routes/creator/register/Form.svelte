@@ -2,7 +2,7 @@
 	import InputBox from './InputBox.svelte';
 	import Button from '$lib/Button.svelte';
 	// import Dropdown from './Dropdown.svelte';
-	import { emplpoyeeRole, userAuthenticated } from '../../../store';
+	import { emplpoyeeRole, userAuthenticated, language } from '../../../store';
 	import { userInfo } from '../../../store';
 	import { goto } from '$app/navigation';
 	import TelInput from './TelInput.svelte';
@@ -16,7 +16,8 @@
 		confirmPassword: '',
 		email: '',
 		role: '',
-		newsletter: yes
+		newsletter: yes,
+		link: ''
 	};
 	emplpoyeeRole.subscribe((updatedRole) => {
 		values.role = updatedRole;
@@ -48,7 +49,13 @@
 		}
 		loading = true;
 		try {
-			let data = await register(values.userName, values.email, values.tel, values.password);
+			let data = await register(
+				values.userName,
+				values.email,
+				values.tel,
+				values.password,
+				values.link
+			);
 			userInfo.set(values);
 			loading = false;
 			errorMessage = '';
@@ -74,7 +81,9 @@
 </script>
 
 <div class="hack-content-box">
-	<h1 class="hack-title text-3xl text-semibold">Welcome to boikontho.com</h1>
+	<h1 class="hack-title text-3xl text-semibold">
+		{$language.lang === 'bn' ? 'Welcome to boikontho.com' : 'Welcome to boikontho.com'}
+	</h1>
 	<div class:hidden={errorType !== 'regError'}>
 		<FormError {errorMessage} />
 	</div>
@@ -97,6 +106,12 @@
 		<div class:hidden={errorType !== 'confirmPassError'}>
 			<FormError {errorMessage} />
 		</div>
+		<!-- svelte-ignore a11y-label-has-associated-control -->
+		<label for="" class="text-sm text-btnColor">
+			( Optional )
+			<InputBox type="text" placeholder="Link of your previous works" bind:value={values.link} />
+		</label>
+
 		<!-- <div>
 			<p>
 				By continuing , you agree to Boikontho’s <a href="/" class="hack-text-red"
@@ -121,9 +136,11 @@
 	</form>
 	{#if !$userAuthenticated}
 		<p class="hack-text-center hack-switch-signup">
-			Have an account?
+			{$language.lang === 'bn' ? 'Have an account?' : 'Have an account?'}
 
-			<a href="/creator/login" class="hack-sign-in-text">Sign in</a>
+			<a href="/creator/login" class="hack-sign-in-text">
+				{$language.lang === 'bn' ? 'Sign in' : 'Sign in'}
+			</a>
 		</p>
 	{/if}
 </div>

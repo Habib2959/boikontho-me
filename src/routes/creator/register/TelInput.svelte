@@ -8,7 +8,7 @@
 </script>
 
 <div class="hack-input-container">
-	<input use:typeAction {placeholder} bind:value class="hack-input" required />
+	<input use:typeAction {placeholder} bind:value class="hack-input" required maxlength="11" />
 	<span class="hack-prefix">+88</span>
 </div>
 

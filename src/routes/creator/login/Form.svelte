@@ -1,7 +1,7 @@
 <script>
 	import InputBox from './InputBox.svelte';
 	import Button from '$lib/Button.svelte';
-	import { userAuthenticated, username } from '../../../store';
+	import { userAuthenticated, username, language } from '../../../store';
 	import { userInfo } from '../../../store';
 	import { goto } from '$app/navigation';
 	// import TelInput from './TelInput.svelte';
@@ -61,7 +61,9 @@
 </script>
 
 <div class="hack-content-box">
-	<h1 class="hack-title text-3xl text-semibold">Welcome back to Boikontho</h1>
+	<h1 class="hack-title text-3xl text-semibold">
+		{$language.lang === 'bn' ? 'Welcome back to Boikontho' : 'Welcome to boikontho.com'}
+	</h1>
 	<div class:hidden={errorType !== 'loginError'}>
 		<FormError {errorMessage} />
 	</div>
@@ -81,8 +83,10 @@
 		<Button mode="Sign in" {loading} />
 	</form>
 	<p class="hack-text-center hack-switch-signup">
-		Don't have an account
-		<a href="/creator/register" class="hack-sign-in-text">Sign up</a>
+		{$language.lang === 'bn' ? "Don't have an account" : "Don't have an account"}
+		<a href="/creator/register" class="hack-sign-in-text">
+			{$language.lang === 'bn' ? 'Sign up' : 'Sign up'}
+		</a>
 	</p>
 </div>
 

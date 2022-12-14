@@ -1,12 +1,12 @@
-<script>
-	export let type, value, placeholder;
+<script lang="ts">
+	export let type: string, value: string, placeholder: string;
 	import eye from '$lib/images/show.svg';
 	import eyeslash from '$lib/images/hide.svg';
 	let showPass = false;
-	function typeAction(node) {
+	function typeAction(node: any) {
 		node.type = type;
 	}
-	function handleShowPass(e) {
+	function handleShowPass(e: any) {
 		if (e.target.previousElementSibling.type === 'password') {
 			e.target.previousElementSibling.type = 'text';
 			showPass = true;
