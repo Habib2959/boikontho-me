@@ -1,11 +1,11 @@
-	import ill2 from '../images/Illustration 2.svg';
-	import ill3 from '../images/Illustration 3.svg';
-	import ill4 from '../images/Illustration 4.svg';
+import ill2 from '../images/Illustration 2.svg';
+import ill3 from '../images/Illustration 3.svg';
+import ill4 from '../images/Illustration 4.svg';
 export let databn = [
     {
         id: 1,
         title: 'প্রি-বুকিং অফার',
-        desc: 'উদ্বোধনের আগে রেজিস্ট্রেশনকারীরা পাবেন ১ মাসের ফ্রি সাবস্ক্রিপশন',
+        desc: 'উদ্বোধনের আগে রেজিস্ট্রেশনকারীরা পাবেন ১ মাসের ফ্রি সাবস্ক্রিপশন।',
         btn: 'প্রি-রেজিস্ট্রেশন করুন',
         src: ill2,
         link: '/register'
@@ -31,25 +31,25 @@ export let databn = [
 export let dataEn = [
     {
         id: 1,
-        title: 'pre-booking',
-        desc: 'Fugiat duis reprehenderit est in sunt veniam enim amet elit ex aliqua exercitation.',
-        btn: 'pre-register',
+        title: 'Pre-booking Offer',
+        desc: 'All register user will get 1 month free subscription if they complete their registration process before our project inauguration.',
+        btn: 'Pre-register',
         src: ill2,
         link: '/register'
     },
     {
         id: 2,
-        title: 'Fugiat duis reprehenderit',
-        desc: 'Fugiat duis reprehenderit est in sunt veniam enim amet elit ex aliqua exercitation.',
-        btn: 'submit booklist',
+        title: 'Your Favourite book is on Boikontho!',
+        desc: 'You can submit your favourite booklist in our platform. We will working highly prioritize with your preferred books in our upcoming production.',
+        btn: 'Submit booklist',
         src: ill3,
         link: '/booklist'
     },
     {
         id: 3,
-        title: 'Fugiat duis reprehenderit',
-        desc: 'Fugiat duis reprehenderit est in sunt veniam enim amet elit ex aliqua exercitation.',
-        btn: 'details',
+        title: 'Publish your own Audiobook',
+        desc: 'If you are confident and good at proof reading you can share your knowledge with us as well you can earn money by publishing your Audiobook.',
+        btn: 'Details',
         src: ill4,
         link: '/creator'
     }

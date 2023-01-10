@@ -28,27 +28,27 @@ export const databn = [
 
 export const dataEn = [
     {
-        question: 'dataEnDeserunt dolor ad ex cupidatat.',
-        ans: 'বইকণ্ঠ বাংলাদেশের প্রথম অডিওবুক ও ইবুক মার্কেটপ্লেস । বইকে শুধুমাত্র কাগজের পাতায় বন্দি না রেখে অডিও ও ডিজিটাল স্ক্রিনে তুলে ধরছে বইকন্ঠ।',
+        question: 'What is Boikontho?',
+        ans: 'Boikontho is the largest audiobook and ebook marketplace in Bangladesh. Boikontho working with books on digitally rather than only paper pages.',
         id: 1
     },
     {
-        question: 'dataEnDeserunt dolor ad ex cupidatat.',
-        ans: 'না।',
+        question: 'Could I have to pay any cost for 1 month free subscription on pre-registration?',
+        ans: 'No',
         id: 2
     },
     {
-        question: 'dataEnDeserunt dolor ad ex cupidatat.',
-        ans: 'আপনার একাউন্ট সম্পর্কিত যেকোন সমস্যা বিস্তারিত লিখে পাঠিয়ে দিন support@boikontho.com এই মেইলে।',
+        question: 'Where can i contact if any issue occurs in my account',
+        ans: 'By explaining your problem you can send mail at support@boikontho.com.',
         id: 3
     },
     {
-        question: 'dataEnDeserunt dolor ad ex cupidatat.',
+        question: 'When can call at helpline?',
         ans: 'আমাদের হেল্পলাইনে সকাল ১০ঃ০০ টা থেকে বিকাল ৫ঃ০০ টার মধ্যে কলে কথা বলতে পারবেন।',
         id: 3
     },
     {
-        question: 'dataEnDeserunt dolor ad ex cupidatat.',
+        question: 'Apart from these, I have another question. Where should I ask?',
         ans: 'আপনার সকল প্রশ্ন বিস্তারিত লিখে পাঠিয়ে দিন support@boikontho.com এই মেইলে।',
         id: 3
     }

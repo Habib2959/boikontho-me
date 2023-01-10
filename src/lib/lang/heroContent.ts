@@ -10,9 +10,9 @@ export const bn = () => {
 }
 
 export const en = () => {
-    const headerEn = 'Welcome to boikontho';
+    const headerEn = 'Welcome to Boikontho';
     const btn1En = 'Pre-register';
-    const btn2En = 'details';
+    const btn2En = 'Details';
     return {
         headerEn,
         btn1En,

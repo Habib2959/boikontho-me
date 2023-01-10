@@ -24,7 +24,7 @@ export const bn = () => {
 }
 
 export const en = () => {
-    const headerEn = 'our story';
+    const headerEn = 'Our Story';
     const p1En = 'our storyExercitation nisi qui sunt duis elit occaecat qui nisi officia aliquip. Consectetur laborum dolor enim sit quis aliqua fugiat reprehenderit fugiat ut veniam est officia sunt. Sit pariatur sint mollit aliqua magna aliquip incididunt commodo officia et. Sit nulla ad cillum magna eu proident dolor nisi labore tempor ullamco.';
     const p2En = `Boikontho, ‘<span class="text-btnColor">Hackules Limited</span>’ our storyExercitation nisi qui sunt duis elit occaecat qui nisi officia aliquip. Consectetur laborum dolor enim sit quis aliqua fugiat reprehenderit fugiat ut veniam est officia sunt. Sit pariatur sint mollit aliqua magna aliquip incididunt commodo officia et. Sit nulla ad cillum magna eu proident dolor nisi labore tempor ullamco.`;
     const p3En = `Boikontho, ‘<span class="text-btnColor">Hackules Limited</span>’ our storyExercitation nisi qui sunt duis elit occaecat qui nisi officia aliquip. Consectetur laborum dolor enim sit quis aliqua fugiat reprehenderit fugiat ut veniam est officia sunt. Sit pariatur sint mollit aliqua magna aliquip incididunt commodo officia et. Sit nulla ad cillum magna eu proident dolor nisi labore tempor ullamco.`;
