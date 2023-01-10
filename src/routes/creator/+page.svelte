@@ -1,5 +1,4 @@
 <script>
-	import ill from '$lib/images/our-story.png';
 	import { language } from '../../store';
 	import { bn, en } from '$lib/lang/creator';
 	const { header, p1 } = bn();
@@ -156,12 +155,10 @@
 		margin-top: 60px;
 	} */
 	.hack-banner {
-		background: url('../../lib/images/campus-program.png');
+		background: url('../../lib/images/creator.webp');
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
-		min-height: 120px;
-		margin-top: 60px;
 	}
 	.hack-btn-animation {
 		animation-name: pulse;
@@ -188,12 +185,12 @@
 	@media (min-width: 768px) {
 		.hack-banner {
 			margin-top: 65px;
-			min-height: 350px;
+			min-height: 250px;
 		}
 	}
 	@media (min-width: 1440px) {
 		.hack-banner {
-			min-height: 400px;
+			min-height: 360px;
 		}
 	}
 </style>

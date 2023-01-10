@@ -99,13 +99,11 @@
 		clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
 		display: inline-block;
 	} */
-	.hack-banner {
-		background: url('../../lib/images/background.png');
-		padding: 90px;
+		.hack-banner {
+		background: url('../../lib/images/campus.webp');
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
-		margin-top: 60px;
 	}
 	/* .hack-btn-animation {
 		animation-name: pulse;
@@ -116,28 +114,16 @@
 		animation-play-state: running;
 		display: inline-block;
 	} */
-	@keyframes pulse {
-		0% {
-			transform: scale(0.95);
-		}
 
-		70% {
-			transform: scale(1.15);
-		}
-
-		100% {
-			transform: scale(0.95);
-		}
-	}
 	@media (min-width: 768px) {
 		.hack-banner {
 			margin-top: 65px;
-			min-height: 400px;
+			min-height: 250px;
 		}
 	}
 	@media (min-width: 1440px) {
 		.hack-banner {
-			min-height: 500px;
+			min-height: 360px;
 		}
 	}
 </style>
