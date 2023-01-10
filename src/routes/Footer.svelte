@@ -18,8 +18,12 @@
 			text: 'আমাদের গল্প'
 		},
 		{
-			link: '/creator',
-			text: 'বইকন্ঠ ক্রিয়েটর প্রোগ্রাম'
+			link: '/details/faq',
+			text: 'সাধারণ জিজ্ঞাসা'
+		},
+		{
+			link: '/advertise',
+			text: 'অ্যাডভার্টাইজমেন্ট'
 		},
 		{
 			link: '/details/career',
@@ -36,8 +40,12 @@
 			text: 'Our story'
 		},
 		{
-			link: '/creator',
-			text: 'Boikontho creator program'
+			link: '/details/faq',
+			text: 'FAQ'
+		},
+		{
+			link: '/advertise',
+			text: 'Advertisement'
 		},
 		{
 			link: '/details/career',
@@ -46,6 +54,42 @@
 		{
 			link: '/details/contact-us',
 			text: 'Contact'
+		}
+	];
+	const bnProgramlinks = [
+		{
+			link: '/creator',
+			text: 'ক্রিয়েটর প্রোগ্রাম'
+		},
+		{
+			link: '/affiliation',
+			text: 'অ্যাফিলিয়েট প্রোগ্রাম'
+		},
+		{
+			link: '/ambassador',
+			text: 'ক্যাম্পাস প্রোগ্রাম'
+		},
+		{
+			link: '/club',
+			text: 'ক্লাব প্রোগ্রাম'
+		}
+	];
+		const enProgramlinks = [
+		{
+			link: '/creator',
+			text: 'Creator program'
+		},
+		{
+			link: '/affiliation',
+			text: 'Affiliate program'
+		},
+		{
+			link: '/ambassador',
+			text: 'Campus Program'
+		},
+		{
+			link: '/club',
+			text: 'Club program'
 		}
 	];
 </script>
@@ -105,13 +149,31 @@
 						{/if}
 					</ul>
 				</div>
+				<div class="hack-program">
+					<h3>{$language.lang === 'bn' ? 'প্রোগ্রাম সমূহ' : 'Programs'}</h3>
+					<ul>
+						{#if $language.lang === 'bn'}
+							{#each bnProgramlinks as bnContent}
+								<li class="text-sm md:text-base">
+									<a href={bnContent.link} class="hover:text-btnColor">{bnContent.text}</a>
+								</li>
+							{/each}
+						{:else}
+							{#each enProgramlinks as enContent}
+								<li class="text-sm md:text-base">
+									<a href={enContent.link} class="hover:text-btnColor">{enContent.text}</a>
+								</li>
+							{/each}
+						{/if}
+					</ul>
+				</div>
 				<div>
 					<h3>{$language.lang === 'bn' ? 'ডাউনলোড' : 'Download'}</h3>
 					<a href="/">
-						<img src={gplay} alt="logo" class="hack-download-img" />
+						<img src={gplay} alt="logo" class="hack-download-img inline-block md:block" />
 					</a>
 					<a href="/">
-						<img src={app} alt="logo" class="hack-download-img mt-2" />
+						<img src={app} alt="logo" class="hack-download-img inline-block ml-2 md:block md:ml-0 md:mt-2" />
 					</a>
 				</div>
 			</div>
@@ -119,7 +181,7 @@
 			<div class="hack-footer-bottom">
 				<div>
 					<p class="text-sm md:text-base">
-						© 2022 Boikontho.com | <a href="/details/terms-of-use" class="hover:text-btnColor"
+						© 2023 Boikontho.com | <a href="/details/terms-of-use" class="hover:text-btnColor"
 							>Terms of Use</a
 						>
 						|

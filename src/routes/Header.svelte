@@ -41,14 +41,14 @@
 			</a>
 		</div>
 		{#if !$userAuthenticated}
-			<div class="flex items-center ">
+			<div class="flex items-center">
 				<a
 					href="/register"
-					class="bg-btnColor p-2 transition-colors duration-300 hover:bg-btnHoverColor text-sm  sm:text-base text-white sm:p-3 rounded"
+					class="bg-btnColor px-2 py-3 transition-colors duration-300 hover:bg-btnHoverColor text-xs  sm:text-base text-white sm:p-3 rounded sm:block hidden"
 					><img
 						src={gift}
 						alt="gift"
-						class="w-[12px] mr-2 md:w-[15px] hack-svg-white inline md:mr-3 mb-1"
+						class="w-[12px] mr-1 md:w-[15px] hack-svg-white inline md:mr-3 mb-1"
 					/>প্রি-রেজিস্ট্রেশন</a
 				>
 				<div class="md:ml-3">

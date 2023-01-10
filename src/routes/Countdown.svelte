@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Set the date we're counting down to
-	let countDownDate = new Date('Jan 1, 2023 0:0:0').getTime();
+	let countDownDate = new Date('Jan 30, 2023 0:0:0').getTime();
 	let days: number | string = 0;
 	let hours: number | string = 0;
 	let minutes: number | string = 0;
@@ -32,10 +32,15 @@
 		if (days < 10) {
 			days = '0' + days;
 		}
+		 
 
 		// If the count down is finished, write some text
 		if (distance < 0) {
 			clearInterval(x);
+			seconds = '00';
+			hours = '00';
+			minutes = '00';
+			days ='00';
 		}
 	}, 1000);
 </script>
