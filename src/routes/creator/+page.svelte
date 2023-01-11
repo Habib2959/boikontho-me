@@ -1,6 +1,6 @@
 <script>
-	import { language } from '../../store';
 	import { bn, en } from '$lib/lang/creator';
+	import { language } from '../../store';
 	const { header, p1 } = bn();
 	const { headerEn, p1En } = en();
 </script>
@@ -32,14 +32,14 @@
 					{#if $language.lang === 'bn'}
 						{@html p1}
 					{:else}
-						{p1En}
+						{@html p1En}
 					{/if}
 				</p>
 				<div class="text-center mt-5">
 					<a
 						href="/creator/register"
 						class="bg-btnColor transition-colors duration-300  hover:bg-btnHoverColor text-white p-2 lg:p-3 rounded hack-btn-animation"
-						>{$language.lang === 'bn' ? 'ক্রিয়েটর একাউন্ট খুলুন' : 'Creator account'}</a
+						>{$language.lang === 'bn' ? 'ক্রিয়েটর একাউন্ট খুলুন' : 'Creator Account'}</a
 					>
 					<p class="mt-3">
 						{$language.lang === 'bn' ? 'অথবা ' : 'or'}

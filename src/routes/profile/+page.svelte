@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { bookChoice } from '$lib/apis/public/bookChoice';
 	import { baseUrl } from '$lib/apis/baseUrl';
-	import { successbtnLink, successBtnText, successText, language, loginRole } from '../../store';
 	import avatar from '$lib/images/avatar.svg';
+	import { language, loginRole, successbtnLink, successBtnText, successText } from '../../store';
 	let first_name = '';
 	let mobile = '';
 	let dob = '';
@@ -60,7 +59,7 @@
 	<div class="container mx-auto w-[90%] lg:w-[100%]">
 		<div class="text-center max-w-[800px] mx-auto">
 			<h2 class="text-3xl my-3 font-bold text-btnColor">
-				{$language.lang === 'bn' ? 'প্রোফাইল আপডেট' : 'Tempor consequat elit amet anim.'}
+				{$language.lang === 'bn' ? 'প্রোফাইল আপডেট' : 'Update your Profile'}
 			</h2>
 		</div>
 		<div
@@ -95,7 +94,7 @@
 					required
 					type="text"
 					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'আপনার নাম' : 'Tempor consequat elit amet anim.'}
+					placeholder={$language.lang === 'bn' ? 'নাম' : 'Name'}
 					bind:value={first_name}
 					name="first_name"
 				/>
@@ -104,21 +103,21 @@
 					required
 					type="email"
 					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7]  focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'ইমেইল' : 'Tempor consequat elit amet anim.'}
+					placeholder={$language.lang === 'bn' ? 'ইমেইল' : 'Email'}
 					bind:value={disabledEmail}
 				/>
 				<input
 					required
 					type="number"
 					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7]  focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'মোবাইল' : 'Tempor consequat elit amet anim.'}
+					placeholder={$language.lang === 'bn' ? 'মোবাইল' : 'Mobile'}
 					bind:value={mobile}
 					maxlength="11"
 					name="mobile"
 				/>
 				<div class="mt-2 text-[#9e9e9e]">
 					<p>
-						{$language.lang === 'bn' ? 'date of birth :' : 'Tempor consequat elit amet anim.'}
+						{$language.lang === 'bn' ? 'জন্ম তারিখঃ' : 'Date of birth :'}
 					</p>
 					<input
 						type="date"
@@ -131,7 +130,7 @@
 				<textarea
 					required
 					class="mt-2 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'address' : 'address'}
+					placeholder={$language.lang === 'bn' ? 'ঠিকানা' : 'Address'}
 					bind:value={detail_address}
 					name="detail_address"
 				/>

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { language, successBtnText, successText, successbtnLink } from '../../store';
 	import { goto } from '$app/navigation';
 	import { club } from '$lib/apis/public/club';
 	import ClubSwitcher from '$lib/clubSwitcher.svelte';
+	import { language, successbtnLink, successBtnText, successText } from '../../store';
 	let name = '';
 	let mobile = '';
 	let email = '';
@@ -40,13 +40,15 @@
 		<div class="text-center max-w-[800px] mx-auto">
 			<ClubSwitcher />
 			<h2 class="text-3xl my-3 font-bold text-btnColor">
-				{$language.lang === 'bn' ? 'আপনার পছন্দের বই বইকন্ঠে!' : 'Tempor consequat elit amet anim.'}
+				{$language.lang === 'bn'
+					? 'ক্লাব অথবা সংগঠনের হয়ে যুক্ত হোন!'
+					: 'Join onbehalf of a Club or Organization'}
 			</h2>
-			<p class="mb-3 text-subtitleColor">
+			<!-- <p class="mb-3 text-subtitleColor">
 				{$language.lang === 'bn'
 					? 'আপনি চাইলে আপনার পছন্দের বইয়ের তালিকা জমা দিতে পারেন। আমরা আমাদের পরবর্তি প্রোডাকশনে আপনার পছন্দের বইটিকে অগ্রাধিকার দিয়ে কাজ করব।'
 					: 'Tempor consequat elit amet anim.'}
-			</p>
+			</p> -->
 		</div>
 		<div
 			class="px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] rounded-md max-w-[800px] mx-auto"
@@ -55,38 +57,40 @@
 				<input
 					type="text"
 					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'আপনার নাম' : 'Tempor consequat elit amet anim.'}
+					placeholder={$language.lang === 'bn' ? 'আপনার নাম' : 'Name'}
 					bind:value={name}
 				/>
 				<input
 					type="text"
 					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'club' : 'Tempor consequat elit amet anim.'}
+					placeholder={$language.lang === 'bn'
+						? 'ক্লাব অথবা সংগঠনের নাম'
+						: 'Name of the Club or Organization'}
 					bind:value={club_name}
 				/>
 				<input
 					type="number"
 					maxlength="11"
 					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7]  focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'মোবাইল' : 'Tempor consequat elit amet anim.'}
+					placeholder={$language.lang === 'bn' ? 'মোবাইল' : 'Mobile'}
 					bind:value={mobile}
 				/>
 				<input
 					type="email"
 					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7]  focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'email' : 'Tempor consequat elit amet anim.'}
+					placeholder={$language.lang === 'bn' ? 'ইমেইল' : 'Email'}
 					bind:value={email}
 				/>
 				<input
 					type="text"
 					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7]  focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'institution' : 'Tempor consequat elit amet anim.'}
+					placeholder={$language.lang === 'bn' ? 'শিক্ষা প্রতিষ্ঠান ' : 'Institution'}
 					bind:value={institution}
 				/>
 				<input
 					type="text"
 					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7]  focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'website' : 'Tempor consequat elit amet anim.'}
+					placeholder={$language.lang === 'bn' ? 'ওয়েবসাইট' : 'Website'}
 					bind:value={website}
 				/>
 				<button

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { language, successBtnText, successText, successbtnLink } from '../../store';
 	import { goto } from '$app/navigation';
 	import { ambassador } from '$lib/apis/public/ambassador';
 	import ClubSwitcher from '$lib/clubSwitcher.svelte';
+	import { language, successbtnLink, successBtnText, successText } from '../../store';
 	let name = '';
 	let mobile = '';
 	let email = '';
@@ -39,13 +39,15 @@
 		<div class="text-center max-w-[800px] mx-auto">
 			<ClubSwitcher />
 			<h2 class="text-3xl my-3 font-bold text-btnColor">
-				{$language.lang === 'bn' ? 'আপনার পছন্দের বই বইকন্ঠে!' : 'Tempor consequat elit amet anim.'}
+				{$language.lang === 'bn'
+					? 'ক্যাম্পাস অ্যাম্বাসেডর হিসেবে যুক্ত হোন!'
+					: 'Join as a Campus Ambassador'}
 			</h2>
-			<p class="mb-3 text-subtitleColor">
+			<!-- <p class="mb-3 text-subtitleColor">
 				{$language.lang === 'bn'
 					? 'আপনি চাইলে আপনার পছন্দের বইয়ের তালিকা জমা দিতে পারেন। আমরা আমাদের পরবর্তি প্রোডাকশনে আপনার পছন্দের বইটিকে অগ্রাধিকার দিয়ে কাজ করব।'
 					: 'Tempor consequat elit amet anim.'}
-			</p>
+			</p> -->
 		</div>
 		<div
 			class="px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] rounded-md max-w-[800px] mx-auto"
@@ -54,7 +56,7 @@
 				<input
 					type="text"
 					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'আপনার নাম' : 'Tempor consequat elit amet anim.'}
+					placeholder={$language.lang === 'bn' ? 'আপনার নাম' : 'Name'}
 					bind:value={name}
 				/>
 
@@ -62,25 +64,25 @@
 					type="number"
 					maxlength="11"
 					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7]  focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'মোবাইল' : 'Tempor consequat elit amet anim.'}
+					placeholder={$language.lang === 'bn' ? 'মোবাইল' : 'Mobile'}
 					bind:value={mobile}
 				/>
 				<input
 					type="email"
 					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7]  focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'email' : 'Tempor consequat elit amet anim.'}
+					placeholder={$language.lang === 'bn' ? 'ইমেইল' : 'Email'}
 					bind:value={email}
 				/>
 				<input
 					type="text"
 					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7]  focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'institution' : 'Tempor consequat elit amet anim.'}
+					placeholder={$language.lang === 'bn' ? 'শিক্ষা প্রতিষ্ঠান ' : 'Institution'}
 					bind:value={institution}
 				/>
 				<input
 					type="text"
 					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7]  focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-					placeholder={$language.lang === 'bn' ? 'website' : 'Tempor consequat elit amet anim.'}
+					placeholder={$language.lang === 'bn' ? 'ওয়েবসাইট' : 'Website'}
 					bind:value={website}
 				/>
 				<button
@@ -99,7 +101,7 @@
 		clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
 		display: inline-block;
 	} */
-		.hack-banner {
+	.hack-banner {
 		background: url('../../lib/images/campus.webp');
 		background-position: center center;
 		background-size: cover;
