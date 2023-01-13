@@ -29,13 +29,17 @@
 		loading = true;
 		try {
 			const loginRes = await login(values.email, values.password);
+			console.log(loginRes);
 			loading = false;
 			errorMessage = '';
 			errorType = '';
-			goto('/');
+			// goto('/');
 		} catch (err) {
 			if (err.detail) {
 				errorMessage = err.detail;
+				errorType = 'loginError';
+			}else{
+				errorMessage = 'wrong credentials';
 				errorType = 'loginError';
 			}
 			loading = false;
@@ -48,7 +52,7 @@
 			const user = localStorage.getItem('user');
 			userAuthenticated.set(true);
 			// @ts-ignore
-			username.set(JSON.parse(user));
+			username.set(JSON.parse(user)?.name);
 			goto('/');
 		} else {
 			userAuthenticated.set(false);

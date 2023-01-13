@@ -2,6 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { baseUrl } from '$lib/apis/baseUrl';
 	import avatar from '$lib/images/avatar.svg';
+	import { onMount } from 'svelte';
 	import { language, loginRole, successbtnLink, successBtnText, successText } from '../../store';
 	let first_name = '';
 	let mobile = '';
@@ -11,6 +12,16 @@
 	let files: any;
 	let disabledEmail = '';
 	let fileInput: HTMLInputElement;
+	onMount(async () => {
+		const token = localStorage.getItem('token');
+		const res = await fetch(`${baseUrl}/profile/`, {
+        method: 'GET',
+        headers: { Authorization: `Token ${token ? JSON.parse(token) : ''}` }
+    });
+    const data = await res.json();
+	console.log(data);
+	disabledEmail = data.email;
+	})
 	const handleSubmit = async () => {
 		const token = localStorage.getItem('token');
 		const paresedToken = JSON.parse(token);
@@ -102,7 +113,7 @@
 					disabled
 					required
 					type="email"
-					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7]  focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+					class="mt-1 px-3 py-2 bg-white border shadow-sm border-[#e9e7e7]  focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 text-[#9e9e9e]"
 					placeholder={$language.lang === 'bn' ? 'ইমেইল' : 'Email'}
 					bind:value={disabledEmail}
 				/>

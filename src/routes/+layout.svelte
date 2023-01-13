@@ -25,6 +25,8 @@
 			});
 			if (authCheck.ok) {
 				const user = localStorage.getItem('user');
+				console.log(user);
+				
 				if (user) {
 					username.set(JSON.parse(user)?.name);
 					loginRole.set(JSON.parse(user)?.role);

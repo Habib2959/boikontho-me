@@ -5,7 +5,8 @@
 
 <section class="hack-bg">
 	<div class="hack-logo-div">
-		<img src={logo} alt="man" class="mx-auto max-w-[45%]" />
+		<a href="/"><img src={logo} alt="man" class="mx-auto max-w-[45%]" /></a>
+		
 		<h2>দেশের সর্ববৃহৎ অডিওবুক ও ই-বুকের সম্ভার</h2>
 	</div>
 	<div class="hack-rocket-div">

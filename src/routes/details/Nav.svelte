@@ -40,7 +40,7 @@
 					<a href="/details/career">Career</a>
 				</li>
 				<li class="pt-2 pb-1" class:active={$page.routeId === '/details/contact-us'}>
-					<a href="/details/contact-us">Conatct {outerWidth > 600 ? 'us' : ''}</a>
+					<a href="/details/contact-us">Contact {outerWidth > 600 ? 'us' : ''}</a>
 				</li>
 				<li class="pt-2 pb-1" class:active={$page.routeId === '/details/privacy-policy'}>
 					<a href="/details/privacy-policy">Privacy {outerWidth > 600 ? 'policy' : ''}</a>

@@ -178,14 +178,14 @@
 	.hack-dropdown-container:hover .hack-down {
 		transform: rotate(-180deg);
 	}
-	.hack-dropdown-container-country:hover .hack-dropdown {
+	/* .hack-dropdown-container-country:hover .hack-dropdown {
 		max-height: 500px;
 		padding: 0.5rem 0.8rem;
 		transition: max-height 0.15s ease-in;
 	}
 	.hack-dropdown-container-country:hover .hack-down {
 		transform: rotate(-180deg);
-	}
+	} */
 	.active {
 		background: #f43131;
 		color: #fff;
