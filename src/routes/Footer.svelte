@@ -169,7 +169,7 @@
 				</div>
 				<div>
 					<h3>{$language.lang === 'bn' ? 'ডাউনলোড' : 'Download'}</h3>
-					<a href="/">
+					<a href="https://play.google.com/store/apps/details?id=com.boikontho.boikontho.app0">
 						<img src={gplay} alt="logo" class="hack-download-img inline-block md:block" />
 					</a>
 					<a href="/">
@@ -427,6 +427,7 @@
 		.hack-footer-bottom {
 			flex-direction: column;
 			align-items: flex-start;
+			padding-bottom: 60px;
 		}
 	}
 	@media (max-width: 480px) {
@@ -437,7 +438,7 @@
 			padding: 0 20px;
 		}
 		.hack-footer-bottom {
-			padding: 0 20px;
+			padding: 0px 20px 60px 20px;
 		}
 		.hack-divider {
 			margin: 20px 20px;

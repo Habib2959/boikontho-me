@@ -7,6 +7,7 @@
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { baseUrl } from '$lib/apis/baseUrl';
+	import MobileNav from './MobileNav.svelte';
 
 	onMount(async () => {
 		const auth = localStorage.getItem('token');
@@ -25,7 +26,6 @@
 			});
 			if (authCheck.ok) {
 				const user = localStorage.getItem('user');
-				console.log(user);
 				
 				if (user) {
 					username.set(JSON.parse(user)?.name);
@@ -52,6 +52,7 @@
 		$page?.routeId?.includes('otp')}
 >
 	<Header />
+	<MobileNav />
 	<main class="mb-10 lg:mb-12">
 		<slot />
 	</main>

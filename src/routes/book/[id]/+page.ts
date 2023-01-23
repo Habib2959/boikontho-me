@@ -2,10 +2,9 @@ import { baseUrl } from '$lib/apis/baseUrl';
 import type { PageLoad } from './$types';
 import { error } from '@sveltejs/kit';
 
-export const load: PageLoad = async ({ fetch }) => {
+export const load: PageLoad = async ({ fetch, params }) => {
   try {
-    const res = await fetch(`${baseUrl}/books`)
-    
+    const res = await fetch(`${baseUrl}/book/?book_id=${params.id}`);
     return {
       data: await res.json()
     };

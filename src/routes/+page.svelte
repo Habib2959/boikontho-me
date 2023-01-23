@@ -1,7 +1,11 @@
 <script lang="ts">
+	import Booklist from './Booklist.svelte';
 	import Hero from './Hero.svelte';
 	// import Opening from "./Opening.svelte";
 	import Zigzag from './Zigzag.svelte';
+	import type { PageData } from './$types';
+	export let data: PageData;
+	
 </script>
 
 <svelte:head>
@@ -20,5 +24,6 @@
 </svelte:head>
 
 <Hero />
+<Booklist books ={data.data}/>
 <!-- <Opening /> -->
 <Zigzag />

@@ -76,34 +76,7 @@
 			</div>
 		{:else}
 			<div class="flex items-center">
-				<div class="relative">
-					<div class="hack-dropdown-container">
-						<div class="hack-dropdown-menu flex cursor-pointer items-center">
-							<img src={avatar} alt="pp" width="30" />
-							<div class="ml-1 text-[.9rem]">{$username ? $username : ''}</div>
-							<img src={down} alt="arrow" width="10" class="hack-down ml-1 rounded-full" />
-						</div>
-						<div
-							class="hack-dropdown absolute right-[0px] top-[101%] bg-[#fff] shadow-lg p-3 rounded-md w-max"
-						>
-							<ul>
-								<!-- <li class="flex mb-2 cursor-pointer">
-									<a href="/dashboard"><i class="fa-solid fa-gauge inline mr-2" />Dashboard</a>
-								</li>
-								<li class="flex mb-2 cursor-pointer">
-									<a href="/"><i class="fa-solid fa-globe inline mr-2" />Goto Website</a>
-								</li> -->
-								<li class="flex cursor-pointer">
-									<a href="/profile">Profile</a>
-								</li>
-								<!-- svelte-ignore a11y-click-events-have-key-events -->
-								<li class="flex cursor-pointer" on:click={logout}>
-									<p>Logout</p>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+				
 				<div class="md:ml-3">
 					<div class="relative">
 						<ul class="flex justify-between items-center bg-[#f5f5f5] rounded">

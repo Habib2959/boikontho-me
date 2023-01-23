@@ -39,4 +39,14 @@
     /* box-shadow: 0 0 9px 1px rgba(79, 75, 147, .15); */
     border: 1px solid #dedede;
   }
+
+  .bookitems-card {
+    background-color: theme('colors.white');
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
+      0 2px 10px 0 rgb(0 0 0 / 12%);
+    -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
+      0 2px 10px 0 rgb(0 0 0 / 12%);
+    border-radius: theme('borderRadius.md');
+    cursor: pointer;
+  }
 }

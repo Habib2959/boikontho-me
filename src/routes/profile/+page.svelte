@@ -19,7 +19,6 @@
         headers: { Authorization: `Token ${token ? JSON.parse(token) : ''}` }
     });
     const data = await res.json();
-	console.log(data);
 	disabledEmail = data.email;
 	})
 	const handleSubmit = async () => {
