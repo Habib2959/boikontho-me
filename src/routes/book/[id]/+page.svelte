@@ -8,11 +8,13 @@
 {#if data}
   <section class="mt-[70px]">
     <div class="container mx-auto">
-      <div class="grid w-[95%] mx-auto lg:w-full md:grid-cols-2 md:justify-between md:items-center md:gap-x-5">
-        <div class="hack-book-img">
-          <img src={`${imgPreurl}${thumbnail}`} alt="cover" />
-        </div>
-        <div class="mt-5">
+      <div class="grid w-[95%] mx-auto lg:w-full md:grid-cols-3 md:justify-center md:items-center md:gap-x-5">
+		<div class="flex justify-center">
+			<div class="hack-book-img">
+				<img src={`${imgPreurl}${thumbnail}`} alt="cover" />
+			  </div>
+		</div>
+        <div class="mt-5 col-span-2">
           <h1 class="text-4xl font-semibold">{name}</h1>
           <p class="text-subtitleColor mt-3">Author: {author}</p>
           <div class="flex items-center mt-3">

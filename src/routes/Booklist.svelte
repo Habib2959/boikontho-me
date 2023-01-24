@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { baseUrl } from '$lib/apis/baseUrl';
 	import { language } from '../store';
 	export let books: any;
 	let imgPreurl = 'https://banana.hackules.com/';
@@ -17,18 +16,19 @@
 		<div class="flex justify-center flex-wrap">	
 				{#each books as book}
 					<a href = {`/book/${book.book_id}`} class="hack-grid-col m-5">
-						<div class="bookitems-card w-[142px] mx-auto">
+						<div class="bookitems-card">
 							<div class="hack-book-img">
 								<img src={`${imgPreurl}${book.thumbnail}`} alt="cover" class="h-[150px] w-full" />
 							</div>
-							<div class="p-1">
+							
+						</div>
+						<div class="p-1">
 								<h3 class="text-base font-medium whitespace-nowrap overflow-hidden text-ellipsis">
 									{$language.lang === 'bn' ? book.name : book.name}
 								</h3>
 								<p class="text-sm text-subtitleColor font-medium">
 									{$language.lang === 'bn' ? book.author : book.author}
 								</p>
-							</div>
 						</div>
 					</a>
 				{/each}
@@ -38,6 +38,9 @@
 </section>
 
 <style>
+	.hack-grid-col{
+		width: 145px;
+	}
 	.hack-book-img {
 		position: relative;
 		overflow: hidden;
@@ -80,7 +83,7 @@
 		object-fit: contain;
 		background: #fff;
 		width: 100%;
-		height: 150px;
+		height: 190px;
 		z-index: 1;
 		position: relative;
 	}
