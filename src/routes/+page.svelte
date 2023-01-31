@@ -9,8 +9,8 @@
 </script>
 
 <svelte:head>
-	<title>Largest Bangla Audio Book & Bangla E-Book Platform | Boikontho.com</title>
-	<meta name="description" content="Largest Bangla Audio Book & Bangla E-Book Platform" />
+	<title>Best Bangla Audio Book & E-Book in Boikontho | বইকণ্ঠ</title>
+	<meta name="description" content=" Boikontho is the first audiobook and e-book marketplace in Bangladesh. We aim to create a new entity other than from pages of papers" />
 	<script type="application/ld+json">
 {
   "@context": "https://schema.org",
