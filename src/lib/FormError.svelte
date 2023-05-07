@@ -1,5 +1,4 @@
 <script lang="ts">
-	import errIcon from '$lib/images/error.svg';
 	export let errorMessage: string;
 </script>
 
@@ -13,10 +12,3 @@
 		{errorMessage}
 	</p>
 </div>
-
-<style>
-	.hack-svg-color {
-		filter: invert(45%) sepia(65%) saturate(5584%) hue-rotate(339deg) brightness(100%)
-			contrast(123%);
-	}
-</style>

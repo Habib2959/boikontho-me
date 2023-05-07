@@ -76,7 +76,6 @@
 			</div>
 		{:else}
 			<div class="flex items-center">
-				
 				<div class="md:ml-3">
 					<div class="relative">
 						<ul class="flex justify-between items-center bg-[#f5f5f5] rounded">
@@ -128,14 +127,14 @@
 		filter: brightness(0) saturate(100%) invert(100%) sepia(51%) saturate(828%) hue-rotate(295deg)
 			brightness(123%) contrast(100%);
 	}
-	.hack-down {
+	/* .hack-down {
 		transition: 0.3s;
 	}
 	.hack-dropdown-menu {
 		padding: 3px 8px;
 		border-radius: 3px;
-	}
-	.hack-dropdown-menu:hover .hack-down {
+	} */
+	/* .hack-dropdown-menu:hover .hack-down {
 		transform: rotate(-180deg);
 	}
 	.hack-dropdown {
@@ -150,7 +149,7 @@
 	}
 	.hack-dropdown-container:hover .hack-down {
 		transform: rotate(-180deg);
-	}
+	} */
 	/* .hack-dropdown-container-country:hover .hack-dropdown {
 		max-height: 500px;
 		padding: 0.5rem 0.8rem;

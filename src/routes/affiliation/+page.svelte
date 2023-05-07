@@ -6,6 +6,7 @@
 	let email = '';
 	let gender = '';
 	let dob = '';
+	// @ts-ignore
 	let platform = [];
 	let link = '';
 	let platformbn = [
